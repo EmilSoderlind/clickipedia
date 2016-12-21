@@ -215,6 +215,7 @@ class StatsViewController: UITableViewController {
             }
         }
         
+        
         return cell
     }
     

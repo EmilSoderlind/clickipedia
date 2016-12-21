@@ -444,24 +444,17 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     func updateBestTime(time: Double){
         if let oldBestTime = UserDefaults.standard.value(forKey: "bestTime") as? Double{
             
-            
             print("OldBest Time: \(oldBestTime)")
             print("newTime: \(time)")
             
-            if(time < oldBestTime){
+            saveBestTimeToLeaderboards(time: time)
             
+            if(time < oldBestTime){
                 UserDefaults.standard.setValue(time, forKey: "bestTime")
-                
-                saveBestTimeToLeaderboards(time: time)
-                
-                
             }
             
         }else{
-            
             UserDefaults.standard.setValue(time, forKey: "bestTime")
-            saveBestTimeToLeaderboards(time: time)
-            
         }
     }
     
@@ -491,17 +484,16 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     func checkLeastClicks(clicks: Int){
         if let oldLeast = UserDefaults.standard.value(forKey: "leastClicks") as? Int{
             
+            saveLeastClicksToLeaderboards(clicks: clicks)
+
+            
             if(oldLeast > clicks){
                 UserDefaults.standard.setValue(clicks, forKey: "leastClicks")
-                
-                
-                saveLeastClicksToLeaderboards(clicks: clicks)
                 
             }
             
         }else{
             UserDefaults.standard.setValue(clicks, forKey: "leastClicks")
-            saveLeastClicksToLeaderboards(clicks: clicks)
         }
     }
     
@@ -509,6 +501,8 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     // Leaderboard stuff
     
     func saveLeastClicksToLeaderboards(clicks: Int){
+        print("\nReporting Least clicks to Leaderboards")
+
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
@@ -523,7 +517,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                 if(error != nil){
                     print("Error in reporting score: \(error)")
                 }else{
-                    print("Uploaded least clicks")
+                    print("\nReporting Least clicks to Leaderboards - Done")
                 }
                 
                 
@@ -539,6 +533,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     }
     
     func saveAverageToLeaderboards(average: Double){
+        print("\nReporting Average to Leaderboards")
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
@@ -553,9 +548,9 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             GKScore.report(scoreArray, withCompletionHandler: { (error) in
                 
                 if(error != nil){
-                    print("Error in reporting score: \(error)")
+                    print("Error in reporting  average to Leaderboards: \(error)")
                 }else{
-                    print("Uploaded average")
+                    print("\nReporting Average to Leaderboards - Done")
                 }
                 
                 
@@ -572,6 +567,8 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     }
     
     func saveBestTimeToLeaderboards(time : Double){
+        print("\nReporting bestTime to Leaderboards")
+
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
@@ -586,9 +583,9 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             GKScore.report(scoreArray, withCompletionHandler: { (error) in
                 
                 if(error != nil){
-                    print("Error in reporting score: \(error)")
+                    print("Error in reporting best time to Leaderboards: \(error)")
                 }else{
-                    print("Uploaded best time")
+                    print("\nReporting bestTime to Leaderboards - Done")
                 }
                 
                 
@@ -602,6 +599,8 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     }
     
     func saveFoundsLeaderboard(founds : Int){
+        print("\nReporting Founds to Leaderboards")
+
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
@@ -613,8 +612,11 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             
             GKScore.report(scoreArray, withCompletionHandler: { (error) in
                 
-                    print("Error in reporting score: \(error)")
-                
+                if(error != nil){
+                    print("\n\nError in reporting Founds to Leaderboards: \(error)")
+                }else{
+                    print("\nReporting Founds to Leaderboards - Done")
+                }
                 
             })
             

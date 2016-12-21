@@ -140,16 +140,17 @@ SWIFT_CLASS("_TtC14clicksToHitler11AppDelegate")
 
 @class UIWebView;
 @class GKGameCenterViewController;
+@class UIActivityIndicatorView;
 @class UIBarButtonItem;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 @interface ClicksViewController : UIViewController <GKGameCenterControllerDelegate, UIWebViewDelegate>
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified loadingIndicator;
 @property (nonatomic) BOOL hitlerFound;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull siteTrace;
 @property (nonatomic, copy) NSDate * _Nonnull startDate;
-@property (nonatomic) double time;
 @property (nonatomic) BOOL timeTicking;
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified web;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified clicksLabel;
@@ -166,11 +167,11 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 - (NSString * _Nonnull)parseStringFromLinkWithOldLink:(NSString * _Nonnull)oldLink;
 - (void)addTotalClicksToLocalSaveWithClicks:(NSInteger)clicks;
 - (void)addTotalHitlerFound;
-- (void)addTotalTimeWithTime:(double)time;
 - (void)updateBestTimeWithTime:(double)time;
 - (void)updateAverageWithClicks:(NSInteger)clicks;
 - (void)checkLeastClicksWithClicks:(NSInteger)clicks;
-- (void)downloadLatestWorldStats;
+- (void)saveLeastClicksToLeaderboardsWithClicks:(NSInteger)clicks;
+- (void)saveAverageToLeaderboardsWithAverage:(double)average;
 - (void)saveBestTimeToLeaderboardsWithTime:(double)time;
 - (void)saveFoundsLeaderboardWithFounds:(NSInteger)founds;
 - (void)authPlayer;
@@ -192,17 +193,19 @@ SWIFT_CLASS("_TtC14clicksToHitler19StartViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified startText;
 @property (nonatomic) double animateAngle;
 @property (nonatomic) double animateSpeed;
+@property (nonatomic) BOOL loggedIn;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)checkInternet;
 - (void)rotateHitlerPlus;
 - (void)rotateHitlerMinus;
 - (void)didReceiveMemoryWarning;
-- (void)downloadLatestWorldStats;
++ (void)downloadLatestWorldStats;
 - (IBAction)gameCenterButton:(id _Nonnull)sender;
 - (IBAction)startButtonPushed:(id _Nonnull)sender;
 - (IBAction)invisButton:(id _Nonnull)sender;
 - (void)authPlayer;
+- (void)resetLocalSave;
 - (void)showLeaderBoard;
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -211,6 +214,7 @@ SWIFT_CLASS("_TtC14clicksToHitler19StartViewController")
 
 @class UITableView;
 @class UITableViewCell;
+@class UIView;
 
 SWIFT_CLASS("_TtC14clicksToHitler19StatsViewController")
 @interface StatsViewController : UITableViewController
@@ -231,6 +235,7 @@ SWIFT_CLASS("_TtC14clicksToHitler19StatsViewController")
 - (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForHeaderInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (UITableViewCell * _Nonnull)configCellWithCell:(UITableViewCell * _Nonnull)cell row:(NSInteger)row section:(NSInteger)section;
+- (void)tableView:(UITableView * _Nonnull)tableView willDisplayHeaderView:(UIView * _Nonnull)view forSection:(NSInteger)section;
 - (void)checkInternet;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
