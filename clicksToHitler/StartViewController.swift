@@ -8,8 +8,9 @@
 
 import UIKit
 import CloudKit
+import GameKit
 
-class StartViewController: UIViewController{
+class StartViewController: UIViewController, GKGameCenterControllerDelegate{
     
     @IBOutlet weak var hitlerStart: UIImageView!
     
@@ -18,6 +19,7 @@ class StartViewController: UIViewController{
     var animateAngle = 0.5
     var animateSpeed:Double = 1
     
+    var loggedIn:Bool = true
     
     override func viewDidAppear(_ animated: Bool) {
         checkInternet()
@@ -30,16 +32,13 @@ class StartViewController: UIViewController{
             checkInternet()
         }else{
             print("Connected to internet.")
-            downloadLatestWorldStats()
+            StartViewController.downloadLatestWorldStats()
+            authPlayer()
         }
         
         startText.text = "Clicks to Hitler is a Wikipedia race game with one simple goal, get to Adolf Hitler! \n\nYou are only allowed to click on the links. \n\nFind the shortest and fastest path to Adolf!"
         
         rotateHitlerPlus()
-        
-        /*tableView.delegate = self
-        tableView.dataSource = self*/
-        
         
         // Do any additional setup after loading the view.
     }
@@ -77,16 +76,11 @@ class StartViewController: UIViewController{
     
     func rotateHitlerPlus(){
         
-    
-                
-                UIView.animate(withDuration: animateSpeed, animations: {
+        UIView.animate(withDuration: animateSpeed, animations: {
                     self.hitlerStart.transform = CGAffineTransform(rotationAngle: CGFloat(self.animateAngle))
-
-                },completion: { (b) in
-                    self.rotateHitlerMinus()
-                })
-        
-        
+            },completion: { (b) in
+                self.rotateHitlerMinus()
+        })
         
     }
     
@@ -108,8 +102,9 @@ class StartViewController: UIViewController{
     }
     
     
-    func downloadLatestWorldStats(){
-        
+    static func downloadLatestWorldStats(){
+        print("Download latest worldstats")
+
         
         
         let publicDB = CKContainer.default().publicCloudDatabase
@@ -122,8 +117,12 @@ class StartViewController: UIViewController{
                 // handle errors here
                 
                 print("\n\n")
-                print(error)
+                print("Fetch error: \(error)")
                 print("\n\n")
+                
+                if(error != nil){
+                    print("NOT LOGGED IN TO iCLOUD")
+                }
                 
                 
                 return
@@ -137,15 +136,21 @@ class StartViewController: UIViewController{
             var foundHitlerTimes = fetchedPlace["foundHitlerTimes"]! as! Int
             var leastClicks = fetchedPlace["leastClicks"]! as! Int
             
+            print("world total clicks: \(totalClicks)")
+            print("world average clicks: \(averageClicks)")
+            print("world best time: \(bestTime)")
+            print("world found hitler times: \(foundHitlerTimes)")
+            print("world least clicks: \(leastClicks)")
+
             
             UserDefaults.standard.setValue(totalClicks, forKey: "worldTotalClicks")
             UserDefaults.standard.setValue(averageClicks, forKey: "worldAverageClicks")
             UserDefaults.standard.setValue(bestTime, forKey: "worldBestTime")
             UserDefaults.standard.setValue(foundHitlerTimes, forKey: "worldFoundHitlerTimes")
             UserDefaults.standard.setValue(leastClicks, forKey: "worldLeastClicks")
-
             
-            print("Downloaded latest worldstats")
+            
+            print("Download latest worldstats - Done")
         }
         
     
@@ -159,47 +164,7 @@ class StartViewController: UIViewController{
         
     }
     
-    
-    /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
-        
-        
-        if(indexPath.row == 0){
-            cell?.textLabel?.text = "Least clicks to Hitler"
-            cell?.detailTextLabel?.text = "2"
-        }else if(indexPath.row == 1){
-            cell?.textLabel?.text = "Average clicks to Hitler"
-            cell?.detailTextLabel?.text = "4.67"
-        }else if(indexPath.row == 2){
-            cell?.textLabel?.text = "Total number of clicks"
-            cell?.detailTextLabel?.text = "3435"
-        }else if(indexPath.row == 3){
-            cell?.textLabel?.text = "Times found Hitler"
-            cell?.detailTextLabel?.text = "22"
-        }
-        
-        return cell!
-    }*/
-    
-    
-    
-    /*override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
 
-        
-        cell.textLabel?.text = "Number Of Clicks"
-        cell.detailTextLabel?.text = "3345"
-        
-        
-        return cell
-    }*/
-    
     
 
     /*
@@ -213,7 +178,7 @@ class StartViewController: UIViewController{
     */
     @IBAction func gameCenterButton(_ sender: Any) {
         print("Game center button pressed")
-    
+        showLeaderBoard()
     }
     
     
@@ -227,5 +192,72 @@ class StartViewController: UIViewController{
         animateAngle = 20
         animateSpeed = 0.25
     }
+    
+    func authPlayer(){
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {
+            (view, error) in
+            
+            if view != nil {
+                
+                self.present(view!, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                print("----> Authenticated: \(GKLocalPlayer.localPlayer().isAuthenticated)")
+                
+                if(!GKLocalPlayer.localPlayer().isAuthenticated){
+                    
+                        print("Presenting \"plz loggin to iCloud & game center\"-screen")
+                        
+                        let alertController = UIAlertController(title: "iCloud & Game Center", message: "You need to be signed in to iCloud and Game Center to get leaderboards and worldwide statistics", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+                            
+                            
+                        }
+                        
+                        alertController.addAction(okAction)
+                        
+                        self.present(alertController, animated: true, completion: {
+                            print("<Closed \"plz loggin to iCloud & game center\"-screen")
+                        })
+                    
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
+    func resetLocalSave(){
+        
+        UserDefaults.standard.removeObject(forKey: "totalFounds")
+        UserDefaults.standard.removeObject(forKey: "totalClicks")
+        UserDefaults.standard.removeObject(forKey: "leastClicks")
+        UserDefaults.standard.removeObject(forKey: "average")
+        UserDefaults.standard.removeObject(forKey: "bestTime")
 
+    }
+    
+    func showLeaderBoard(){
+        let viewController = self.view.window?.rootViewController
+        let gcvc = GKGameCenterViewController()
+        
+        gcvc.gameCenterDelegate = self
+        
+        viewController?.present(gcvc, animated: true, completion: nil)
+    }
+    
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        
+        gameCenterViewController.dismiss(animated: true) { 
+            
+        }
+        
+    }
 }

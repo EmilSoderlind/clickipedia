@@ -8,15 +8,16 @@
 
 import UIKit
 import CloudKit
+import GameKit
 
-class ClicksViewController: UIViewController,UIWebViewDelegate {
+class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterControllerDelegate{
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var hitlerFound = false
     
     var siteTrace = [String]()
     
     var startDate:Date = Date()
-    var time:Double = 1000
     
     var timeTicking = false
     
@@ -34,11 +35,7 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
         timeTicking = false
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        web.alpha = 0
-        
-        navigationItem.leftBarButtonItem?.title = "Hello"
-        
+                
         hitlerFound = false
         
         siteTrace.removeAll()
@@ -65,7 +62,7 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
     func checkInternet(){
         
         if(String(describing: currentReachabilityStatus) == "notReachable"){
-            print("NO INTERNET CONNECTION")
+            print("<NO INTERNET CONNECTION")
             
             
             let alertController = UIAlertController(title: "No internet connection", message: "You will need a internet connection for this game", preferredStyle: UIAlertControllerStyle.actionSheet)
@@ -96,15 +93,21 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        web.alpha = 0
+        
+        
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        loadingIndicator.startAnimating()
         
         if(String(describing: currentReachabilityStatus) == "notReachable"){
             checkInternet()
         }else{
-            print("Connected to internet.")
+            print("<Connected to internet.")
+            authPlayer()
         }
         
         
-        print("ViewDidLoad - Start")
+        print("<ViewDidLoad - Start")
         
         navigationController?.navigationBar.barTintColor = UIColor(red: 204.0/255.0, green: 21.0/255.0, blue: 24.0/255.0, alpha: 1.0)
 
@@ -130,7 +133,7 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
         
         clicksLabel.title = "Clicks: 0"
         
-        print("ViewDidLoad - Done")
+        print("<ViewDidLoad - Done")
     }
     
     func updateTimeLabel(){
@@ -227,7 +230,7 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
                 clicksLabel.title = "Clicks: 0"
             }
         }else{
-            print("YOU FOUND HITLER!")
+            print("<FOUND HITLER!")
             hitlerFound = true
             
             timeTicking = false
@@ -239,6 +242,8 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
             
             clicks += 1
             
+            
+            // Local save & Leaderboard save
             updateAverage(clicks: clicks)
             addTotalClicksToLocalSave(clicks: clicks)
             addTotalHitlerFound()
@@ -247,6 +252,10 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
             
             
             
+            
+            
+            // Cloudkit stuff
+            
             let publicDB = CKContainer.default().publicCloudDatabase
             
             let greatID = CKRecordID(recordName: "worldwideStats")
@@ -254,19 +263,35 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
             
             publicDB.fetch(withRecordID: greatID) { fetchedPlace, error in
                 guard let fetchedPlace = fetchedPlace else {
-                    // handle errors here
+
+                    print("\n\nError: \(error) \n\n")
+                    
                     return
                 }
+                
+                print("\nOld save: \(fetchedPlace.allKeys())")
+                print("Old save: \(fetchedPlace.allTokens()) \n")
+
             
                 var oldBestTime:Double = fetchedPlace["bestTime"] as! Double
-                if(oldBestTime > self.time){
-                    fetchedPlace["bestTime"] = self.time as CKRecordValue?
+                print("<Old best time: \(oldBestTime)")
+                print("<New best time: \(time)")
+                
+                if (round(100*time)/100) < (round(100*oldBestTime)/100) {
+                    print("<Replacing \(oldBestTime) with \(time)")
+                    fetchedPlace["bestTime"] = time as CKRecordValue
+                }else{
+                    print("<Old best time is BETTER")
                 }
                 
                 var oldLeastClicks:Int = fetchedPlace["leastClicks"] as! Int
                 
-                if(oldLeastClicks > self.clicks){
-                    fetchedPlace["leastClicks"] = self.clicks as CKRecordValue?
+                print("Old least clicks: \(oldLeastClicks)")
+                print("New least clicks: \(self.clicks)")
+
+                
+                if(Int(oldLeastClicks) > (self.clicks)){
+                    fetchedPlace["leastClicks"] = self.clicks as CKRecordValue
                 }
                 
                 var oldTotalClicks:Int = fetchedPlace["totalClicks"] as! Int
@@ -276,12 +301,19 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
                 fetchedPlace["foundHitlerTimes"] = (oldFoundHitlerTimes + 1) as CKRecordValue
                 
                 
-                var newAverageClicks = (oldTotalClicks + self.clicks) / (oldFoundHitlerTimes + 1)
-                fetchedPlace["averageClicks"] = newAverageClicks as CKRecordValue?
+                var newAverageClicks:Double = Double(oldTotalClicks + self.clicks) / Double(oldFoundHitlerTimes + 1)
+                fetchedPlace["averageClicks"] = newAverageClicks as CKRecordValue
                 
                 
                 publicDB.save(fetchedPlace) { savedPlace, savedError in
                     //...
+                    
+                    print("\n\nCloudKit error: \(savedError.debugDescription) \n\n")
+                    
+                    print("\nSaved: \(savedPlace?.allKeys())")
+                    print("Saved: \(savedPlace?.allTokens())\n")
+
+                
                 }
             }
             
@@ -318,16 +350,18 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
             let alertController = UIAlertController(title: "Congratulations!", message: "You found Adolf Hitler in: \n\(clicks) clicks \nand\n\(round(100*time)/100) sec.\n\n\(traceString)", preferredStyle: UIAlertControllerStyle.alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+                StartViewController.downloadLatestWorldStats()
             }
             
             let againAction = UIAlertAction(title: "Try again!", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in self.resetButton(self)
+                StartViewController.downloadLatestWorldStats()
             }
             
             alertController.addAction(okAction)
             alertController.addAction(againAction)
 
             self.present(alertController, animated: true, completion: { 
-                self.downloadLatestWorldStats()
+                print("<Closed found hitler popup")
             })
             
         }
@@ -340,13 +374,14 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
         removeLoadingInd()
         
         if(clicks == 0){
-            print("Reseting date")
+            print("<Reseting date")
             timeTicking = true
             startDate = Date()
         }
         
         
         if(!(clicks < 0)){
+            loadingIndicator.alpha = 0
             web.alpha = 1
         }
     }
@@ -394,23 +429,14 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
             
             UserDefaults.standard.setValue(oldFounds + 1, forKey: "totalFounds")
             
+            saveFoundsLeaderboard(founds: oldFounds + 1)
+            
         }else{
             
             UserDefaults.standard.setValue(1, forKey: "totalFounds")
             
-        }
-    }
-    
-    func addTotalTime(time: Double){
-        if let oldTotalTime = UserDefaults.standard.value(forKey: "totalTime") as? Double{
-        
-            print("Old: \(oldTotalTime)")
-            print("New: \(oldTotalTime + time)")
-            
-            UserDefaults.standard.setValue(oldTotalTime + time, forKey: "totalTime")
-            
-        }else{
-            UserDefaults.standard.setValue(time, forKey: "totalTime")
+            saveFoundsLeaderboard(founds: 1)
+
             
         }
     }
@@ -418,15 +444,23 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
     func updateBestTime(time: Double){
         if let oldBestTime = UserDefaults.standard.value(forKey: "bestTime") as? Double{
             
+            
+            print("OldBest Time: \(oldBestTime)")
+            print("newTime: \(time)")
+            
             if(time < oldBestTime){
             
                 UserDefaults.standard.setValue(time, forKey: "bestTime")
+                
+                saveBestTimeToLeaderboards(time: time)
+                
                 
             }
             
         }else{
             
             UserDefaults.standard.setValue(time, forKey: "bestTime")
+            saveBestTimeToLeaderboards(time: time)
             
         }
     }
@@ -448,7 +482,7 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
         var totalClicksToHitler: Double = Double(hitlerFound)*average
         var newTotalClicks:Double = totalClicksToHitler + Double(clicks)
         
-        
+        saveAverageToLeaderboards(average: newTotalClicks/Double((hitlerFound + 1)))
         
         UserDefaults.standard.setValue(newTotalClicks/Double((hitlerFound + 1)), forKey: "average")
 
@@ -459,57 +493,164 @@ class ClicksViewController: UIViewController,UIWebViewDelegate {
             
             if(oldLeast > clicks){
                 UserDefaults.standard.setValue(clicks, forKey: "leastClicks")
-
+                
+                
+                saveLeastClicksToLeaderboards(clicks: clicks)
+                
             }
             
         }else{
             UserDefaults.standard.setValue(clicks, forKey: "leastClicks")
-            
+            saveLeastClicksToLeaderboards(clicks: clicks)
         }
     }
     
-    func downloadLatestWorldStats(){
+    
+    // Leaderboard stuff
+    
+    func saveLeastClicksToLeaderboards(clicks: Int){
         
-        
-        
-        let publicDB = CKContainer.default().publicCloudDatabase
-        
-        let greatID = CKRecordID(recordName: "worldwideStats")
-        
-        
-        publicDB.fetch(withRecordID: greatID) { fetchedPlace, error in
-            guard let fetchedPlace = fetchedPlace else {
-                // handle errors here
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "leastClicksToHitler_ID")
+            
+            scoreReporter.value = Int64(clicks)
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            
+            GKScore.report(scoreArray, withCompletionHandler: { (error) in
                 
-                print("\n\n")
-                print(error)
-                print("\n\n")
+                if(error != nil){
+                    print("Error in reporting score: \(error)")
+                }else{
+                    print("Uploaded least clicks")
+                }
                 
                 
-                return
-            }
+            })
             
-            
-            
-            var totalClicks = fetchedPlace["totalClicks"]! as! Int
-            var averageClicks = fetchedPlace["averageClicks"]! as! Double
-            var bestTime = fetchedPlace["bestTime"]! as! Double
-            var foundHitlerTimes = fetchedPlace["foundHitlerTimes"]! as! Int
-            var leastClicks = fetchedPlace["leastClicks"]! as! Int
-            
-            
-            UserDefaults.standard.setValue(totalClicks, forKey: "worldTotalClicks")
-            UserDefaults.standard.setValue(averageClicks, forKey: "worldAverageClicks")
-            UserDefaults.standard.setValue(bestTime, forKey: "worldBestTime")
-            UserDefaults.standard.setValue(foundHitlerTimes, forKey: "worldFoundHitlerTimes")
-            UserDefaults.standard.setValue(leastClicks, forKey: "worldLeastClicks")
-            
-            
-            print("Downloaded latest worldstats")
+        }else{
+            print("NOT AUTHENTICATED fewest clicks -> Leaderboards")
         }
 
-    
+        
+        
+        
     }
+    
+    func saveAverageToLeaderboards(average: Double){
+        
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "average_ID")
+            
+            var roundedAverage:Double = round(100*average)
+            scoreReporter.value = Int64(roundedAverage)
+            
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            
+            GKScore.report(scoreArray, withCompletionHandler: { (error) in
+                
+                if(error != nil){
+                    print("Error in reporting score: \(error)")
+                }else{
+                    print("Uploaded average")
+                }
+                
+                
+            })
+            
+        }else{
+            print("NOT AUTHENTICATED average -> leaderboards")
+        }
+
+        
+        
+        
+        
+    }
+    
+    func saveBestTimeToLeaderboards(time : Double){
+        
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "shortestTime_ID")
+            
+            var bestTime:Double = round(100*time)
+            scoreReporter.value = Int64(bestTime)
+            
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            
+            GKScore.report(scoreArray, withCompletionHandler: { (error) in
+                
+                if(error != nil){
+                    print("Error in reporting score: \(error)")
+                }else{
+                    print("Uploaded best time")
+                }
+                
+                
+            })
+            
+        }else{
+            print("NOT AUTHENTICATED best time -> Leaderboards")
+        }
+        
+        
+    }
+    
+    func saveFoundsLeaderboard(founds : Int){
+        
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "mostHitlersFound_ID")
+            
+            scoreReporter.value = Int64(founds)
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            
+            GKScore.report(scoreArray, withCompletionHandler: { (error) in
+                
+                    print("Error in reporting score: \(error)")
+                
+                
+            })
+            
+        }else{
+            print("NOT AUTHENTICATED founds -> Leaderboards")
+        }
+        
+        
+    }
+
+    
+    func authPlayer(){
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {
+            (view, error) in
+            
+            if view != nil {
+                
+                self.present(view!, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                print(GKLocalPlayer.localPlayer().isAuthenticated)
+                
+            }
+            
+        }
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+        
+    }
+
 
 
 }

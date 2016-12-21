@@ -19,9 +19,9 @@ class StatsViewController: UITableViewController {
     }
     
     
-    var userStats = Stats(averageClicks: "Loading..", totalClicks: "Loading..", foundHitlerTimes: "Loading..", leastClicks: "Loading..", bestTime: "Loading..")
+    var userStats = Stats(averageClicks: "No data..", totalClicks: "No data..", foundHitlerTimes: "No data..", leastClicks: "No data..", bestTime: "No data..")
     
-    var worldwideStats = Stats(averageClicks: "Loading..", totalClicks: "Loading..", foundHitlerTimes: "Loading..", leastClicks: "Loading..", bestTime: "Loading..")
+    var worldwideStats = Stats(averageClicks: "Sign in to iCloud", totalClicks: "Sign in to iCloud", foundHitlerTimes: "Sign in to iCloud", leastClicks: "Sign in to iCloud", bestTime: "Sign in to iCloud")
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,46 +33,37 @@ class StatsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+                
+        populateTable()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func populateTable(){
+        print("Populating table")
         
-        
-        
-        loadUserStats()
         loadWorldstats()
+
+        loadUserStats()
         
-        
+        print("Populating table - Done")
+
     }
     
     func loadWorldstats(){
+        print("Loading worldstats")
         
+        if(UserDefaults.standard.integer(forKey: "worldTotalClicks") != 0){
+            self.worldwideStats.totalClicks = "\(UserDefaults.standard.integer(forKey: "worldTotalClicks"))"
+            self.worldwideStats.averageClicks = "\(round(100*UserDefaults.standard.double(forKey: "worldAverageClicks"))/100)"
+            self.worldwideStats.bestTime = "\(round(100*UserDefaults.standard.double(forKey: "worldBestTime"))/100) s"
+            self.worldwideStats.foundHitlerTimes = "\(UserDefaults.standard.integer(forKey: "worldFoundHitlerTimes"))"
+            self.worldwideStats.leastClicks = "\(UserDefaults.standard.integer(forKey: "worldLeastClicks"))"
         
-        if let worldTotalClicks = UserDefaults.standard.value(forKey: "leastClicks") as? Int{
-            self.worldwideStats.totalClicks = String(describing: worldTotalClicks)
-
+            reloadTableView(self.tableView)
+            print("Loading worldstats - Done")
+        }else{
+            print("Could not get worldwide stats. Not logged in?")
         }
-        if let worldAverageClicks = UserDefaults.standard.value(forKey: "worldAverageClicks") as? Double{
-            self.worldwideStats.averageClicks = "\(round(Double(100*worldAverageClicks))/100)"
-            
-        }
-        if let worldBestTime = UserDefaults.standard.value(forKey: "worldBestTime") as? Int{
-            self.worldwideStats.bestTime = "\(worldBestTime) s"
-        }
-        if let worldFoundHitlerTimes = UserDefaults.standard.value(forKey: "worldFoundHitlerTimes") as? Int{
-            self.worldwideStats.foundHitlerTimes = "\(worldFoundHitlerTimes)"
-        }
-        if let worldLeastClicks = UserDefaults.standard.value(forKey: "worldLeastClicks") as? Int{
-            self.worldwideStats.leastClicks = "\(worldLeastClicks)"
-            
-        }
-        
         
     }
     
@@ -84,7 +75,7 @@ class StatsViewController: UITableViewController {
     }
     
     func loadUserStats(){
-        
+        print("Loading user stats")
         
         // Total clicks
         
@@ -93,7 +84,8 @@ class StatsViewController: UITableViewController {
         loadLeastClicks()
         loadAverageClicks()
         loadBestTime()
-        
+        print("Loading user stats - Done")
+
     }
     
     
@@ -101,9 +93,6 @@ class StatsViewController: UITableViewController {
         if let totalClicks = UserDefaults.standard.value(forKey: "totalClicks") as? Int{
             print("Found total-click-save on device")
             userStats.totalClicks = "\(totalClicks)"
-        }else{
-            print("No total-click-save on device")
-            userStats.totalClicks = "Never clicked"
         }
     }
     
@@ -111,33 +100,24 @@ class StatsViewController: UITableViewController {
         if let totalFounds = UserDefaults.standard.value(forKey: "totalFounds") as? Int{
             print("Found total-found-save on device")
             userStats.foundHitlerTimes = "\(totalFounds)"
-        }else{
-            print("No total-found-save on device")
-            userStats.foundHitlerTimes = "Never found"
         }
     }
     
     func loadLeastClicks(){
         if let leastClicks = UserDefaults.standard.value(forKey: "leastClicks") as? Int{
             userStats.leastClicks = "\(leastClicks)"
-        }else{
-            userStats.leastClicks = "Never found"
         }
     }
     
     func loadAverageClicks(){
         if let average = UserDefaults.standard.value(forKey: "average") as? Double{
             userStats.averageClicks = "\(round(100*average)/100)"
-        }else{
-            userStats.averageClicks = "Never found"
         }
     }
     
     func loadBestTime(){
         if let bestTime = UserDefaults.standard.value(forKey: "bestTime") as? Double{
             userStats.bestTime = "\(round(100*bestTime)/100) s"
-        }else{
-            userStats.bestTime = "Never found"
         }
     }
     
@@ -195,7 +175,7 @@ class StatsViewController: UITableViewController {
                 cell.detailTextLabel?.text = "\(userStats.averageClicks)"
                 break
             case 1:
-                cell.textLabel?.text = "Least clicks"
+                cell.textLabel?.text = "Fewest clicks"
                 cell.detailTextLabel?.text = "\(userStats.leastClicks)"
                 break
             case 3:
@@ -220,7 +200,7 @@ class StatsViewController: UITableViewController {
                 cell.detailTextLabel?.text = "\(worldwideStats.averageClicks)"
                 break
             case 1:
-                cell.textLabel?.text = "Least clicks"
+                cell.textLabel?.text = "Fewest clicks"
                 cell.detailTextLabel?.text = "\(worldwideStats.leastClicks)"
                 break
             case 3:
@@ -238,6 +218,11 @@ class StatsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -289,7 +274,6 @@ class StatsViewController: UITableViewController {
         if(String(describing: currentReachabilityStatus) == "notReachable"){
             print("NO INTERNET CONNECTION")
             
-            
             let alertController = UIAlertController(title: "No internet connection", message: "You will need a internet connection for this game", preferredStyle: UIAlertControllerStyle.actionSheet)
             
             let okAction = UIAlertAction(title: "Retry", style: UIAlertActionStyle.destructive) { (result : UIAlertAction) -> Void in
@@ -300,19 +284,11 @@ class StatsViewController: UITableViewController {
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: {
-                
                 self.checkInternet()
-                
             })
-            
-            
             
         }else{
             print(currentReachabilityStatus)
         }
-        
-        
-        
     }
-
 }

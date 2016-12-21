@@ -8,53 +8,52 @@ provides-member:
 - ["C14clicksToHitler19StatsViewController", ""]
 - ["VC14clicksToHitler19StatsViewController5Stats", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "viewDidAppear"
-- "populateTable"
-- "loadWorldstats"
-- "loadUserStats"
-- "reloadTableView"
-- "loadTotalClicks"
-- "loadTotalHitlerFounds"
-- "didReceiveMemoryWarning"
-- "loadLeastClicks"
 - "loadAverageClicks"
-- "numberOfSections"
+- "didReceiveMemoryWarning"
 - "tableView"
 - "tableView"
 - "tableView"
-- "loadBestTime"
+- "loadLeastClicks"
+- "reloadTableView"
+- "viewDidAppear"
+- "loadTotalHitlerFounds"
 - "checkInternet"
+- "populateTable"
+- "viewDidLoad"
+- "loadTotalClicks"
+- "loadWorldstats"
 - "configCell"
+- "loadBestTime"
+- "loadUserStats"
+- "numberOfSections"
 depends-top-level:
-- !private "UIAlertAction"
-- !private "round"
-- "UITableViewController"
-- !private "UIAlertController"
 - !private "print"
-- !private "UIAlertActionStyle"
-- "Bool"
-- "UITableViewCell"
-- !private "~="
-- "AssignmentPrecedence"
-- !private "/"
-- !private "=="
-- "IndexPath"
-- "CastingPrecedence"
-- !private "UIAlertControllerStyle"
-- !private "Void"
-- !private "Double"
-- "Int"
-- "StatsViewController"
-- "StringLiteralType"
-- "String"
 - "UITableView"
-- !private "BooleanLiteralType"
+- !private "round"
+- !private "UIAlertActionStyle"
+- "UITableViewController"
+- "IndexPath"
 - !private "*"
+- "Int"
+- "String"
+- !private "UIAlertController"
+- !private "Double"
+- "StatsViewController"
+- "UITableViewCell"
+- !private "UIAlertAction"
+- !private "Void"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- "Bool"
 - !private "UserDefaults"
+- !private "=="
+- !private "~="
+- !private "UIAlertControllerStyle"
+- !private "!="
+- "StringLiteralType"
+- !private "/"
 depends-member:
-- !private ["Ps16AbsoluteValuable", "init"]
-- !private ["Ps9AnyObject", "Double"]
 - ["Ps9AnyObject", "Stats"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIAlertAction"]
@@ -70,7 +69,9 @@ depends-member:
 - !private ["Ps9AnyObject", "dequeueReusableCell"]
 - !private ["Ps9AnyObject", "detailTextLabel"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "double"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "integer"]
 - !private ["Ps9AnyObject", "layoutIfNeeded"]
 - ["Ps9AnyObject", "loadAverageClicks"]
 - ["Ps9AnyObject", "loadBestTime"]
@@ -101,7 +102,6 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "section"]
 - !private ["Ps22BidirectionalIndexable", "row"]
 - !private ["Ps22BidirectionalIndexable", "section"]
-- !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Ps17BitwiseOperations", "Stride"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
@@ -116,7 +116,6 @@ depends-member:
 - ["VSC7CGPoint", "deinit"]
 - ["PSo13CKRecordValue", "init"]
 - ["PSo15CNKeyDescriptor", "init"]
-- !private ["Ps7CVarArg", "Double"]
 - ["Ps7CVarArg", "Stats"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "String"]
@@ -133,7 +132,9 @@ depends-member:
 - !private ["Ps7CVarArg", "dequeueReusableCell"]
 - !private ["Ps7CVarArg", "detailTextLabel"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "double"]
 - ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "integer"]
 - !private ["Ps7CVarArg", "layoutIfNeeded"]
 - ["Ps7CVarArg", "loadAverageClicks"]
 - ["Ps7CVarArg", "loadBestTime"]
@@ -170,7 +171,6 @@ depends-member:
 - !private ["Ps10Comparable", "section"]
 - !private ["Vs20CountableClosedRange", "deinit"]
 - !private ["Vs14CountableRange", "deinit"]
-- !private ["Ps28CustomDebugStringConvertible", "Double"]
 - ["Ps28CustomDebugStringConvertible", "Stats"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
@@ -186,7 +186,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCell"]
 - !private ["Ps28CustomDebugStringConvertible", "detailTextLabel"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "double"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "integer"]
 - !private ["Ps28CustomDebugStringConvertible", "layoutIfNeeded"]
 - ["Ps28CustomDebugStringConvertible", "loadAverageClicks"]
 - ["Ps28CustomDebugStringConvertible", "loadBestTime"]
@@ -223,7 +225,6 @@ depends-member:
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "row"]
 - !private ["Ps17CustomReflectable", "section"]
-- !private ["Ps23CustomStringConvertible", "Double"]
 - ["Ps23CustomStringConvertible", "Stats"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "String"]
@@ -241,7 +242,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCell"]
 - !private ["Ps23CustomStringConvertible", "detailTextLabel"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "double"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "integer"]
 - !private ["Ps23CustomStringConvertible", "layoutIfNeeded"]
 - ["Ps23CustomStringConvertible", "loadAverageClicks"]
 - ["Ps23CustomStringConvertible", "loadBestTime"]
@@ -272,8 +275,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", ""]
 - !private ["VSC7Decimal", "deinit"]
 - ["Sd", "deinit"]
-- !private ["Sd", "init"]
-- !private ["Ps9Equatable", "Double"]
 - ["Ps9Equatable", "Stats"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "String"]
@@ -293,7 +294,9 @@ depends-member:
 - !private ["Ps9Equatable", "destructive"]
 - !private ["Ps9Equatable", "detailTextLabel"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "double"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "integer"]
 - !private ["Ps9Equatable", "layoutIfNeeded"]
 - ["Ps9Equatable", "loadAverageClicks"]
 - ["Ps9Equatable", "loadBestTime"]
@@ -326,15 +329,11 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "section"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - ["Ps32ExpressibleByStringInterpolation", "init"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
-- !private ["Ps13FloatingPoint", "init"]
-- !private ["Ps8Hashable", "Double"]
 - ["Ps8Hashable", "Stats"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
@@ -354,7 +353,9 @@ depends-member:
 - !private ["Ps8Hashable", "destructive"]
 - !private ["Ps8Hashable", "detailTextLabel"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "double"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "integer"]
 - !private ["Ps8Hashable", "layoutIfNeeded"]
 - ["Ps8Hashable", "loadAverageClicks"]
 - ["Ps8Hashable", "loadBestTime"]
@@ -408,7 +409,6 @@ depends-member:
 - !private ["Ps16MutableIndexable", "row"]
 - !private ["Ps16MutableIndexable", "section"]
 - ["CSo7NSCoder", "deinit"]
-- !private ["PSo8NSCoding", "Double"]
 - ["PSo8NSCoding", "Stats"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
@@ -450,7 +450,6 @@ depends-member:
 - ["PSo8NSCoding", "worldwideStats"]
 - ["PSo8NSCoding", ""]
 - ["PSo9NSCopying", "init"]
-- !private ["PSo26NSExtensionRequestHandling", "Double"]
 - ["PSo26NSExtensionRequestHandling", "Stats"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
@@ -506,7 +505,9 @@ depends-member:
 - !private ["CSo8NSObject", "dequeueReusableCell"]
 - !private ["CSo8NSObject", "detailTextLabel"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "double"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "integer"]
 - !private ["CSo8NSObject", "layoutIfNeeded"]
 - ["CSo8NSObject", "loadAverageClicks"]
 - ["CSo8NSObject", "loadBestTime"]
@@ -532,7 +533,6 @@ depends-member:
 - ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "worldwideStats"]
-- !private ["PSo16NSObjectProtocol", "Double"]
 - ["PSo16NSObjectProtocol", "Stats"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
@@ -548,7 +548,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCell"]
 - !private ["PSo16NSObjectProtocol", "detailTextLabel"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "double"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "integer"]
 - !private ["PSo16NSObjectProtocol", "layoutIfNeeded"]
 - ["PSo16NSObjectProtocol", "loadAverageClicks"]
 - ["PSo16NSObjectProtocol", "loadBestTime"]
@@ -592,7 +594,6 @@ depends-member:
 - !private ["Ps8Sequence", "section"]
 - !private ["Ps13SignedInteger", "Stride"]
 - !private ["Ps12SignedNumber", "Stride"]
-- !private ["Ps12SignedNumber", "init"]
 - ["VC14clicksToHitler19StatsViewController5Stats", "String"]
 - ["VC14clicksToHitler19StatsViewController5Stats", "averageClicks"]
 - ["VC14clicksToHitler19StatsViewController5Stats", "bestTime"]
@@ -640,7 +641,6 @@ depends-member:
 - ["C14clicksToHitler19StatsViewController", "viewDidLoad"]
 - ["C14clicksToHitler19StatsViewController", "worldwideStats"]
 - !private ["Ps10Strideable", "Stride"]
-- !private ["Ps10Strideable", "init"]
 - ["SS", "deinit"]
 - ["SS", "init"]
 - ["Ps16TextOutputStream", "init"]
@@ -670,7 +670,6 @@ depends-member:
 - !private ["PSo12UIAppearance", "setContentOffset"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textLabel"]
-- !private ["PSo21UIAppearanceContainer", "Double"]
 - ["PSo21UIAppearanceContainer", "Stats"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
@@ -711,7 +710,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "worldwideStats"]
 - ["PSo21UIAppearanceContainer", ""]
-- !private ["PSo18UIContentContainer", "Double"]
 - ["PSo18UIContentContainer", "Stats"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
@@ -761,7 +759,6 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "setContentOffset"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
-- !private ["PSo18UIFocusEnvironment", "Double"]
 - ["PSo18UIFocusEnvironment", "Stats"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
@@ -860,7 +857,6 @@ depends-member:
 - ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "worldwideStats"]
-- !private ["PSo30UIResponderStandardEditActions", "Double"]
 - ["PSo30UIResponderStandardEditActions", "Stats"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
@@ -906,7 +902,6 @@ depends-member:
 - !private ["CSo12UIScrollView", "layoutIfNeeded"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["CSo12UIScrollView", "setContentOffset"]
-- !private ["PSo20UIScrollViewDelegate", "Double"]
 - ["PSo20UIScrollViewDelegate", "Stats"]
 - !private ["PSo20UIScrollViewDelegate", "String"]
 - !private ["PSo20UIScrollViewDelegate", "UIAlertAction"]
@@ -938,7 +933,6 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", "worldwideStats"]
 - ["PSo20UIScrollViewDelegate", ""]
-- !private ["PSo16UIStateRestoring", "Double"]
 - ["PSo16UIStateRestoring", "Stats"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
@@ -1019,7 +1013,6 @@ depends-member:
 - ["CSo21UITableViewController", "viewDidLoad"]
 - ["CSo21UITableViewController", "worldwideStats"]
 - ["CSo21UITableViewController", ""]
-- !private ["PSo21UITableViewDataSource", "Double"]
 - ["PSo21UITableViewDataSource", "Stats"]
 - !private ["PSo21UITableViewDataSource", "String"]
 - !private ["PSo21UITableViewDataSource", "UIAlertAction"]
@@ -1051,7 +1044,6 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewDidLoad"]
 - ["PSo21UITableViewDataSource", "worldwideStats"]
 - ["PSo21UITableViewDataSource", ""]
-- !private ["PSo19UITableViewDelegate", "Double"]
 - ["PSo19UITableViewDelegate", "Stats"]
 - !private ["PSo19UITableViewDelegate", "String"]
 - !private ["PSo19UITableViewDelegate", "UIAlertAction"]
@@ -1084,7 +1076,6 @@ depends-member:
 - ["PSo19UITableViewDelegate", "worldwideStats"]
 - ["PSo19UITableViewDelegate", ""]
 - ["OSC16UITableViewStyle", "deinit"]
-- !private ["PSo18UITraitEnvironment", "Double"]
 - ["PSo18UITraitEnvironment", "Stats"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
@@ -1178,9 +1169,10 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - ["CSo12UserDefaults", "deinit"]
+- !private ["CSo12UserDefaults", "double"]
+- !private ["CSo12UserDefaults", "integer"]
 - !private ["CSo12UserDefaults", "standard"]
 - !private ["CSo12UserDefaults", "value"]
-- !private ["P14clicksToHitler9Utilities", "Double"]
 - ["P14clicksToHitler9Utilities", "Stats"]
 - !private ["P14clicksToHitler9Utilities", "String"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertAction"]
@@ -1196,7 +1188,9 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "dequeueReusableCell"]
 - !private ["P14clicksToHitler9Utilities", "detailTextLabel"]
 - ["P14clicksToHitler9Utilities", "didReceiveMemoryWarning"]
+- !private ["P14clicksToHitler9Utilities", "double"]
 - ["P14clicksToHitler9Utilities", "init"]
+- !private ["P14clicksToHitler9Utilities", "integer"]
 - !private ["P14clicksToHitler9Utilities", "layoutIfNeeded"]
 - ["P14clicksToHitler9Utilities", "loadAverageClicks"]
 - ["P14clicksToHitler9Utilities", "loadBestTime"]
@@ -1223,8 +1217,6 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "viewDidLoad"]
 - ["P14clicksToHitler9Utilities", "worldwideStats"]
 - ["P14clicksToHitler9Utilities", ""]
-- !private ["Ps15_CVarArgAligned", "init"]
-- !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "contentOffset"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "dequeueReusableCell"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "detailTextLabel"]
@@ -1235,14 +1227,11 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps9_Hashable", "Double"]
 - ["Ps9_Hashable", "Stats"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "String"]
@@ -1262,7 +1251,9 @@ depends-member:
 - !private ["Ps9_Hashable", "destructive"]
 - !private ["Ps9_Hashable", "detailTextLabel"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "double"]
 - ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "integer"]
 - !private ["Ps9_Hashable", "layoutIfNeeded"]
 - ["Ps9_Hashable", "loadAverageClicks"]
 - ["Ps9_Hashable", "loadBestTime"]
@@ -1302,13 +1293,10 @@ depends-member:
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps14_SignedInteger", "Stride"]
 - !private ["Ps11_Strideable", "Stride"]
-- !private ["Ps11_Strideable", "init"]
 depends-nominal:
-- !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
-- !private "Ps19BinaryFloatingPoint"
 - !private "Ps17BitwiseOperations"
 - "Sb"
 - !private "PSo15CALayerDelegate"
@@ -1332,13 +1320,11 @@ depends-nominal:
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
-- !private "Ps13FloatingPoint"
 - "Ps8Hashable"
 - "V10Foundation9IndexPath"
 - !private "Ps9Indexable"
@@ -1417,12 +1403,9 @@ depends-nominal:
 - !private "Sc"
 - "CSo12UserDefaults"
 - "P14clicksToHitler9Utilities"
-- !private "Ps15_CVarArgAligned"
-- !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
@@ -1451,4 +1434,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Contacts.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
-interface-hash: "9f24ff9e0c02000cbe1bb8565905865b"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+interface-hash: "251d7dbf535ca5d9d1141901e5a7d225"

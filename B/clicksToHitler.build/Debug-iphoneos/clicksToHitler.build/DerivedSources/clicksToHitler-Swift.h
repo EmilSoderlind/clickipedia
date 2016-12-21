@@ -116,6 +116,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import GameKit;
 @import Foundation;
 @import ObjectiveC;
 #endif
@@ -138,16 +139,18 @@ SWIFT_CLASS("_TtC14clicksToHitler11AppDelegate")
 @end
 
 @class UIWebView;
+@class GKGameCenterViewController;
+@class UIActivityIndicatorView;
 @class UIBarButtonItem;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
-@interface ClicksViewController : UIViewController <UIWebViewDelegate>
+@interface ClicksViewController : UIViewController <GKGameCenterControllerDelegate, UIWebViewDelegate>
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified loadingIndicator;
 @property (nonatomic) BOOL hitlerFound;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull siteTrace;
 @property (nonatomic, copy) NSDate * _Nonnull startDate;
-@property (nonatomic) double time;
 @property (nonatomic) BOOL timeTicking;
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified web;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified clicksLabel;
@@ -167,6 +170,12 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 - (void)updateBestTimeWithTime:(double)time;
 - (void)updateAverageWithClicks:(NSInteger)clicks;
 - (void)checkLeastClicksWithClicks:(NSInteger)clicks;
+- (void)saveLeastClicksToLeaderboardsWithClicks:(NSInteger)clicks;
+- (void)saveAverageToLeaderboardsWithAverage:(double)average;
+- (void)saveBestTimeToLeaderboardsWithTime:(double)time;
+- (void)saveFoundsLeaderboardWithFounds:(NSInteger)founds;
+- (void)authPlayer;
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -179,28 +188,41 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 @class UILabel;
 
 SWIFT_CLASS("_TtC14clicksToHitler19StartViewController")
-@interface StartViewController : UIViewController
+@interface StartViewController : UIViewController <GKGameCenterControllerDelegate>
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified hitlerStart;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified startText;
+@property (nonatomic) double animateAngle;
+@property (nonatomic) double animateSpeed;
+@property (nonatomic) BOOL loggedIn;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)checkInternet;
 - (void)rotateHitlerPlus;
 - (void)rotateHitlerMinus;
 - (void)didReceiveMemoryWarning;
++ (void)downloadLatestWorldStats;
+- (IBAction)gameCenterButton:(id _Nonnull)sender;
 - (IBAction)startButtonPushed:(id _Nonnull)sender;
+- (IBAction)invisButton:(id _Nonnull)sender;
+- (void)authPlayer;
+- (void)resetLocalSave;
+- (void)showLeaderBoard;
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UITableView;
 @class UITableViewCell;
+@class UIView;
 
 SWIFT_CLASS("_TtC14clicksToHitler19StatsViewController")
 @interface StatsViewController : UITableViewController
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)populateTable;
+- (void)loadWorldstats;
+- (void)reloadTableView:(UITableView * _Nonnull)tableView;
 - (void)loadUserStats;
 - (void)loadTotalClicks;
 - (void)loadTotalHitlerFounds;
@@ -213,6 +235,7 @@ SWIFT_CLASS("_TtC14clicksToHitler19StatsViewController")
 - (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForHeaderInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (UITableViewCell * _Nonnull)configCellWithCell:(UITableViewCell * _Nonnull)cell row:(NSInteger)row section:(NSInteger)section;
+- (void)tableView:(UITableView * _Nonnull)tableView willDisplayHeaderView:(UIView * _Nonnull)view forSection:(NSInteger)section;
 - (void)checkInternet;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
