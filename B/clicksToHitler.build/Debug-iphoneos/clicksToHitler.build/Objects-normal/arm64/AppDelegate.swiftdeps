@@ -6,23 +6,26 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
-- "applicationDidBecomeActive"
+- "applicationDidEnterBackground"
 - "applicationWillEnterForeground"
 - "application"
-- "applicationDidEnterBackground"
+- "applicationDidBecomeActive"
+- "window"
 - "applicationWillResignActive"
 - "applicationWillTerminate"
 depends-top-level:
-- "UIApplicationDelegate"
-- !private "BooleanLiteralType"
-- "AppDelegate"
-- "UIWindow"
-- "UIResponder"
 - "UIApplication"
-- "Bool"
+- "UIApplicationDelegate"
+- "UIResponder"
+- !private "GADMobileAds"
+- "AppDelegate"
 - "UIApplicationLaunchOptionsKey"
+- "Bool"
+- !private "StringLiteralType"
+- "UIWindow"
+- !private "BooleanLiteralType"
 depends-member:
+- !private ["Ps9AnyObject", "GADMobileAds"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -35,10 +38,12 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillEnterForeground"]
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
+- !private ["Ps9AnyObject", "configure"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - ["C14clicksToHitler11AppDelegate", "Bool"]
+- !private ["C14clicksToHitler11AppDelegate", "GADMobileAds"]
 - ["C14clicksToHitler11AppDelegate", "UIApplication"]
 - ["C14clicksToHitler11AppDelegate", "UIApplicationLaunchOptionsKey"]
 - ["C14clicksToHitler11AppDelegate", "UIWindow"]
@@ -58,6 +63,9 @@ depends-member:
 - ["C14clicksToHitler11AppDelegate", "init"]
 - ["C14clicksToHitler11AppDelegate", "window"]
 - ["Sb", "deinit"]
+- !private ["PSo13CKRecordValue", "init"]
+- !private ["PSo15CNKeyDescriptor", "init"]
+- !private ["Ps7CVarArg", "GADMobileAds"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
 - ["Ps7CVarArg", "applicationDidEnterBackground"]
@@ -70,9 +78,12 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillEnterForeground"]
 - ["Ps7CVarArg", "applicationWillResignActive"]
 - ["Ps7CVarArg", "applicationWillTerminate"]
+- !private ["Ps7CVarArg", "configure"]
 - !private ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "GADMobileAds"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -85,9 +96,13 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillEnterForeground"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
+- !private ["Ps28CustomDebugStringConvertible", "configure"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "GADMobileAds"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -100,9 +115,11 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillEnterForeground"]
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["Ps23CustomStringConvertible", "configure"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "GADMobileAds"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
 - ["Ps9Equatable", "applicationDidEnterBackground"]
@@ -115,9 +132,16 @@ depends-member:
 - ["Ps9Equatable", "applicationWillEnterForeground"]
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
+- !private ["Ps9Equatable", "configure"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["CSo12GADMobileAds", "configure"]
+- !private ["Ps8Hashable", "GADMobileAds"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
 - ["Ps8Hashable", "applicationDidEnterBackground"]
@@ -130,10 +154,17 @@ depends-member:
 - ["Ps8Hashable", "applicationWillEnterForeground"]
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
+- !private ["Ps8Hashable", "configure"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "GADMobileAds"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
 - ["CSo8NSObject", "UIWindow"]
@@ -149,8 +180,10 @@ depends-member:
 - ["CSo8NSObject", "applicationWillEnterForeground"]
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "configure"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "window"]
+- !private ["PSo16NSObjectProtocol", "GADMobileAds"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -163,10 +196,18 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "configure"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo21UIApplicationDelegate", "GADMobileAds"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
 - ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
@@ -182,6 +223,7 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
 - ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "GADMobileAds"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
 - ["CSo11UIResponder", "UIWindow"]
@@ -201,6 +243,7 @@ depends-member:
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
+- !private ["PSo30UIResponderStandardEditActions", "GADMobileAds"]
 - ["PSo30UIResponderStandardEditActions", "application"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
@@ -216,6 +259,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["P14clicksToHitler9Utilities", "GADMobileAds"]
 - ["P14clicksToHitler9Utilities", "application"]
 - ["P14clicksToHitler9Utilities", "applicationDidBecomeActive"]
 - ["P14clicksToHitler9Utilities", "applicationDidEnterBackground"]
@@ -228,9 +272,16 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "applicationWillEnterForeground"]
 - ["P14clicksToHitler9Utilities", "applicationWillResignActive"]
 - ["P14clicksToHitler9Utilities", "applicationWillTerminate"]
+- !private ["P14clicksToHitler9Utilities", "configure"]
 - !private ["P14clicksToHitler9Utilities", "init"]
 - ["P14clicksToHitler9Utilities", "window"]
 - ["P14clicksToHitler9Utilities", ""]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "GADMobileAds"]
 - ["Ps9_Hashable", "application"]
 - ["Ps9_Hashable", "applicationDidBecomeActive"]
 - ["Ps9_Hashable", "applicationDidEnterBackground"]
@@ -243,26 +294,54 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillEnterForeground"]
 - ["Ps9_Hashable", "applicationWillResignActive"]
 - ["Ps9_Hashable", "applicationWillTerminate"]
+- !private ["Ps9_Hashable", "configure"]
 - !private ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
 - "C14clicksToHitler11AppDelegate"
 - "Sb"
+- !private "PSo13CKRecordValue"
+- !private "PSo15CNKeyDescriptor"
 - "Ps7CVarArg"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "CSo12GADMobileAds"
 - "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - "Sq"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
 - "PSo21UIApplicationDelegate"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "P14clicksToHitler9Utilities"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
@@ -275,4 +354,87 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
-interface-hash: "7e85a999868267b7cde0941f4dd635ac"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMRewardBasedVideoAdNetworkConnectorProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMRewardBasedVideoAdNetworkAdapterProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMEnums.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMAdNetworkConnectorProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMAdNetworkAdapterProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRewardBasedVideoAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRewardBasedVideoAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdReward.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADSearchRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADSearchBannerView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADDynamicHeightSearchRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeContentAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAppInstallAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAdNotificationSource.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventParameters.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventNativeAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventNativeAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventInterstitialDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventInterstitial.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventExtras.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventBannerDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventBanner.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdViewAdOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdImageAdLoaderOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeCustomTemplateAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeContentAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAppInstallAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdImage+Mediation.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdImage.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdChoicesView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdLoaderAdTypes.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPInterstitial.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPCustomRenderedInterstitialDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPCustomRenderedAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAppEventDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPCustomRenderedBannerViewDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPBannerView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADVideoOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADVideoControllerDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADVideoController.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeExpressAdViewDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeExpressAdView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMobileAds.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediaView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInterstitialDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInterstitial.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInAppPurchase.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADExtras.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADDebugOptionsViewController.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdLoaderDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdLoader.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCorrelatorAdLoaderOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCorrelator.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRequestError.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInAppPurchaseDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADBannerViewDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdSizeDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADBannerView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdSize.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdNetworkExtras.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
+interface-hash: "0881b1dadd0fc98dec067860addcaf8f"

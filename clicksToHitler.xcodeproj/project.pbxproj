@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2033FEB81E095E0900B247C4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FEB71E095E0900B247C4 /* Utilities.swift */; };
 		205011E41DDE3E9F000C6902 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205011E31DDE3E9F000C6902 /* StartViewController.swift */; };
+		206349901E0ADFF800B53AF0 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2063498F1E0ADFF800B53AF0 /* GoogleMobileAds.framework */; };
+		206349921E0AE3AA00B53AF0 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206349911E0AE3AA00B53AF0 /* GoogleMobileAds.framework */; };
 		207B566F1E02E6A5001FF349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207B566E1E02E6A5001FF349 /* Assets.xcassets */; };
 		208613E51DDDE28B00133740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208613E41DDDE28B00133740 /* AppDelegate.swift */; };
 		208613E71DDDE28B00133740 /* ClicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208613E61DDDE28B00133740 /* ClicksViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		2033FEB71E095E0900B247C4 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		205011E31DDE3E9F000C6902 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		2063498F1E0ADFF800B53AF0 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.16.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		206349911E0AE3AA00B53AF0 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		207B566E1E02E6A5001FF349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208613E11DDDE28B00133740 /* clicksToHitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clicksToHitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208613E41DDDE28B00133740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206349901E0ADFF800B53AF0 /* GoogleMobileAds.framework in Frameworks */,
 				20E731ED1E098B4000DC5ED1 /* GameKit.framework in Frameworks */,
+				206349921E0AE3AA00B53AF0 /* GoogleMobileAds.framework in Frameworks */,
 				20E731F01E098B4E00DC5ED1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +84,7 @@
 				208613ED1DDDE28B00133740 /* LaunchScreen.storyboard */,
 				208613F01DDDE28B00133740 /* Info.plist */,
 				2033FEB71E095E0900B247C4 /* Utilities.swift */,
+				206349911E0AE3AA00B53AF0 /* GoogleMobileAds.framework */,
 			);
 			path = clicksToHitler;
 			sourceTree = "<group>";
@@ -85,6 +92,7 @@
 		20E731EB1E098B4000DC5ED1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2063498F1E0ADFF800B53AF0 /* GoogleMobileAds.framework */,
 				20E731EF1E098B4E00DC5ED1 /* CloudKit.framework */,
 				20E731EC1E098B4000DC5ED1 /* GameKit.framework */,
 			);
@@ -304,6 +312,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = clicksToHitler/clicksToHitler.entitlements;
 				DEVELOPMENT_TEAM = 59T9958NQV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/clicksToHitler",
+				);
 				INFOPLIST_FILE = clicksToHitler/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -319,6 +331,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = clicksToHitler/clicksToHitler.entitlements;
 				DEVELOPMENT_TEAM = 59T9958NQV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/clicksToHitler",
+				);
 				INFOPLIST_FILE = clicksToHitler/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

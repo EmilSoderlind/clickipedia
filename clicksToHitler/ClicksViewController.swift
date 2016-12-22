@@ -9,8 +9,14 @@
 import UIKit
 import CloudKit
 import GameKit
+import GoogleMobileAds
 
-class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterControllerDelegate{
+class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterControllerDelegate, GADInterstitialDelegate{
+    
+    
+    var interstitial: GADInterstitial!
+
+    var hitlerGratzPopup: UIAlertController = UIAlertController()
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var hitlerFound = false
@@ -21,6 +27,10 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     var timeTicking = false
     
+    var showingAd = false
+    var siteReady = false
+    var gratzScreenHasBeenShown = false
+    
     @IBOutlet weak var web: UIWebView!
     @IBOutlet weak var clicksLabel: UIBarButtonItem!
     
@@ -30,13 +40,20 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     @IBAction func resetButton(_ sender: Any) {
         
+        showAd()
+        
         checkInternet()
         
+        web.alpha = 0
+        loadingIndicator.alpha = 1
+        loadingIndicator.startAnimating()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
         timeTicking = false
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-                
+        
         hitlerFound = false
+        gratzScreenHasBeenShown = false
         
         siteTrace.removeAll()
         
@@ -79,8 +96,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                 
             })
             
-            
-            
         }else{
             print(currentReachabilityStatus)
         }
@@ -92,6 +107,14 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("\n\n")
+        
+        web.allowsLinkPreview = false
+        web.allowsPictureInPictureMediaPlayback = false
+        web.sizeToFit()
+        
+        interstitial = createAndLoadInterstitial()
         
         web.alpha = 0
         
@@ -135,6 +158,48 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         
         print("<ViewDidLoad - Done")
     }
+    
+    // ADMOB STUFF
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3033461333499330/7963329403")
+        interstitial.delegate = self
+        var request = GADRequest()
+        request.testDevices = [ kGADSimulatorID, "fff49adc7690922a03c614377c2f2ad2" ];
+        interstitial.load(request)
+        return interstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
+        
+        print("User closed AD")
+        showingAd = false
+        
+        if(hitlerFound){
+            self.present(hitlerGratzPopup, animated: true, completion: {
+                print("<Closed found hitler popup")
+                self.gratzScreenHasBeenShown = true
+            })
+        }
+        
+        if(siteReady){
+            print("Reseting Date! (in interstitialDidDismissScreen)")
+            startDate = Date()
+        }
+        
+    }
+    
+    func showAd(){
+        if (self.interstitial.isReady && !gratzScreenHasBeenShown){
+            print("\nPresenting ad!\n")
+            showingAd = true
+            self.interstitial.present(fromRootViewController: self)
+        }else{
+            print("\nAd was not ready\n")
+        }
+    }
+    
     
     func updateTimeLabel(){
     
@@ -233,25 +298,22 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             print("<FOUND HITLER!")
             hitlerFound = true
             
+            showAd()
+            
             timeTicking = false
             
             var time:Double = -(Double(startDate.timeIntervalSinceNow.description)!)
-            
-            
-            print("Time: \(time)")
+            print("\nTime: \(time)")
+            print("\n\(ClicksViewController.getTimeString(time: time))")
             
             clicks += 1
             
-            
             // Local save & Leaderboard save
-            updateAverage(clicks: clicks)
             addTotalClicksToLocalSave(clicks: clicks)
             addTotalHitlerFound()
             checkLeastClicks(clicks: clicks)
             updateBestTime(time: time)
-            
-            
-            
+            updateAverage(clicks: clicks)
             
             
             // Cloudkit stuff
@@ -260,7 +322,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             
             let greatID = CKRecordID(recordName: "worldwideStats")
             
-            
             publicDB.fetch(withRecordID: greatID) { fetchedPlace, error in
                 guard let fetchedPlace = fetchedPlace else {
 
@@ -268,10 +329,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                     
                     return
                 }
-                
-                print("\nOld save: \(fetchedPlace.allKeys())")
-                print("Old save: \(fetchedPlace.allTokens()) \n")
-
             
                 var oldBestTime:Double = fetchedPlace["bestTime"] as! Double
                 print("<Old best time: \(oldBestTime)")
@@ -309,21 +366,9 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                     //...
                     
                     print("\n\nCloudKit error: \(savedError.debugDescription) \n\n")
-                    
-                    print("\nSaved: \(savedPlace?.allKeys())")
-                    print("Saved: \(savedPlace?.allTokens())\n")
-
                 
                 }
             }
-            
-            
-            
-            
-            
-            
-            
-            
             
             siteTrace.append(parseStringFromLink(oldLink: request.description))
             
@@ -347,7 +392,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                 
             }
             
-            let alertController = UIAlertController(title: "Congratulations!", message: "You found Adolf Hitler in: \n\(clicks) clicks \nand\n\(round(100*time)/100) sec.\n\n\(traceString)", preferredStyle: UIAlertControllerStyle.alert)
+            hitlerGratzPopup = UIAlertController(title: "Congratulations!", message: "You found Adolf Hitler in: \n\(clicks) clicks \nand\n\(ClicksViewController.getTimeString(time: time))\n\n\(traceString)", preferredStyle: UIAlertControllerStyle.alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
                 StartViewController.downloadLatestWorldStats()
@@ -357,16 +402,10 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                 StartViewController.downloadLatestWorldStats()
             }
             
-            alertController.addAction(okAction)
-            alertController.addAction(againAction)
-
-            self.present(alertController, animated: true, completion: { 
-                print("<Closed found hitler popup")
-            })
+            hitlerGratzPopup.addAction(okAction)
+            hitlerGratzPopup.addAction(againAction)
             
         }
-        
-        
         return true;
     }
     
@@ -376,9 +415,16 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         if(clicks == 0){
             print("<Reseting date")
             timeTicking = true
-            startDate = Date()
+            siteReady = true
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            if(!showingAd){
+                print("Reseting Date! (in webViewDidFinishLoad)")
+                startDate = Date()
+            }else{
+                print("Not done with AD, waiting with reseting date (in webViewDidFinishLoad)")
+            }
         }
-        
         
         if(!(clicks < 0)){
             loadingIndicator.alpha = 0
@@ -393,18 +439,15 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     func parseStringFromLink(oldLink: String)->String{
         
-        
         var link:String = oldLink.replacingOccurrences(of: "#/random", with: "")
         
         link = link.replacingOccurrences(of: "https://en.m.wikipedia.org/wiki/", with: "")
         
         var siteName:String = link.replacingOccurrences(of: "_", with: " ")
 
-        
         print(siteName)
         
         return siteName
-        
     }
     
     func addTotalClicksToLocalSave(clicks: Int){
@@ -460,24 +503,20 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     func updateAverage(clicks: Int){
         
-        var hitlerFound: Int = 0
-        var average: Double = 0
+        var hitlerFound: Double = 0
+        var totalClicks: Double = 0
         
         if let hitlerFoundSave = UserDefaults.standard.value(forKey: "totalFounds") as? Int{
-            hitlerFound = hitlerFoundSave
+            hitlerFound = Double(hitlerFoundSave)
         }
         
-        if let averageSave = UserDefaults.standard.value(forKey: "average") as? Double{
-            average = averageSave
+        if let totalClicksSave = UserDefaults.standard.value(forKey: "totalClicks") as? Int{
+            totalClicks = Double(totalClicksSave)
         }
         
+        saveAverageToLeaderboards(average: totalClicks/hitlerFound)
         
-        var totalClicksToHitler: Double = Double(hitlerFound)*average
-        var newTotalClicks:Double = totalClicksToHitler + Double(clicks)
-        
-        saveAverageToLeaderboards(average: newTotalClicks/Double((hitlerFound + 1)))
-        
-        UserDefaults.standard.setValue(newTotalClicks/Double((hitlerFound + 1)), forKey: "average")
+        UserDefaults.standard.setValue(totalClicks/hitlerFound, forKey: "average")
 
     }
     
@@ -652,8 +691,34 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         gameCenterViewController.dismiss(animated: true, completion: nil)
         
     }
-
-
-
+    
+    
+    static func getTimeString(time: Double)-> String{
+        
+        
+            var timeCopy:Double = time
+        
+            var hours = 0
+            var minutes = 0
+        
+        
+            while (timeCopy > 3600){
+                hours += 1
+                timeCopy = timeCopy - 3600
+            }
+            while(timeCopy > 60){
+                minutes += 1
+                timeCopy = timeCopy - 60
+            }
+                
+                
+        if(hours != 0){
+            return "\(hours) hours \(minutes) min \(round(100*timeCopy)/100) sec"
+        }else if(minutes != 0){
+            return "\(minutes) min \(round(100*timeCopy)/100) sec"
+        }else{
+            return "\(round(100*timeCopy)/100) sec"
+        }
+    }
 }
 

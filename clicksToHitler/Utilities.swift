@@ -4,6 +4,7 @@ import SystemConfiguration
 protocol Utilities {
 }
 
+
 extension NSObject:Utilities{
     
     

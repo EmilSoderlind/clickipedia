@@ -8,58 +8,65 @@ provides-member:
 - ["C14clicksToHitler19StatsViewController", ""]
 - ["VC14clicksToHitler19StatsViewController5Stats", ""]
 provides-dynamic-lookup:
-- "loadBestTime"
-- "configCell"
-- "numberOfSections"
-- "loadAverageClicks"
-- "viewDidAppear"
-- "loadLeastClicks"
-- "didReceiveMemoryWarning"
-- "tableView"
-- "tableView"
-- "tableView"
-- "reloadTableView"
-- "loadWorldstats"
+- "populateTable"
 - "checkInternet"
-- "loadTotalClicks"
+- "didReceiveMemoryWarning"
+- "numberOfSections"
 - "loadUserStats"
 - "loadTotalHitlerFounds"
-- "populateTable"
+- "configCell"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "loadTotalClicks"
 - "viewDidLoad"
+- "loadAverageClicks"
+- "viewDidAppear"
+- "loadWorldstats"
+- "reloadTableView"
+- "loadBestTime"
+- "loadLeastClicks"
 depends-top-level:
-- !private "BooleanLiteralType"
-- "Bool"
-- !private "Void"
+- !private "UIAlertActionStyle"
 - !private "*"
-- !private "UIAlertControllerStyle"
-- "String"
-- !private "!="
+- !private "UIColor"
+- !private "UITableViewHeaderFooterView"
 - !private "round"
-- !private "/"
-- "StringLiteralType"
-- "UITableView"
-- !private "print"
-- !private "UIAlertController"
-- "IndexPath"
+- !private "UIAlertAction"
 - !private "UserDefaults"
+- !private "Double"
+- !private "Void"
+- "UITableViewCell"
+- !private "~="
 - "AssignmentPrecedence"
 - !private "=="
-- !private "~="
+- "Bool"
 - "CastingPrecedence"
-- !private "UIAlertActionStyle"
-- "StatsViewController"
-- "UITableViewCell"
+- "String"
+- "UITableView"
+- !private "print"
 - "UITableViewController"
-- !private "Double"
-- !private "UIAlertAction"
+- "StringLiteralType"
+- "IndexPath"
+- "UIView"
+- !private "!="
+- !private "BooleanLiteralType"
+- "StatsViewController"
 - "Int"
+- !private "ClicksViewController"
+- !private "/"
+- !private "UIAlertController"
+- !private "UIAlertControllerStyle"
 depends-member:
+- !private ["Ps9AnyObject", "ClicksViewController"]
 - ["Ps9AnyObject", "Stats"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIAlertAction"]
 - !private ["Ps9AnyObject", "UIAlertActionStyle"]
 - !private ["Ps9AnyObject", "UIAlertController"]
 - !private ["Ps9AnyObject", "UIAlertControllerStyle"]
+- !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UserDefaults"]
 - !private ["Ps9AnyObject", "addAction"]
 - ["Ps9AnyObject", "checkInternet"]
@@ -70,6 +77,7 @@ depends-member:
 - !private ["Ps9AnyObject", "detailTextLabel"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "double"]
+- !private ["Ps9AnyObject", "getTimeString"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "integer"]
 - !private ["Ps9AnyObject", "layoutIfNeeded"]
@@ -91,11 +99,13 @@ depends-member:
 - !private ["Ps9AnyObject", "standard"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textColor"]
 - !private ["Ps9AnyObject", "textLabel"]
 - ["Ps9AnyObject", "userStats"]
 - !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", "viewDidAppear"]
 - ["Ps9AnyObject", "viewDidLoad"]
+- !private ["Ps9AnyObject", "white"]
 - ["Ps9AnyObject", "worldwideStats"]
 - ["Ps9AnyObject", ""]
 - !private ["Ps23BidirectionalCollection", "row"]
@@ -112,10 +122,12 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "reloadData"]
 - !private ["PSo15CALayerDelegate", "setContentOffset"]
 - !private ["PSo15CALayerDelegate", "text"]
+- !private ["PSo15CALayerDelegate", "textColor"]
 - !private ["PSo15CALayerDelegate", "textLabel"]
 - ["VSC7CGPoint", "deinit"]
 - ["PSo13CKRecordValue", "init"]
 - ["PSo15CNKeyDescriptor", "init"]
+- !private ["Ps7CVarArg", "ClicksViewController"]
 - ["Ps7CVarArg", "Stats"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "String"]
@@ -123,6 +135,7 @@ depends-member:
 - !private ["Ps7CVarArg", "UIAlertActionStyle"]
 - !private ["Ps7CVarArg", "UIAlertController"]
 - !private ["Ps7CVarArg", "UIAlertControllerStyle"]
+- !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UserDefaults"]
 - !private ["Ps7CVarArg", "addAction"]
 - ["Ps7CVarArg", "checkInternet"]
@@ -133,6 +146,7 @@ depends-member:
 - !private ["Ps7CVarArg", "detailTextLabel"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
 - !private ["Ps7CVarArg", "double"]
+- !private ["Ps7CVarArg", "getTimeString"]
 - ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "integer"]
 - !private ["Ps7CVarArg", "layoutIfNeeded"]
@@ -154,14 +168,17 @@ depends-member:
 - !private ["Ps7CVarArg", "standard"]
 - ["Ps7CVarArg", "tableView"]
 - !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "textColor"]
 - !private ["Ps7CVarArg", "textLabel"]
 - ["Ps7CVarArg", "userStats"]
 - !private ["Ps7CVarArg", "value"]
 - ["Ps7CVarArg", "viewDidAppear"]
 - ["Ps7CVarArg", "viewDidLoad"]
+- !private ["Ps7CVarArg", "white"]
 - ["Ps7CVarArg", "worldwideStats"]
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
+- !private ["C14clicksToHitler20ClicksViewController", "getTimeString"]
 - !private ["Vs11ClosedRange", "deinit"]
 - !private ["Ps10Collection", "row"]
 - !private ["Ps10Collection", "section"]
@@ -171,12 +188,14 @@ depends-member:
 - !private ["Ps10Comparable", "section"]
 - !private ["Vs20CountableClosedRange", "deinit"]
 - !private ["Vs14CountableRange", "deinit"]
+- !private ["Ps28CustomDebugStringConvertible", "ClicksViewController"]
 - ["Ps28CustomDebugStringConvertible", "Stats"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertActionStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertControllerStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "addAction"]
 - ["Ps28CustomDebugStringConvertible", "checkInternet"]
@@ -187,6 +206,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "detailTextLabel"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "double"]
+- !private ["Ps28CustomDebugStringConvertible", "getTimeString"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "integer"]
 - !private ["Ps28CustomDebugStringConvertible", "layoutIfNeeded"]
@@ -210,11 +230,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "standard"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
 - !private ["Ps28CustomDebugStringConvertible", "textLabel"]
 - ["Ps28CustomDebugStringConvertible", "userStats"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "white"]
 - ["Ps28CustomDebugStringConvertible", "worldwideStats"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
@@ -225,6 +247,7 @@ depends-member:
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "row"]
 - !private ["Ps17CustomReflectable", "section"]
+- !private ["Ps23CustomStringConvertible", "ClicksViewController"]
 - ["Ps23CustomStringConvertible", "Stats"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "String"]
@@ -232,6 +255,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIAlertActionStyle"]
 - !private ["Ps23CustomStringConvertible", "UIAlertController"]
 - !private ["Ps23CustomStringConvertible", "UIAlertControllerStyle"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UserDefaults"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addAction"]
@@ -243,6 +267,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "detailTextLabel"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "double"]
+- !private ["Ps23CustomStringConvertible", "getTimeString"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "integer"]
 - !private ["Ps23CustomStringConvertible", "layoutIfNeeded"]
@@ -266,15 +291,18 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "standard"]
 - ["Ps23CustomStringConvertible", "tableView"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
 - !private ["Ps23CustomStringConvertible", "textLabel"]
 - ["Ps23CustomStringConvertible", "userStats"]
 - !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", "viewDidAppear"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
+- !private ["Ps23CustomStringConvertible", "white"]
 - ["Ps23CustomStringConvertible", "worldwideStats"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["VSC7Decimal", "deinit"]
 - ["Sd", "deinit"]
+- !private ["Ps9Equatable", "ClicksViewController"]
 - ["Ps9Equatable", "Stats"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "String"]
@@ -282,6 +310,7 @@ depends-member:
 - !private ["Ps9Equatable", "UIAlertActionStyle"]
 - !private ["Ps9Equatable", "UIAlertController"]
 - !private ["Ps9Equatable", "UIAlertControllerStyle"]
+- !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UserDefaults"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "actionSheet"]
@@ -295,6 +324,7 @@ depends-member:
 - !private ["Ps9Equatable", "detailTextLabel"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "double"]
+- !private ["Ps9Equatable", "getTimeString"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "integer"]
 - !private ["Ps9Equatable", "layoutIfNeeded"]
@@ -318,11 +348,13 @@ depends-member:
 - !private ["Ps9Equatable", "standard"]
 - ["Ps9Equatable", "tableView"]
 - !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textColor"]
 - !private ["Ps9Equatable", "textLabel"]
 - ["Ps9Equatable", "userStats"]
 - !private ["Ps9Equatable", "value"]
 - ["Ps9Equatable", "viewDidAppear"]
 - ["Ps9Equatable", "viewDidLoad"]
+- !private ["Ps9Equatable", "white"]
 - ["Ps9Equatable", "worldwideStats"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "row"]
@@ -334,6 +366,10 @@ depends-member:
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
+- !private ["PSo13GADAdDelegate", "getTimeString"]
+- !private ["PSo23GADInterstitialDelegate", "getTimeString"]
+- !private ["PSo30GKGameCenterControllerDelegate", "getTimeString"]
+- !private ["Ps8Hashable", "ClicksViewController"]
 - ["Ps8Hashable", "Stats"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
@@ -341,6 +377,7 @@ depends-member:
 - !private ["Ps8Hashable", "UIAlertActionStyle"]
 - !private ["Ps8Hashable", "UIAlertController"]
 - !private ["Ps8Hashable", "UIAlertControllerStyle"]
+- !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UserDefaults"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "actionSheet"]
@@ -354,6 +391,7 @@ depends-member:
 - !private ["Ps8Hashable", "detailTextLabel"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "double"]
+- !private ["Ps8Hashable", "getTimeString"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "integer"]
 - !private ["Ps8Hashable", "layoutIfNeeded"]
@@ -377,11 +415,13 @@ depends-member:
 - !private ["Ps8Hashable", "standard"]
 - ["Ps8Hashable", "tableView"]
 - !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textColor"]
 - !private ["Ps8Hashable", "textLabel"]
 - ["Ps8Hashable", "userStats"]
 - !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", "viewDidAppear"]
 - ["Ps8Hashable", "viewDidLoad"]
+- !private ["Ps8Hashable", "white"]
 - ["Ps8Hashable", "worldwideStats"]
 - ["Ps8Hashable", ""]
 - ["V10Foundation9IndexPath", "deinit"]
@@ -409,12 +449,14 @@ depends-member:
 - !private ["Ps16MutableIndexable", "row"]
 - !private ["Ps16MutableIndexable", "section"]
 - ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "ClicksViewController"]
 - ["PSo8NSCoding", "Stats"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
 - !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "UIAlertControllerStyle"]
+- !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UserDefaults"]
 - !private ["PSo8NSCoding", "addAction"]
 - ["PSo8NSCoding", "checkInternet"]
@@ -424,6 +466,7 @@ depends-member:
 - !private ["PSo8NSCoding", "dequeueReusableCell"]
 - !private ["PSo8NSCoding", "detailTextLabel"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "getTimeString"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "layoutIfNeeded"]
 - ["PSo8NSCoding", "loadAverageClicks"]
@@ -443,25 +486,31 @@ depends-member:
 - !private ["PSo8NSCoding", "setContentOffset"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "textLabel"]
 - ["PSo8NSCoding", "userStats"]
 - ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidLoad"]
+- !private ["PSo8NSCoding", "white"]
 - ["PSo8NSCoding", "worldwideStats"]
 - ["PSo8NSCoding", ""]
 - ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "white"]
+- !private ["PSo26NSExtensionRequestHandling", "ClicksViewController"]
 - ["PSo26NSExtensionRequestHandling", "Stats"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertControllerStyle"]
+- !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - ["PSo26NSExtensionRequestHandling", "checkInternet"]
 - ["PSo26NSExtensionRequestHandling", "configCell"]
 - !private ["PSo26NSExtensionRequestHandling", "currentReachabilityStatus"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "getTimeString"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "loadAverageClicks"]
 - ["PSo26NSExtensionRequestHandling", "loadBestTime"]
@@ -484,6 +533,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "ClicksViewController"]
 - !private ["CSo8NSObject", "Double"]
 - ["CSo8NSObject", "IndexPath"]
 - ["CSo8NSObject", "Int"]
@@ -493,8 +543,11 @@ depends-member:
 - !private ["CSo8NSObject", "UIAlertActionStyle"]
 - !private ["CSo8NSObject", "UIAlertController"]
 - !private ["CSo8NSObject", "UIAlertControllerStyle"]
+- !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "UITableViewHeaderFooterView"]
+- ["CSo8NSObject", "UIView"]
 - !private ["CSo8NSObject", "UserDefaults"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addAction"]
@@ -506,6 +559,7 @@ depends-member:
 - !private ["CSo8NSObject", "detailTextLabel"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "double"]
+- !private ["CSo8NSObject", "getTimeString"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "integer"]
 - !private ["CSo8NSObject", "layoutIfNeeded"]
@@ -527,18 +581,22 @@ depends-member:
 - !private ["CSo8NSObject", "standard"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "textLabel"]
 - ["CSo8NSObject", "userStats"]
 - !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["CSo8NSObject", "white"]
 - ["CSo8NSObject", "worldwideStats"]
+- !private ["PSo16NSObjectProtocol", "ClicksViewController"]
 - ["PSo16NSObjectProtocol", "Stats"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
 - !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIAlertControllerStyle"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UserDefaults"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
 - ["PSo16NSObjectProtocol", "checkInternet"]
@@ -549,6 +607,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "detailTextLabel"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "double"]
+- !private ["PSo16NSObjectProtocol", "getTimeString"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "integer"]
 - !private ["PSo16NSObjectProtocol", "layoutIfNeeded"]
@@ -570,14 +629,17 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "standard"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "textLabel"]
 - ["PSo16NSObjectProtocol", "userStats"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "white"]
 - ["PSo16NSObjectProtocol", "worldwideStats"]
 - ["PSo16NSObjectProtocol", ""]
 - ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "white"]
 - ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
 - !private ["Ps22RandomAccessCollection", "row"]
@@ -603,6 +665,7 @@ depends-member:
 - ["VC14clicksToHitler19StatsViewController5Stats", "leastClicks"]
 - ["VC14clicksToHitler19StatsViewController5Stats", "totalClicks"]
 - ["C14clicksToHitler19StatsViewController", "Bool"]
+- !private ["C14clicksToHitler19StatsViewController", "ClicksViewController"]
 - !private ["C14clicksToHitler19StatsViewController", "Double"]
 - ["C14clicksToHitler19StatsViewController", "IndexPath"]
 - ["C14clicksToHitler19StatsViewController", "Int"]
@@ -612,8 +675,11 @@ depends-member:
 - !private ["C14clicksToHitler19StatsViewController", "UIAlertActionStyle"]
 - !private ["C14clicksToHitler19StatsViewController", "UIAlertController"]
 - !private ["C14clicksToHitler19StatsViewController", "UIAlertControllerStyle"]
+- !private ["C14clicksToHitler19StatsViewController", "UIColor"]
 - ["C14clicksToHitler19StatsViewController", "UITableView"]
 - ["C14clicksToHitler19StatsViewController", "UITableViewCell"]
+- !private ["C14clicksToHitler19StatsViewController", "UITableViewHeaderFooterView"]
+- ["C14clicksToHitler19StatsViewController", "UIView"]
 - !private ["C14clicksToHitler19StatsViewController", "UserDefaults"]
 - !private ["C14clicksToHitler19StatsViewController", "Void"]
 - ["C14clicksToHitler19StatsViewController", "checkInternet"]
@@ -652,6 +718,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo29UIAccessibilityIdentification", "setContentOffset"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
 - ["CSo13UIAlertAction", "deinit"]
 - !private ["CSo13UIAlertAction", "init"]
@@ -669,13 +736,16 @@ depends-member:
 - !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo12UIAppearance", "setContentOffset"]
 - !private ["PSo12UIAppearance", "text"]
+- !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "textLabel"]
+- !private ["PSo21UIAppearanceContainer", "ClicksViewController"]
 - ["PSo21UIAppearanceContainer", "Stats"]
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertControllerStyle"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - ["PSo21UIAppearanceContainer", "checkInternet"]
@@ -685,6 +755,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCell"]
 - !private ["PSo21UIAppearanceContainer", "detailTextLabel"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "getTimeString"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "layoutIfNeeded"]
 - ["PSo21UIAppearanceContainer", "loadAverageClicks"]
@@ -704,24 +775,30 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "setContentOffset"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "textLabel"]
 - ["PSo21UIAppearanceContainer", "userStats"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "worldwideStats"]
 - ["PSo21UIAppearanceContainer", ""]
+- ["CSo7UIColor", "deinit"]
+- !private ["CSo7UIColor", "white"]
+- !private ["PSo18UIContentContainer", "ClicksViewController"]
 - ["PSo18UIContentContainer", "Stats"]
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "UIAlertControllerStyle"]
+- !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UserDefaults"]
 - !private ["PSo18UIContentContainer", "addAction"]
 - ["PSo18UIContentContainer", "checkInternet"]
 - ["PSo18UIContentContainer", "configCell"]
 - !private ["PSo18UIContentContainer", "currentReachabilityStatus"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "getTimeString"]
 - !private ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "loadAverageClicks"]
 - ["PSo18UIContentContainer", "loadBestTime"]
@@ -743,6 +820,7 @@ depends-member:
 - ["PSo18UIContentContainer", "worldwideStats"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "textColor"]
 - !private ["PSo17UICoordinateSpace", "contentOffset"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCell"]
 - !private ["PSo17UICoordinateSpace", "detailTextLabel"]
@@ -750,6 +828,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo17UICoordinateSpace", "setContentOffset"]
 - !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "contentOffset"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCell"]
@@ -758,13 +837,16 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo13UIDynamicItem", "setContentOffset"]
 - !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
+- !private ["PSo18UIFocusEnvironment", "ClicksViewController"]
 - ["PSo18UIFocusEnvironment", "Stats"]
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertControllerStyle"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - ["PSo18UIFocusEnvironment", "checkInternet"]
@@ -774,6 +856,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCell"]
 - !private ["PSo18UIFocusEnvironment", "detailTextLabel"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "getTimeString"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "layoutIfNeeded"]
 - ["PSo18UIFocusEnvironment", "loadAverageClicks"]
@@ -793,6 +876,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "setContentOffset"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "textLabel"]
 - ["PSo18UIFocusEnvironment", "userStats"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
@@ -806,12 +890,15 @@ depends-member:
 - !private ["PSo11UIFocusItem", "reloadData"]
 - !private ["PSo11UIFocusItem", "setContentOffset"]
 - !private ["PSo11UIFocusItem", "text"]
+- !private ["PSo11UIFocusItem", "textColor"]
 - !private ["PSo11UIFocusItem", "textLabel"]
 - !private ["PSo27UIGestureRecognizerDelegate", "detailTextLabel"]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "text"]
+- !private ["CSo7UILabel", "textColor"]
 - ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "ClicksViewController"]
 - !private ["CSo11UIResponder", "Double"]
 - ["CSo11UIResponder", "IndexPath"]
 - ["CSo11UIResponder", "Int"]
@@ -821,8 +908,11 @@ depends-member:
 - !private ["CSo11UIResponder", "UIAlertActionStyle"]
 - !private ["CSo11UIResponder", "UIAlertController"]
 - !private ["CSo11UIResponder", "UIAlertControllerStyle"]
+- !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
+- !private ["CSo11UIResponder", "UITableViewHeaderFooterView"]
+- ["CSo11UIResponder", "UIView"]
 - !private ["CSo11UIResponder", "UserDefaults"]
 - !private ["CSo11UIResponder", "Void"]
 - !private ["CSo11UIResponder", "addAction"]
@@ -833,6 +923,7 @@ depends-member:
 - !private ["CSo11UIResponder", "dequeueReusableCell"]
 - !private ["CSo11UIResponder", "detailTextLabel"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "getTimeString"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "layoutIfNeeded"]
 - ["CSo11UIResponder", "loadAverageClicks"]
@@ -852,17 +943,20 @@ depends-member:
 - !private ["CSo11UIResponder", "setContentOffset"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "textColor"]
 - !private ["CSo11UIResponder", "textLabel"]
 - ["CSo11UIResponder", "userStats"]
 - ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "worldwideStats"]
+- !private ["PSo30UIResponderStandardEditActions", "ClicksViewController"]
 - ["PSo30UIResponderStandardEditActions", "Stats"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertActionStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertController"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertControllerStyle"]
+- !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UserDefaults"]
 - !private ["PSo30UIResponderStandardEditActions", "addAction"]
 - ["PSo30UIResponderStandardEditActions", "checkInternet"]
@@ -872,6 +966,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "dequeueReusableCell"]
 - !private ["PSo30UIResponderStandardEditActions", "detailTextLabel"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "getTimeString"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - !private ["PSo30UIResponderStandardEditActions", "layoutIfNeeded"]
 - ["PSo30UIResponderStandardEditActions", "loadAverageClicks"]
@@ -891,6 +986,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "setContentOffset"]
 - ["PSo30UIResponderStandardEditActions", "tableView"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "textColor"]
 - !private ["PSo30UIResponderStandardEditActions", "textLabel"]
 - ["PSo30UIResponderStandardEditActions", "userStats"]
 - ["PSo30UIResponderStandardEditActions", "viewDidAppear"]
@@ -902,12 +998,14 @@ depends-member:
 - !private ["CSo12UIScrollView", "layoutIfNeeded"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["CSo12UIScrollView", "setContentOffset"]
+- !private ["PSo20UIScrollViewDelegate", "ClicksViewController"]
 - ["PSo20UIScrollViewDelegate", "Stats"]
 - !private ["PSo20UIScrollViewDelegate", "String"]
 - !private ["PSo20UIScrollViewDelegate", "UIAlertAction"]
 - !private ["PSo20UIScrollViewDelegate", "UIAlertActionStyle"]
 - !private ["PSo20UIScrollViewDelegate", "UIAlertController"]
 - !private ["PSo20UIScrollViewDelegate", "UIAlertControllerStyle"]
+- !private ["PSo20UIScrollViewDelegate", "UIColor"]
 - !private ["PSo20UIScrollViewDelegate", "UserDefaults"]
 - ["PSo20UIScrollViewDelegate", "checkInternet"]
 - ["PSo20UIScrollViewDelegate", "configCell"]
@@ -933,18 +1031,21 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", "worldwideStats"]
 - ["PSo20UIScrollViewDelegate", ""]
+- !private ["PSo16UIStateRestoring", "ClicksViewController"]
 - ["PSo16UIStateRestoring", "Stats"]
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "UIAlertControllerStyle"]
+- !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UserDefaults"]
 - !private ["PSo16UIStateRestoring", "addAction"]
 - ["PSo16UIStateRestoring", "checkInternet"]
 - ["PSo16UIStateRestoring", "configCell"]
 - !private ["PSo16UIStateRestoring", "currentReachabilityStatus"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "getTimeString"]
 - !private ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "loadAverageClicks"]
 - ["PSo16UIStateRestoring", "loadBestTime"]
@@ -975,6 +1076,7 @@ depends-member:
 - !private ["CSo15UITableViewCell", "detailTextLabel"]
 - !private ["CSo15UITableViewCell", "textLabel"]
 - ["CSo21UITableViewController", "Bool"]
+- !private ["CSo21UITableViewController", "ClicksViewController"]
 - !private ["CSo21UITableViewController", "Double"]
 - ["CSo21UITableViewController", "IndexPath"]
 - ["CSo21UITableViewController", "Int"]
@@ -984,8 +1086,11 @@ depends-member:
 - !private ["CSo21UITableViewController", "UIAlertActionStyle"]
 - !private ["CSo21UITableViewController", "UIAlertController"]
 - !private ["CSo21UITableViewController", "UIAlertControllerStyle"]
+- !private ["CSo21UITableViewController", "UIColor"]
 - ["CSo21UITableViewController", "UITableView"]
 - ["CSo21UITableViewController", "UITableViewCell"]
+- !private ["CSo21UITableViewController", "UITableViewHeaderFooterView"]
+- ["CSo21UITableViewController", "UIView"]
 - !private ["CSo21UITableViewController", "UserDefaults"]
 - !private ["CSo21UITableViewController", "Void"]
 - ["CSo21UITableViewController", "checkInternet"]
@@ -1013,12 +1118,14 @@ depends-member:
 - ["CSo21UITableViewController", "viewDidLoad"]
 - ["CSo21UITableViewController", "worldwideStats"]
 - ["CSo21UITableViewController", ""]
+- !private ["PSo21UITableViewDataSource", "ClicksViewController"]
 - ["PSo21UITableViewDataSource", "Stats"]
 - !private ["PSo21UITableViewDataSource", "String"]
 - !private ["PSo21UITableViewDataSource", "UIAlertAction"]
 - !private ["PSo21UITableViewDataSource", "UIAlertActionStyle"]
 - !private ["PSo21UITableViewDataSource", "UIAlertController"]
 - !private ["PSo21UITableViewDataSource", "UIAlertControllerStyle"]
+- !private ["PSo21UITableViewDataSource", "UIColor"]
 - !private ["PSo21UITableViewDataSource", "UserDefaults"]
 - ["PSo21UITableViewDataSource", "checkInternet"]
 - ["PSo21UITableViewDataSource", "configCell"]
@@ -1044,12 +1151,14 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewDidLoad"]
 - ["PSo21UITableViewDataSource", "worldwideStats"]
 - ["PSo21UITableViewDataSource", ""]
+- !private ["PSo19UITableViewDelegate", "ClicksViewController"]
 - ["PSo19UITableViewDelegate", "Stats"]
 - !private ["PSo19UITableViewDelegate", "String"]
 - !private ["PSo19UITableViewDelegate", "UIAlertAction"]
 - !private ["PSo19UITableViewDelegate", "UIAlertActionStyle"]
 - !private ["PSo19UITableViewDelegate", "UIAlertController"]
 - !private ["PSo19UITableViewDelegate", "UIAlertControllerStyle"]
+- !private ["PSo19UITableViewDelegate", "UIColor"]
 - !private ["PSo19UITableViewDelegate", "UserDefaults"]
 - ["PSo19UITableViewDelegate", "checkInternet"]
 - ["PSo19UITableViewDelegate", "configCell"]
@@ -1075,13 +1184,17 @@ depends-member:
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", "worldwideStats"]
 - ["PSo19UITableViewDelegate", ""]
+- ["CSo27UITableViewHeaderFooterView", "deinit"]
+- !private ["CSo27UITableViewHeaderFooterView", "textLabel"]
 - ["OSC16UITableViewStyle", "deinit"]
+- !private ["PSo18UITraitEnvironment", "ClicksViewController"]
 - ["PSo18UITraitEnvironment", "Stats"]
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "UIAlertControllerStyle"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UserDefaults"]
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - ["PSo18UITraitEnvironment", "checkInternet"]
@@ -1091,6 +1204,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCell"]
 - !private ["PSo18UITraitEnvironment", "detailTextLabel"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "getTimeString"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "layoutIfNeeded"]
 - ["PSo18UITraitEnvironment", "loadAverageClicks"]
@@ -1110,6 +1224,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "setContentOffset"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
 - !private ["PSo18UITraitEnvironment", "textLabel"]
 - ["PSo18UITraitEnvironment", "userStats"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
@@ -1117,14 +1232,17 @@ depends-member:
 - ["PSo18UITraitEnvironment", "worldwideStats"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "contentOffset"]
+- ["CSo6UIView", "deinit"]
 - !private ["CSo6UIView", "dequeueReusableCell"]
 - !private ["CSo6UIView", "detailTextLabel"]
 - !private ["CSo6UIView", "layoutIfNeeded"]
 - !private ["CSo6UIView", "reloadData"]
 - !private ["CSo6UIView", "setContentOffset"]
 - !private ["CSo6UIView", "text"]
+- !private ["CSo6UIView", "textColor"]
 - !private ["CSo6UIView", "textLabel"]
 - ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "ClicksViewController"]
 - !private ["CSo16UIViewController", "Double"]
 - ["CSo16UIViewController", "IndexPath"]
 - ["CSo16UIViewController", "Int"]
@@ -1134,8 +1252,11 @@ depends-member:
 - !private ["CSo16UIViewController", "UIAlertActionStyle"]
 - !private ["CSo16UIViewController", "UIAlertController"]
 - !private ["CSo16UIViewController", "UIAlertControllerStyle"]
+- !private ["CSo16UIViewController", "UIColor"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
+- !private ["CSo16UIViewController", "UITableViewHeaderFooterView"]
+- ["CSo16UIViewController", "UIView"]
 - !private ["CSo16UIViewController", "UserDefaults"]
 - !private ["CSo16UIViewController", "Void"]
 - !private ["CSo16UIViewController", "addAction"]
@@ -1143,6 +1264,7 @@ depends-member:
 - ["CSo16UIViewController", "configCell"]
 - !private ["CSo16UIViewController", "currentReachabilityStatus"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- !private ["CSo16UIViewController", "getTimeString"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "loadAverageClicks"]
 - ["CSo16UIViewController", "loadBestTime"]
@@ -1162,6 +1284,7 @@ depends-member:
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "worldwideStats"]
+- !private ["PSo17UIWebViewDelegate", "getTimeString"]
 - !private ["Su", "deinit"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
@@ -1173,12 +1296,14 @@ depends-member:
 - !private ["CSo12UserDefaults", "integer"]
 - !private ["CSo12UserDefaults", "standard"]
 - !private ["CSo12UserDefaults", "value"]
+- !private ["P14clicksToHitler9Utilities", "ClicksViewController"]
 - ["P14clicksToHitler9Utilities", "Stats"]
 - !private ["P14clicksToHitler9Utilities", "String"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertAction"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertActionStyle"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertController"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertControllerStyle"]
+- !private ["P14clicksToHitler9Utilities", "UIColor"]
 - !private ["P14clicksToHitler9Utilities", "UserDefaults"]
 - !private ["P14clicksToHitler9Utilities", "addAction"]
 - ["P14clicksToHitler9Utilities", "checkInternet"]
@@ -1189,6 +1314,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "detailTextLabel"]
 - ["P14clicksToHitler9Utilities", "didReceiveMemoryWarning"]
 - !private ["P14clicksToHitler9Utilities", "double"]
+- !private ["P14clicksToHitler9Utilities", "getTimeString"]
 - ["P14clicksToHitler9Utilities", "init"]
 - !private ["P14clicksToHitler9Utilities", "integer"]
 - !private ["P14clicksToHitler9Utilities", "layoutIfNeeded"]
@@ -1210,11 +1336,13 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "standard"]
 - ["P14clicksToHitler9Utilities", "tableView"]
 - !private ["P14clicksToHitler9Utilities", "text"]
+- !private ["P14clicksToHitler9Utilities", "textColor"]
 - !private ["P14clicksToHitler9Utilities", "textLabel"]
 - ["P14clicksToHitler9Utilities", "userStats"]
 - !private ["P14clicksToHitler9Utilities", "value"]
 - ["P14clicksToHitler9Utilities", "viewDidAppear"]
 - ["P14clicksToHitler9Utilities", "viewDidLoad"]
+- !private ["P14clicksToHitler9Utilities", "white"]
 - ["P14clicksToHitler9Utilities", "worldwideStats"]
 - ["P14clicksToHitler9Utilities", ""]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "contentOffset"]
@@ -1224,6 +1352,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "reloadData"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setContentOffset"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
@@ -1231,7 +1360,9 @@ depends-member:
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "white"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "ClicksViewController"]
 - ["Ps9_Hashable", "Stats"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "String"]
@@ -1239,6 +1370,7 @@ depends-member:
 - !private ["Ps9_Hashable", "UIAlertActionStyle"]
 - !private ["Ps9_Hashable", "UIAlertController"]
 - !private ["Ps9_Hashable", "UIAlertControllerStyle"]
+- !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UserDefaults"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "actionSheet"]
@@ -1252,6 +1384,7 @@ depends-member:
 - !private ["Ps9_Hashable", "detailTextLabel"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps9_Hashable", "double"]
+- !private ["Ps9_Hashable", "getTimeString"]
 - ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "integer"]
 - !private ["Ps9_Hashable", "layoutIfNeeded"]
@@ -1275,11 +1408,13 @@ depends-member:
 - !private ["Ps9_Hashable", "standard"]
 - ["Ps9_Hashable", "tableView"]
 - !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "textColor"]
 - !private ["Ps9_Hashable", "textLabel"]
 - ["Ps9_Hashable", "userStats"]
 - !private ["Ps9_Hashable", "value"]
 - ["Ps9_Hashable", "viewDidAppear"]
 - ["Ps9_Hashable", "viewDidLoad"]
+- !private ["Ps9_Hashable", "white"]
 - ["Ps9_Hashable", "worldwideStats"]
 - ["Ps9_Hashable", ""]
 - !private ["Ps14_Incrementable", "Stride"]
@@ -1305,6 +1440,7 @@ depends-nominal:
 - "PSo15CNKeyDescriptor"
 - "Ps7CVarArg"
 - !private "Vs9Character"
+- !private "C14clicksToHitler20ClicksViewController"
 - !private "Vs11ClosedRange"
 - !private "Ps10Collection"
 - "Ps10Comparable"
@@ -1325,6 +1461,9 @@ depends-nominal:
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
+- !private "PSo13GADAdDelegate"
+- !private "PSo23GADInterstitialDelegate"
+- !private "PSo30GKGameCenterControllerDelegate"
 - "Ps8Hashable"
 - "V10Foundation9IndexPath"
 - !private "Ps9Indexable"
@@ -1373,6 +1512,7 @@ depends-nominal:
 - "OSC22UIAlertControllerStyle"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
+- "CSo7UIColor"
 - "PSo18UIContentContainer"
 - !private "PSo30UIContentSizeCategoryAdjusting"
 - !private "PSo17UICoordinateSpace"
@@ -1391,10 +1531,12 @@ depends-nominal:
 - "CSo21UITableViewController"
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
+- "CSo27UITableViewHeaderFooterView"
 - "OSC16UITableViewStyle"
 - "PSo18UITraitEnvironment"
-- !private "CSo6UIView"
+- "CSo6UIView"
 - "CSo16UIViewController"
+- !private "PSo17UIWebViewDelegate"
 - !private "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
@@ -1410,6 +1552,7 @@ depends-nominal:
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByColorLiteral"
 - "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 - !private "Ps14_Incrementable"
@@ -1442,4 +1585,76 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreAudio.swiftmodule"
-interface-hash: "251d7dbf535ca5d9d1141901e5a7d225"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMRewardBasedVideoAdNetworkConnectorProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMRewardBasedVideoAdNetworkAdapterProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMEnums.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMediationAdRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMAdNetworkConnectorProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/Mediation/GADMAdNetworkAdapterProtocol.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRewardBasedVideoAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRewardBasedVideoAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdReward.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADSearchRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADSearchBannerView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADDynamicHeightSearchRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeContentAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAppInstallAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAdNotificationSource.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventParameters.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediatedNativeAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventNativeAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventNativeAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventInterstitialDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventInterstitial.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventExtras.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventBannerDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCustomEventBanner.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdViewAdOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdImageAdLoaderOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeCustomTemplateAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeContentAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAppInstallAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdImage+Mediation.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdImage.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdChoicesView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdLoaderAdTypes.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPInterstitial.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPCustomRenderedInterstitialDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPCustomRenderedAd.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAppEventDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPCustomRenderedBannerViewDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/DFPBannerView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADVideoOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADVideoControllerDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADVideoController.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeExpressAdViewDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADNativeExpressAdView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMobileAds.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADMediaView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInterstitialDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInterstitial.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInAppPurchase.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADExtras.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADDebugOptionsViewController.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdLoaderDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdLoader.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCorrelatorAdLoaderOptions.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADCorrelator.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRequestError.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADRequest.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADInAppPurchaseDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADBannerViewDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdSizeDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADBannerView.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdSize.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdNetworkExtras.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GADAdDelegate.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
+- "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
+interface-hash: "6b626a2b2d8205a8d4315abe0789eb7f"

@@ -117,6 +117,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import GameKit;
+@import GoogleMobileAds;
 @import Foundation;
 @import ObjectiveC;
 #endif
@@ -138,6 +139,8 @@ SWIFT_CLASS("_TtC14clicksToHitler11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class GADInterstitial;
+@class UIAlertController;
 @class UIWebView;
 @class GKGameCenterViewController;
 @class UIActivityIndicatorView;
@@ -146,12 +149,17 @@ SWIFT_CLASS("_TtC14clicksToHitler11AppDelegate")
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
-@interface ClicksViewController : UIViewController <GKGameCenterControllerDelegate, UIWebViewDelegate>
+@interface ClicksViewController : UIViewController <GKGameCenterControllerDelegate, GADInterstitialDelegate, GADAdDelegate, UIWebViewDelegate>
+@property (nonatomic, strong) GADInterstitial * _Null_unspecified interstitial;
+@property (nonatomic, strong) UIAlertController * _Nonnull hitlerGratzPopup;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified loadingIndicator;
 @property (nonatomic) BOOL hitlerFound;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull siteTrace;
 @property (nonatomic, copy) NSDate * _Nonnull startDate;
 @property (nonatomic) BOOL timeTicking;
+@property (nonatomic) BOOL showingAd;
+@property (nonatomic) BOOL siteReady;
+@property (nonatomic) BOOL gratzScreenHasBeenShown;
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified web;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified clicksLabel;
 - (void)viewDidAppear:(BOOL)animated;
@@ -159,6 +167,9 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 @property (nonatomic) NSInteger clicks;
 - (void)checkInternet;
 - (void)viewDidLoad;
+- (GADInterstitial * _Nonnull)createAndLoadInterstitial;
+- (void)interstitialDidDismissScreen:(GADInterstitial * _Nonnull)ad;
+- (void)showAd;
 - (void)updateTimeLabel;
 - (void)removeLoadingInd;
 - (BOOL)webView:(UIWebView * _Nonnull)webView shouldStartLoadWithRequest:(NSURLRequest * _Nonnull)request navigationType:(UIWebViewNavigationType)navigationType;
@@ -176,6 +187,7 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 - (void)saveFoundsLeaderboardWithFounds:(NSInteger)founds;
 - (void)authPlayer;
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
++ (NSString * _Nonnull)getTimeStringWithTime:(double)time;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

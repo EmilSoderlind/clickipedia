@@ -55,7 +55,7 @@ class StatsViewController: UITableViewController {
         if(UserDefaults.standard.integer(forKey: "worldTotalClicks") != 0){
             self.worldwideStats.totalClicks = "\(UserDefaults.standard.integer(forKey: "worldTotalClicks"))"
             self.worldwideStats.averageClicks = "\(round(100*UserDefaults.standard.double(forKey: "worldAverageClicks"))/100)"
-            self.worldwideStats.bestTime = "\(round(100*UserDefaults.standard.double(forKey: "worldBestTime"))/100) s"
+            self.worldwideStats.bestTime = ClicksViewController.getTimeString(time: UserDefaults.standard.double(forKey: "worldBestTime"))
             self.worldwideStats.foundHitlerTimes = "\(UserDefaults.standard.integer(forKey: "worldFoundHitlerTimes"))"
             self.worldwideStats.leastClicks = "\(UserDefaults.standard.integer(forKey: "worldLeastClicks"))"
         
@@ -117,7 +117,8 @@ class StatsViewController: UITableViewController {
     
     func loadBestTime(){
         if let bestTime = UserDefaults.standard.value(forKey: "bestTime") as? Double{
-            userStats.bestTime = "\(round(100*bestTime)/100) s"
+            userStats.bestTime = ClicksViewController.getTimeString(time: bestTime)
+            //userStats.bestTime = "\(round(100*bestTime)/100) s"
         }
     }
     
