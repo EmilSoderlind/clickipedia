@@ -159,6 +159,7 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 @property (nonatomic) BOOL timeTicking;
 @property (nonatomic) BOOL showingAd;
 @property (nonatomic) BOOL siteReady;
+@property (nonatomic) BOOL gratzScreenHasBeenShown;
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified web;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified clicksLabel;
 - (void)viewDidAppear:(BOOL)animated;
@@ -186,6 +187,7 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 - (void)saveFoundsLeaderboardWithFounds:(NSInteger)founds;
 - (void)authPlayer;
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
++ (NSString * _Nonnull)getTimeStringWithTime:(double)time;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

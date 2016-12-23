@@ -178,10 +178,32 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
     */
     @IBAction func gameCenterButton(_ sender: Any) {
         print("Game center button pressed")
-        showLeaderBoard()
+        
+        var dateWhenPressed = Date()
+        
+        if(GKLocalPlayer.localPlayer().isAuthenticated){
+            print("GC authenticated")
+            showLeaderBoard()
+        }else{
+            DispatchQueue.global(qos: .background).async {
+                while(!GKLocalPlayer.localPlayer().isAuthenticated){
+                    print("Not yet authenticated")
+                    
+                    if(dateWhenPressed.timeIntervalSinceNow < -15){
+                        print("Giving up showing leaderboards, fuck it.")
+                        return
+                    }
+                    
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    print("Authenticated!")
+                    self.showLeaderBoard()
+                }
+            }
+        }
     }
-    
-    
     
     @IBAction func startButtonPushed(_ sender: Any) {
         
@@ -250,6 +272,7 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
         gcvc.gameCenterDelegate = self
         
         viewController?.present(gcvc, animated: true, completion: nil)
+        
     }
     
     

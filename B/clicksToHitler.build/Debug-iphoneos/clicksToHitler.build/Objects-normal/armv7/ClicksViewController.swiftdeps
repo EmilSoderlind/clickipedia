@@ -6,109 +6,111 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler20ClicksViewController", ""]
 provides-dynamic-lookup:
-- "gameCenterViewControllerDidFinish"
-- "showAd"
-- "saveFoundsLeaderboard"
-- "didReceiveMemoryWarning"
-- "viewDidAppear"
-- "webView"
-- "saveLeastClicksToLeaderboards"
-- "startDate"
-- "clicksLabel"
-- "createAndLoadInterstitial"
-- "hitlerFound"
-- "updateAverage"
-- "authPlayer"
-- "saveAverageToLeaderboards"
-- "parseStringFromLink"
-- "interstitial"
-- "siteTrace"
-- "updateTimeLabel"
-- "timeTicking"
-- "clicks"
 - "siteReady"
-- "checkInternet"
-- "addTotalHitlerFound"
-- "checkLeastClicks"
+- "loadingIndicator"
+- "interstitialDidDismissScreen"
+- "updateTimeLabel"
+- "saveAverageToLeaderboards"
 - "webViewDidFinishLoad"
 - "showingAd"
-- "addTotalClicksToLocalSave"
-- "saveBestTimeToLeaderboards"
-- "interstitialDidDismissScreen"
-- "hitlerGratzPopup"
-- "removeLoadingInd"
-- "viewDidLoad"
+- "webView"
+- "didReceiveMemoryWarning"
+- "checkLeastClicks"
 - "resetButton"
-- "loadingIndicator"
+- "hitlerFound"
 - "web"
+- "addTotalHitlerFound"
+- "gratzScreenHasBeenShown"
+- "gameCenterViewControllerDidFinish"
+- "checkInternet"
+- "clicks"
+- "addTotalClicksToLocalSave"
+- "saveLeastClicksToLeaderboards"
+- "siteTrace"
+- "updateAverage"
+- "interstitial"
+- "clicksLabel"
+- "createAndLoadInterstitial"
+- "showAd"
+- "viewDidLoad"
+- "removeLoadingInd"
+- "authPlayer"
+- "startDate"
+- "saveFoundsLeaderboard"
+- "viewDidAppear"
+- "hitlerGratzPopup"
 - "updateBestTime"
+- "parseStringFromLink"
+- "saveBestTimeToLeaderboards"
+- "getTimeString"
+- "timeTicking"
 depends-top-level:
-- !private ">"
-- "UIWebViewDelegate"
-- "UIBarButtonItem"
-- !private "round"
-- "UIViewController"
-- !private "UIAlertAction"
-- !private "UIAlertActionStyle"
-- !private "DispatchQueue"
-- !private "Void"
-- !private "!"
-- "ClicksViewController"
-- "GKGameCenterViewController"
-- !private "CKRecordValue"
-- !private "CKContainer"
-- "Date"
-- "Bool"
-- !private "URL"
-- "GADInterstitial"
-- !private "Array"
-- "CastingPrecedence"
-- !private "UIApplication"
-- !private "Int64"
-- "AssignmentPrecedence"
-- !private "=="
-- "GADInterstitialDelegate"
-- !private "*"
-- !private "CKRecordID"
-- "GKGameCenterControllerDelegate"
-- "String"
-- !private "UnicodeScalarType"
-- !private "StringLiteralType"
-- !private "+="
-- !private ">="
-- !private "+"
-- "Double"
 - !private "-"
-- "UIAlertController"
-- !private "print"
-- !private "StartViewController"
-- !private "GKLocalPlayer"
-- !private "GADRequest"
-- !private "NSURLRequest"
-- "BooleanLiteralType"
-- !private "UserDefaults"
+- !private "CKRecordValue"
+- "Double"
+- !private "CKRecordID"
+- !private "UIAlertAction"
+- !private "UIApplication"
+- !private "DispatchQueue"
+- !private "UIAlertActionStyle"
+- !private "Array"
 - !private "/"
-- "UIWebViewNavigationType"
-- "UIWebView"
+- "Bool"
 - !private "UIAlertControllerStyle"
 - "UIActivityIndicatorView"
-- !private "UIColor"
-- "Int"
-- !private "<"
-- !private "GKScore"
-- !private "kGADSimulatorID"
-- "URLRequest"
-- !private "NSURL"
-- !private "UIActivityIndicatorViewStyle"
+- !private "+="
 - !private "&&"
+- !private "GKScore"
+- !private "UnicodeScalarType"
+- "ClicksViewController"
+- !private "StartViewController"
 - !private "!="
+- !private "Int64"
+- !private "NSURLRequest"
+- !private "Void"
+- "String"
+- !private "*"
+- "UIViewController"
+- !private "URL"
+- !private "<"
+- "UIWebViewDelegate"
+- !private "round"
+- !private "print"
+- !private "GADRequest"
+- "URLRequest"
+- "GKGameCenterViewController"
+- "GKGameCenterControllerDelegate"
+- "GADInterstitialDelegate"
+- "Date"
+- "UIWebView"
+- !private ">="
+- "AssignmentPrecedence"
+- !private "=="
+- "GADInterstitial"
+- "CastingPrecedence"
+- !private ">"
+- "Int"
+- !private "+"
+- !private "UIActivityIndicatorViewStyle"
+- "UIAlertController"
+- !private "CKContainer"
+- !private "!"
+- !private "kGADSimulatorID"
+- !private "UserDefaults"
+- !private "StringLiteralType"
+- "UIBarButtonItem"
+- "UIWebViewNavigationType"
+- !private "UIColor"
+- "BooleanLiteralType"
+- !private "NSURL"
+- !private "GKLocalPlayer"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "RawValue"]
-- !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "description"]
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CKContainer"]
 - !private ["Ps9AnyObject", "CKRecordID"]
+- !private ["Ps9AnyObject", "ClicksViewController"]
 - ["Ps9AnyObject", "Date"]
 - !private ["Ps9AnyObject", "DispatchQueue"]
 - !private ["Ps9AnyObject", "Double"]
@@ -135,6 +137,8 @@ depends-member:
 - !private ["Ps9AnyObject", "addAction"]
 - ["Ps9AnyObject", "addTotalClicksToLocalSave"]
 - ["Ps9AnyObject", "addTotalHitlerFound"]
+- !private ["Ps9AnyObject", "allowsLinkPreview"]
+- !private ["Ps9AnyObject", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "async"]
 - ["Ps9AnyObject", "authPlayer"]
@@ -155,7 +159,9 @@ depends-member:
 - !private ["Ps9AnyObject", "downloadLatestWorldStats"]
 - !private ["Ps9AnyObject", "fetch"]
 - ["Ps9AnyObject", "gameCenterViewControllerDidFinish"]
+- ["Ps9AnyObject", "getTimeString"]
 - !private ["Ps9AnyObject", "global"]
+- ["Ps9AnyObject", "gratzScreenHasBeenShown"]
 - ["Ps9AnyObject", "hitlerFound"]
 - ["Ps9AnyObject", "hitlerGratzPopup"]
 - ["Ps9AnyObject", "init"]
@@ -199,6 +205,7 @@ depends-member:
 - ["Ps9AnyObject", "showingAd"]
 - ["Ps9AnyObject", "siteReady"]
 - ["Ps9AnyObject", "siteTrace"]
+- !private ["Ps9AnyObject", "sizeToFit"]
 - !private ["Ps9AnyObject", "standard"]
 - !private ["Ps9AnyObject", "startAnimating"]
 - ["Ps9AnyObject", "startDate"]
@@ -257,26 +264,26 @@ depends-member:
 - !private ["Vs18BidirectionalSlice", "SubSequence"]
 - !private ["Vs18BidirectionalSlice", "_Element"]
 - !private ["Ps19BinaryFloatingPoint", "RawValue"]
-- !private ["Ps19BinaryFloatingPoint", "Stride"]
 - !private ["Ps19BinaryFloatingPoint", "description"]
 - !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Ps17BitwiseOperations", "IntegerLiteralType"]
 - !private ["Ps17BitwiseOperations", "RawValue"]
 - !private ["Ps17BitwiseOperations", "Stride"]
 - !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
-- !private ["Ps17BitwiseOperations", "_DisallowMixedSignArithmetic"]
 - !private ["Ps17BitwiseOperations", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "activityIndicatorViewStyle"]
+- !private ["PSo15CALayerDelegate", "allowsLinkPreview"]
+- !private ["PSo15CALayerDelegate", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo15CALayerDelegate", "alpha"]
 - !private ["PSo15CALayerDelegate", "barTintColor"]
 - !private ["PSo15CALayerDelegate", "delegate"]
 - !private ["PSo15CALayerDelegate", "loadRequest"]
 - !private ["PSo15CALayerDelegate", "scalesPageToFit"]
+- !private ["PSo15CALayerDelegate", "sizeToFit"]
 - !private ["PSo15CALayerDelegate", "startAnimating"]
 - !private ["V12CoreGraphics7CGFloat", "RawValue"]
-- !private ["V12CoreGraphics7CGFloat", "Stride"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["CSo11CKContainer", "default"]
 - ["CSo11CKContainer", "deinit"]
@@ -297,6 +304,7 @@ depends-member:
 - !private ["PSo15CNKeyDescriptor", "replacingOccurrences"]
 - !private ["Ps7CVarArg", "CKContainer"]
 - !private ["Ps7CVarArg", "CKRecordID"]
+- !private ["Ps7CVarArg", "ClicksViewController"]
 - ["Ps7CVarArg", "Date"]
 - !private ["Ps7CVarArg", "DispatchQueue"]
 - !private ["Ps7CVarArg", "Double"]
@@ -327,13 +335,14 @@ depends-member:
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UserDefaults"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
-- !private ["Ps7CVarArg", "_DisallowMixedSignArithmetic"]
 - !private ["Ps7CVarArg", "_Element"]
 - !private ["Ps7CVarArg", "activityIndicatorViewStyle"]
 - ["Ps7CVarArg", "ad"]
 - !private ["Ps7CVarArg", "addAction"]
 - ["Ps7CVarArg", "addTotalClicksToLocalSave"]
 - ["Ps7CVarArg", "addTotalHitlerFound"]
+- !private ["Ps7CVarArg", "allowsLinkPreview"]
+- !private ["Ps7CVarArg", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps7CVarArg", "alpha"]
 - !private ["Ps7CVarArg", "append"]
 - !private ["Ps7CVarArg", "async"]
@@ -355,7 +364,9 @@ depends-member:
 - !private ["Ps7CVarArg", "downloadLatestWorldStats"]
 - !private ["Ps7CVarArg", "fetch"]
 - ["Ps7CVarArg", "gameCenterViewControllerDidFinish"]
+- ["Ps7CVarArg", "getTimeString"]
 - !private ["Ps7CVarArg", "global"]
+- ["Ps7CVarArg", "gratzScreenHasBeenShown"]
 - ["Ps7CVarArg", "hitlerFound"]
 - ["Ps7CVarArg", "hitlerGratzPopup"]
 - ["Ps7CVarArg", "init"]
@@ -400,6 +411,7 @@ depends-member:
 - ["Ps7CVarArg", "showingAd"]
 - ["Ps7CVarArg", "siteReady"]
 - ["Ps7CVarArg", "siteTrace"]
+- !private ["Ps7CVarArg", "sizeToFit"]
 - !private ["Ps7CVarArg", "standard"]
 - !private ["Ps7CVarArg", "startAnimating"]
 - ["Ps7CVarArg", "startDate"]
@@ -423,6 +435,7 @@ depends-member:
 - !private ["C14clicksToHitler20ClicksViewController", "CKContainer"]
 - !private ["C14clicksToHitler20ClicksViewController", "CKRecordID"]
 - !private ["C14clicksToHitler20ClicksViewController", "CKRecordValue"]
+- !private ["C14clicksToHitler20ClicksViewController", "ClicksViewController"]
 - ["C14clicksToHitler20ClicksViewController", "Date"]
 - !private ["C14clicksToHitler20ClicksViewController", "DispatchQueue"]
 - ["C14clicksToHitler20ClicksViewController", "Double"]
@@ -465,6 +478,8 @@ depends-member:
 - ["C14clicksToHitler20ClicksViewController", "deinit"]
 - ["C14clicksToHitler20ClicksViewController", "didReceiveMemoryWarning"]
 - ["C14clicksToHitler20ClicksViewController", "gameCenterViewControllerDidFinish"]
+- ["C14clicksToHitler20ClicksViewController", "getTimeString"]
+- ["C14clicksToHitler20ClicksViewController", "gratzScreenHasBeenShown"]
 - ["C14clicksToHitler20ClicksViewController", "hitlerFound"]
 - ["C14clicksToHitler20ClicksViewController", "hitlerGratzPopup"]
 - ["C14clicksToHitler20ClicksViewController", "init"]
@@ -519,7 +534,6 @@ depends-member:
 - !private ["Ps10Comparable", "RawValue"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
-- !private ["Ps10Comparable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps10Comparable", "contains"]
 - !private ["Ps10Comparable", "description"]
 - ["Ps10Comparable", "init"]
@@ -527,6 +541,7 @@ depends-member:
 - !private ["Ps10Comparable", "timeIntervalSinceNow"]
 - !private ["Ps28CustomDebugStringConvertible", "CKContainer"]
 - !private ["Ps28CustomDebugStringConvertible", "CKRecordID"]
+- !private ["Ps28CustomDebugStringConvertible", "ClicksViewController"]
 - ["Ps28CustomDebugStringConvertible", "Date"]
 - !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
 - !private ["Ps28CustomDebugStringConvertible", "Double"]
@@ -544,7 +559,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSURLRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "RawValue"]
 - !private ["Ps28CustomDebugStringConvertible", "StartViewController"]
-- !private ["Ps28CustomDebugStringConvertible", "Stride"]
 - ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIActivityIndicatorViewStyle"]
@@ -561,6 +575,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "addAction"]
 - ["Ps28CustomDebugStringConvertible", "addTotalClicksToLocalSave"]
 - ["Ps28CustomDebugStringConvertible", "addTotalHitlerFound"]
+- !private ["Ps28CustomDebugStringConvertible", "allowsLinkPreview"]
+- !private ["Ps28CustomDebugStringConvertible", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "async"]
@@ -583,7 +599,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "downloadLatestWorldStats"]
 - !private ["Ps28CustomDebugStringConvertible", "fetch"]
 - ["Ps28CustomDebugStringConvertible", "gameCenterViewControllerDidFinish"]
+- ["Ps28CustomDebugStringConvertible", "getTimeString"]
 - !private ["Ps28CustomDebugStringConvertible", "global"]
+- ["Ps28CustomDebugStringConvertible", "gratzScreenHasBeenShown"]
 - ["Ps28CustomDebugStringConvertible", "hitlerFound"]
 - ["Ps28CustomDebugStringConvertible", "hitlerGratzPopup"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -628,6 +646,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "showingAd"]
 - ["Ps28CustomDebugStringConvertible", "siteReady"]
 - ["Ps28CustomDebugStringConvertible", "siteTrace"]
+- !private ["Ps28CustomDebugStringConvertible", "sizeToFit"]
 - !private ["Ps28CustomDebugStringConvertible", "standard"]
 - !private ["Ps28CustomDebugStringConvertible", "startAnimating"]
 - ["Ps28CustomDebugStringConvertible", "startDate"]
@@ -651,7 +670,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "RawValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_DisabledRangeIndex"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "contains"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "description"]
@@ -667,7 +685,6 @@ depends-member:
 - !private ["Ps17CustomReflectable", "Stride"]
 - !private ["Ps17CustomReflectable", "SubSequence"]
 - !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
-- !private ["Ps17CustomReflectable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "append"]
@@ -681,6 +698,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "timeIntervalSinceNow"]
 - !private ["Ps23CustomStringConvertible", "CKContainer"]
 - !private ["Ps23CustomStringConvertible", "CKRecordID"]
+- !private ["Ps23CustomStringConvertible", "ClicksViewController"]
 - ["Ps23CustomStringConvertible", "Date"]
 - !private ["Ps23CustomStringConvertible", "DispatchQueue"]
 - !private ["Ps23CustomStringConvertible", "Double"]
@@ -711,7 +729,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UserDefaults"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
-- !private ["Ps23CustomStringConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "activityIndicatorViewStyle"]
@@ -719,6 +736,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "addAction"]
 - ["Ps23CustomStringConvertible", "addTotalClicksToLocalSave"]
 - ["Ps23CustomStringConvertible", "addTotalHitlerFound"]
+- !private ["Ps23CustomStringConvertible", "allowsLinkPreview"]
+- !private ["Ps23CustomStringConvertible", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "async"]
@@ -740,7 +759,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "downloadLatestWorldStats"]
 - !private ["Ps23CustomStringConvertible", "fetch"]
 - ["Ps23CustomStringConvertible", "gameCenterViewControllerDidFinish"]
+- ["Ps23CustomStringConvertible", "getTimeString"]
 - !private ["Ps23CustomStringConvertible", "global"]
+- ["Ps23CustomStringConvertible", "gratzScreenHasBeenShown"]
 - ["Ps23CustomStringConvertible", "hitlerFound"]
 - ["Ps23CustomStringConvertible", "hitlerGratzPopup"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -785,6 +806,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "showingAd"]
 - ["Ps23CustomStringConvertible", "siteReady"]
 - ["Ps23CustomStringConvertible", "siteTrace"]
+- !private ["Ps23CustomStringConvertible", "sizeToFit"]
 - !private ["Ps23CustomStringConvertible", "standard"]
 - !private ["Ps23CustomStringConvertible", "startAnimating"]
 - ["Ps23CustomStringConvertible", "startDate"]
@@ -827,12 +849,12 @@ depends-member:
 - !private ["CSo13DispatchQueue", "global"]
 - !private ["CSo13DispatchQueue", "main"]
 - !private ["Sd", "RawValue"]
-- !private ["Sd", "Stride"]
 - ["Sd", "deinit"]
 - !private ["Sd", "description"]
 - !private ["Sd", "init"]
 - !private ["Ps9Equatable", "CKContainer"]
 - !private ["Ps9Equatable", "CKRecordID"]
+- !private ["Ps9Equatable", "ClicksViewController"]
 - ["Ps9Equatable", "Date"]
 - !private ["Ps9Equatable", "DispatchQueue"]
 - !private ["Ps9Equatable", "Double"]
@@ -858,7 +880,6 @@ depends-member:
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UserDefaults"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
-- !private ["Ps9Equatable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "actionSheet"]
 - !private ["Ps9Equatable", "activityIndicatorViewStyle"]
@@ -867,6 +888,8 @@ depends-member:
 - ["Ps9Equatable", "addTotalClicksToLocalSave"]
 - ["Ps9Equatable", "addTotalHitlerFound"]
 - !private ["Ps9Equatable", "alert"]
+- !private ["Ps9Equatable", "allowsLinkPreview"]
+- !private ["Ps9Equatable", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "async"]
 - ["Ps9Equatable", "authPlayer"]
@@ -890,7 +913,9 @@ depends-member:
 - !private ["Ps9Equatable", "downloadLatestWorldStats"]
 - !private ["Ps9Equatable", "fetch"]
 - ["Ps9Equatable", "gameCenterViewControllerDidFinish"]
+- ["Ps9Equatable", "getTimeString"]
 - !private ["Ps9Equatable", "global"]
+- ["Ps9Equatable", "gratzScreenHasBeenShown"]
 - ["Ps9Equatable", "hitlerFound"]
 - ["Ps9Equatable", "hitlerGratzPopup"]
 - ["Ps9Equatable", "init"]
@@ -934,6 +959,7 @@ depends-member:
 - ["Ps9Equatable", "showingAd"]
 - ["Ps9Equatable", "siteReady"]
 - ["Ps9Equatable", "siteTrace"]
+- !private ["Ps9Equatable", "sizeToFit"]
 - !private ["Ps9Equatable", "standard"]
 - !private ["Ps9Equatable", "startAnimating"]
 - ["Ps9Equatable", "startDate"]
@@ -971,14 +997,12 @@ depends-member:
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "replacingOccurrences"]
 - !private ["Ps25ExpressibleByFloatLiteral", "RawValue"]
-- !private ["Ps25ExpressibleByFloatLiteral", "Stride"]
 - !private ["Ps25ExpressibleByFloatLiteral", "description"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "RawValue"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "_DisallowMixedSignArithmetic"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "description"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - !private ["Ps23ExpressibleByNilLiteral", "debugDescription"]
@@ -992,14 +1016,13 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "replacingOccurrences"]
 - !private ["Sf", "RawValue"]
-- !private ["Sf", "Stride"]
 - !private ["Sf", "deinit"]
 - !private ["Ps13FloatingPoint", "RawValue"]
-- !private ["Ps13FloatingPoint", "Stride"]
 - !private ["Ps13FloatingPoint", "description"]
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["PSo13GADAdDelegate", "CKContainer"]
 - !private ["PSo13GADAdDelegate", "CKRecordID"]
+- !private ["PSo13GADAdDelegate", "ClicksViewController"]
 - ["PSo13GADAdDelegate", "Date"]
 - !private ["PSo13GADAdDelegate", "DispatchQueue"]
 - !private ["PSo13GADAdDelegate", "Double"]
@@ -1032,6 +1055,8 @@ depends-member:
 - !private ["PSo13GADAdDelegate", "createAndLoadInterstitial"]
 - !private ["PSo13GADAdDelegate", "currentReachabilityStatus"]
 - ["PSo13GADAdDelegate", "gameCenterViewControllerDidFinish"]
+- !private ["PSo13GADAdDelegate", "getTimeString"]
+- !private ["PSo13GADAdDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo13GADAdDelegate", "hitlerFound"]
 - !private ["PSo13GADAdDelegate", "hitlerGratzPopup"]
 - ["PSo13GADAdDelegate", "interstitial"]
@@ -1077,6 +1102,7 @@ depends-member:
 - !private ["CSo15GADInterstitial", "present"]
 - !private ["PSo23GADInterstitialDelegate", "CKContainer"]
 - !private ["PSo23GADInterstitialDelegate", "CKRecordID"]
+- !private ["PSo23GADInterstitialDelegate", "ClicksViewController"]
 - ["PSo23GADInterstitialDelegate", "Date"]
 - !private ["PSo23GADInterstitialDelegate", "DispatchQueue"]
 - !private ["PSo23GADInterstitialDelegate", "Double"]
@@ -1109,6 +1135,8 @@ depends-member:
 - !private ["PSo23GADInterstitialDelegate", "createAndLoadInterstitial"]
 - !private ["PSo23GADInterstitialDelegate", "currentReachabilityStatus"]
 - ["PSo23GADInterstitialDelegate", "gameCenterViewControllerDidFinish"]
+- !private ["PSo23GADInterstitialDelegate", "getTimeString"]
+- !private ["PSo23GADInterstitialDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo23GADInterstitialDelegate", "hitlerFound"]
 - !private ["PSo23GADInterstitialDelegate", "hitlerGratzPopup"]
 - ["PSo23GADInterstitialDelegate", "interstitial"]
@@ -1154,6 +1182,7 @@ depends-member:
 - !private ["CSo12GKBasePlayer", "localPlayer"]
 - !private ["PSo30GKGameCenterControllerDelegate", "CKContainer"]
 - !private ["PSo30GKGameCenterControllerDelegate", "CKRecordID"]
+- !private ["PSo30GKGameCenterControllerDelegate", "ClicksViewController"]
 - ["PSo30GKGameCenterControllerDelegate", "Date"]
 - !private ["PSo30GKGameCenterControllerDelegate", "DispatchQueue"]
 - !private ["PSo30GKGameCenterControllerDelegate", "Double"]
@@ -1187,6 +1216,8 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "currentReachabilityStatus"]
 - !private ["PSo30GKGameCenterControllerDelegate", "downloadLatestWorldStats"]
 - ["PSo30GKGameCenterControllerDelegate", "gameCenterViewControllerDidFinish"]
+- !private ["PSo30GKGameCenterControllerDelegate", "getTimeString"]
+- !private ["PSo30GKGameCenterControllerDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo30GKGameCenterControllerDelegate", "hitlerFound"]
 - !private ["PSo30GKGameCenterControllerDelegate", "hitlerGratzPopup"]
 - ["PSo30GKGameCenterControllerDelegate", "interstitial"]
@@ -1242,6 +1273,7 @@ depends-member:
 - !private ["CSo7GKScore", "value"]
 - !private ["Ps8Hashable", "CKContainer"]
 - !private ["Ps8Hashable", "CKRecordID"]
+- !private ["Ps8Hashable", "ClicksViewController"]
 - ["Ps8Hashable", "Date"]
 - !private ["Ps8Hashable", "DispatchQueue"]
 - !private ["Ps8Hashable", "Double"]
@@ -1267,7 +1299,6 @@ depends-member:
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UserDefaults"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
-- !private ["Ps8Hashable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "actionSheet"]
 - !private ["Ps8Hashable", "activityIndicatorViewStyle"]
@@ -1276,6 +1307,8 @@ depends-member:
 - ["Ps8Hashable", "addTotalClicksToLocalSave"]
 - ["Ps8Hashable", "addTotalHitlerFound"]
 - !private ["Ps8Hashable", "alert"]
+- !private ["Ps8Hashable", "allowsLinkPreview"]
+- !private ["Ps8Hashable", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "async"]
 - ["Ps8Hashable", "authPlayer"]
@@ -1299,7 +1332,9 @@ depends-member:
 - !private ["Ps8Hashable", "downloadLatestWorldStats"]
 - !private ["Ps8Hashable", "fetch"]
 - ["Ps8Hashable", "gameCenterViewControllerDidFinish"]
+- ["Ps8Hashable", "getTimeString"]
 - !private ["Ps8Hashable", "global"]
+- ["Ps8Hashable", "gratzScreenHasBeenShown"]
 - ["Ps8Hashable", "hitlerFound"]
 - ["Ps8Hashable", "hitlerGratzPopup"]
 - ["Ps8Hashable", "init"]
@@ -1343,6 +1378,7 @@ depends-member:
 - ["Ps8Hashable", "showingAd"]
 - ["Ps8Hashable", "siteReady"]
 - ["Ps8Hashable", "siteTrace"]
+- !private ["Ps8Hashable", "sizeToFit"]
 - !private ["Ps8Hashable", "standard"]
 - !private ["Ps8Hashable", "startAnimating"]
 - ["Ps8Hashable", "startDate"]
@@ -1394,33 +1430,26 @@ depends-member:
 - ["Si", "deinit"]
 - !private ["Si", "init"]
 - !private ["Vs5Int16", "RawValue"]
-- !private ["Vs5Int16", "Stride"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "RawValue"]
-- !private ["Vs5Int32", "Stride"]
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "RawValue"]
-- !private ["Vs5Int64", "Stride"]
 - ["Vs5Int64", "deinit"]
 - !private ["Vs5Int64", "init"]
 - !private ["Vs4Int8", "RawValue"]
-- !private ["Vs4Int8", "Stride"]
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "IntegerLiteralType"]
 - !private ["Ps7Integer", "RawValue"]
 - !private ["Ps7Integer", "Stride"]
 - !private ["Ps7Integer", "_DisabledRangeIndex"]
-- !private ["Ps7Integer", "_DisallowMixedSignArithmetic"]
 - !private ["Ps7Integer", "init"]
 - !private ["Ps17IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps17IntegerArithmetic", "RawValue"]
 - !private ["Ps17IntegerArithmetic", "Stride"]
 - !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
-- !private ["Ps17IntegerArithmetic", "_DisallowMixedSignArithmetic"]
 - !private ["Ps17IntegerArithmetic", "init"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "RawValue"]
-- !private ["Ps25LosslessStringConvertible", "Stride"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "contains"]
 - !private ["Ps25LosslessStringConvertible", "description"]
@@ -1458,6 +1487,7 @@ depends-member:
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "CKContainer"]
 - !private ["PSo8NSCoding", "CKRecordID"]
+- !private ["PSo8NSCoding", "ClicksViewController"]
 - ["PSo8NSCoding", "Date"]
 - !private ["PSo8NSCoding", "DispatchQueue"]
 - !private ["PSo8NSCoding", "Double"]
@@ -1484,6 +1514,8 @@ depends-member:
 - !private ["PSo8NSCoding", "addAction"]
 - ["PSo8NSCoding", "addTotalClicksToLocalSave"]
 - ["PSo8NSCoding", "addTotalHitlerFound"]
+- !private ["PSo8NSCoding", "allowsLinkPreview"]
+- !private ["PSo8NSCoding", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo8NSCoding", "alpha"]
 - ["PSo8NSCoding", "authPlayer"]
 - !private ["PSo8NSCoding", "barTintColor"]
@@ -1499,6 +1531,8 @@ depends-member:
 - !private ["PSo8NSCoding", "dismiss"]
 - !private ["PSo8NSCoding", "downloadLatestWorldStats"]
 - ["PSo8NSCoding", "gameCenterViewControllerDidFinish"]
+- ["PSo8NSCoding", "getTimeString"]
+- ["PSo8NSCoding", "gratzScreenHasBeenShown"]
 - ["PSo8NSCoding", "hitlerFound"]
 - ["PSo8NSCoding", "hitlerGratzPopup"]
 - ["PSo8NSCoding", "init"]
@@ -1532,6 +1566,7 @@ depends-member:
 - ["PSo8NSCoding", "showingAd"]
 - ["PSo8NSCoding", "siteReady"]
 - ["PSo8NSCoding", "siteTrace"]
+- !private ["PSo8NSCoding", "sizeToFit"]
 - !private ["PSo8NSCoding", "startAnimating"]
 - ["PSo8NSCoding", "startDate"]
 - !private ["PSo8NSCoding", "subscript"]
@@ -1555,6 +1590,7 @@ depends-member:
 - !private ["PSo9NSCopying", "testDevices"]
 - !private ["PSo26NSExtensionRequestHandling", "CKContainer"]
 - !private ["PSo26NSExtensionRequestHandling", "CKRecordID"]
+- !private ["PSo26NSExtensionRequestHandling", "ClicksViewController"]
 - ["PSo26NSExtensionRequestHandling", "Date"]
 - !private ["PSo26NSExtensionRequestHandling", "DispatchQueue"]
 - !private ["PSo26NSExtensionRequestHandling", "Double"]
@@ -1591,6 +1627,8 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "dismiss"]
 - !private ["PSo26NSExtensionRequestHandling", "downloadLatestWorldStats"]
 - ["PSo26NSExtensionRequestHandling", "gameCenterViewControllerDidFinish"]
+- ["PSo26NSExtensionRequestHandling", "getTimeString"]
+- ["PSo26NSExtensionRequestHandling", "gratzScreenHasBeenShown"]
 - ["PSo26NSExtensionRequestHandling", "hitlerFound"]
 - ["PSo26NSExtensionRequestHandling", "hitlerGratzPopup"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -1635,11 +1673,11 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "contains"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "replacingOccurrences"]
-- !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CKContainer"]
 - !private ["CSo8NSObject", "CKRecordID"]
 - !private ["CSo8NSObject", "CKRecordValue"]
+- !private ["CSo8NSObject", "ClicksViewController"]
 - ["CSo8NSObject", "Date"]
 - !private ["CSo8NSObject", "DispatchQueue"]
 - ["CSo8NSObject", "Double"]
@@ -1674,6 +1712,8 @@ depends-member:
 - !private ["CSo8NSObject", "addAction"]
 - ["CSo8NSObject", "addTotalClicksToLocalSave"]
 - ["CSo8NSObject", "addTotalHitlerFound"]
+- !private ["CSo8NSObject", "allowsLinkPreview"]
+- !private ["CSo8NSObject", "allowsPictureInPictureMediaPlayback"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "async"]
 - ["CSo8NSObject", "authPlayer"]
@@ -1693,7 +1733,9 @@ depends-member:
 - !private ["CSo8NSObject", "downloadLatestWorldStats"]
 - !private ["CSo8NSObject", "fetch"]
 - ["CSo8NSObject", "gameCenterViewControllerDidFinish"]
+- ["CSo8NSObject", "getTimeString"]
 - !private ["CSo8NSObject", "global"]
+- ["CSo8NSObject", "gratzScreenHasBeenShown"]
 - ["CSo8NSObject", "hitlerFound"]
 - ["CSo8NSObject", "hitlerGratzPopup"]
 - ["CSo8NSObject", "init"]
@@ -1737,6 +1779,7 @@ depends-member:
 - ["CSo8NSObject", "showingAd"]
 - ["CSo8NSObject", "siteReady"]
 - ["CSo8NSObject", "siteTrace"]
+- !private ["CSo8NSObject", "sizeToFit"]
 - !private ["CSo8NSObject", "standard"]
 - !private ["CSo8NSObject", "startAnimating"]
 - ["CSo8NSObject", "startDate"]
@@ -1756,6 +1799,7 @@ depends-member:
 - ["CSo8NSObject", "webViewDidStartLoad"]
 - !private ["PSo16NSObjectProtocol", "CKContainer"]
 - !private ["PSo16NSObjectProtocol", "CKRecordID"]
+- !private ["PSo16NSObjectProtocol", "ClicksViewController"]
 - ["PSo16NSObjectProtocol", "Date"]
 - !private ["PSo16NSObjectProtocol", "DispatchQueue"]
 - !private ["PSo16NSObjectProtocol", "Double"]
@@ -1782,6 +1826,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addAction"]
 - ["PSo16NSObjectProtocol", "addTotalClicksToLocalSave"]
 - ["PSo16NSObjectProtocol", "addTotalHitlerFound"]
+- !private ["PSo16NSObjectProtocol", "allowsLinkPreview"]
+- !private ["PSo16NSObjectProtocol", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "async"]
 - ["PSo16NSObjectProtocol", "authPlayer"]
@@ -1801,7 +1847,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "downloadLatestWorldStats"]
 - !private ["PSo16NSObjectProtocol", "fetch"]
 - ["PSo16NSObjectProtocol", "gameCenterViewControllerDidFinish"]
+- ["PSo16NSObjectProtocol", "getTimeString"]
 - !private ["PSo16NSObjectProtocol", "global"]
+- ["PSo16NSObjectProtocol", "gratzScreenHasBeenShown"]
 - ["PSo16NSObjectProtocol", "hitlerFound"]
 - ["PSo16NSObjectProtocol", "hitlerGratzPopup"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -1845,6 +1893,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "showingAd"]
 - ["PSo16NSObjectProtocol", "siteReady"]
 - ["PSo16NSObjectProtocol", "siteTrace"]
+- !private ["PSo16NSObjectProtocol", "sizeToFit"]
 - !private ["PSo16NSObjectProtocol", "standard"]
 - !private ["PSo16NSObjectProtocol", "startAnimating"]
 - ["PSo16NSObjectProtocol", "startDate"]
@@ -1973,7 +2022,6 @@ depends-member:
 - !private ["Ps10Strideable", "RawValue"]
 - !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
-- !private ["Ps10Strideable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps10Strideable", "description"]
 - !private ["Ps10Strideable", "init"]
 - !private ["SS", "contains"]
@@ -1987,11 +2035,14 @@ depends-member:
 - !private ["Ps20TextOutputStreamable", "init"]
 - !private ["Ps20TextOutputStreamable", "replacingOccurrences"]
 - !private ["PSo29UIAccessibilityIdentification", "activityIndicatorViewStyle"]
+- !private ["PSo29UIAccessibilityIdentification", "allowsLinkPreview"]
+- !private ["PSo29UIAccessibilityIdentification", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "barTintColor"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "loadRequest"]
 - !private ["PSo29UIAccessibilityIdentification", "scalesPageToFit"]
+- !private ["PSo29UIAccessibilityIdentification", "sizeToFit"]
 - !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
 - !private ["PSo29UIAccessibilityIdentification", "title"]
 - !private ["CSo23UIActivityIndicatorView", "activityIndicatorViewStyle"]
@@ -2012,15 +2063,19 @@ depends-member:
 - !private ["OSC22UIAlertControllerStyle", "alert"]
 - ["OSC22UIAlertControllerStyle", "deinit"]
 - !private ["PSo12UIAppearance", "activityIndicatorViewStyle"]
+- !private ["PSo12UIAppearance", "allowsLinkPreview"]
+- !private ["PSo12UIAppearance", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo12UIAppearance", "alpha"]
 - !private ["PSo12UIAppearance", "barTintColor"]
 - !private ["PSo12UIAppearance", "delegate"]
 - !private ["PSo12UIAppearance", "loadRequest"]
 - !private ["PSo12UIAppearance", "scalesPageToFit"]
+- !private ["PSo12UIAppearance", "sizeToFit"]
 - !private ["PSo12UIAppearance", "startAnimating"]
 - !private ["PSo12UIAppearance", "title"]
 - !private ["PSo21UIAppearanceContainer", "CKContainer"]
 - !private ["PSo21UIAppearanceContainer", "CKRecordID"]
+- !private ["PSo21UIAppearanceContainer", "ClicksViewController"]
 - ["PSo21UIAppearanceContainer", "Date"]
 - !private ["PSo21UIAppearanceContainer", "DispatchQueue"]
 - !private ["PSo21UIAppearanceContainer", "Double"]
@@ -2047,6 +2102,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - ["PSo21UIAppearanceContainer", "addTotalClicksToLocalSave"]
 - ["PSo21UIAppearanceContainer", "addTotalHitlerFound"]
+- !private ["PSo21UIAppearanceContainer", "allowsLinkPreview"]
+- !private ["PSo21UIAppearanceContainer", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo21UIAppearanceContainer", "alpha"]
 - ["PSo21UIAppearanceContainer", "authPlayer"]
 - !private ["PSo21UIAppearanceContainer", "barTintColor"]
@@ -2061,6 +2118,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "dismiss"]
 - !private ["PSo21UIAppearanceContainer", "downloadLatestWorldStats"]
 - ["PSo21UIAppearanceContainer", "gameCenterViewControllerDidFinish"]
+- ["PSo21UIAppearanceContainer", "getTimeString"]
+- ["PSo21UIAppearanceContainer", "gratzScreenHasBeenShown"]
 - ["PSo21UIAppearanceContainer", "hitlerFound"]
 - ["PSo21UIAppearanceContainer", "hitlerGratzPopup"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -2092,6 +2151,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "showingAd"]
 - ["PSo21UIAppearanceContainer", "siteReady"]
 - ["PSo21UIAppearanceContainer", "siteTrace"]
+- !private ["PSo21UIAppearanceContainer", "sizeToFit"]
 - !private ["PSo21UIAppearanceContainer", "startAnimating"]
 - ["PSo21UIAppearanceContainer", "startDate"]
 - ["PSo21UIAppearanceContainer", "timeTicking"]
@@ -2115,6 +2175,7 @@ depends-member:
 - !private ["CSo7UIColor", "init"]
 - !private ["PSo18UIContentContainer", "CKContainer"]
 - !private ["PSo18UIContentContainer", "CKRecordID"]
+- !private ["PSo18UIContentContainer", "ClicksViewController"]
 - ["PSo18UIContentContainer", "Date"]
 - !private ["PSo18UIContentContainer", "DispatchQueue"]
 - !private ["PSo18UIContentContainer", "Double"]
@@ -2151,6 +2212,8 @@ depends-member:
 - !private ["PSo18UIContentContainer", "dismiss"]
 - !private ["PSo18UIContentContainer", "downloadLatestWorldStats"]
 - ["PSo18UIContentContainer", "gameCenterViewControllerDidFinish"]
+- ["PSo18UIContentContainer", "getTimeString"]
+- ["PSo18UIContentContainer", "gratzScreenHasBeenShown"]
 - ["PSo18UIContentContainer", "hitlerFound"]
 - ["PSo18UIContentContainer", "hitlerGratzPopup"]
 - ["PSo18UIContentContainer", "init"]
@@ -2193,21 +2256,28 @@ depends-member:
 - ["PSo18UIContentContainer", "webViewDidStartLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo17UICoordinateSpace", "activityIndicatorViewStyle"]
+- !private ["PSo17UICoordinateSpace", "allowsLinkPreview"]
+- !private ["PSo17UICoordinateSpace", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo17UICoordinateSpace", "alpha"]
 - !private ["PSo17UICoordinateSpace", "barTintColor"]
 - !private ["PSo17UICoordinateSpace", "delegate"]
 - !private ["PSo17UICoordinateSpace", "loadRequest"]
 - !private ["PSo17UICoordinateSpace", "scalesPageToFit"]
+- !private ["PSo17UICoordinateSpace", "sizeToFit"]
 - !private ["PSo17UICoordinateSpace", "startAnimating"]
 - !private ["PSo13UIDynamicItem", "activityIndicatorViewStyle"]
+- !private ["PSo13UIDynamicItem", "allowsLinkPreview"]
+- !private ["PSo13UIDynamicItem", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo13UIDynamicItem", "alpha"]
 - !private ["PSo13UIDynamicItem", "barTintColor"]
 - !private ["PSo13UIDynamicItem", "delegate"]
 - !private ["PSo13UIDynamicItem", "loadRequest"]
 - !private ["PSo13UIDynamicItem", "scalesPageToFit"]
+- !private ["PSo13UIDynamicItem", "sizeToFit"]
 - !private ["PSo13UIDynamicItem", "startAnimating"]
 - !private ["PSo18UIFocusEnvironment", "CKContainer"]
 - !private ["PSo18UIFocusEnvironment", "CKRecordID"]
+- !private ["PSo18UIFocusEnvironment", "ClicksViewController"]
 - ["PSo18UIFocusEnvironment", "Date"]
 - !private ["PSo18UIFocusEnvironment", "DispatchQueue"]
 - !private ["PSo18UIFocusEnvironment", "Double"]
@@ -2234,6 +2304,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - ["PSo18UIFocusEnvironment", "addTotalClicksToLocalSave"]
 - ["PSo18UIFocusEnvironment", "addTotalHitlerFound"]
+- !private ["PSo18UIFocusEnvironment", "allowsLinkPreview"]
+- !private ["PSo18UIFocusEnvironment", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo18UIFocusEnvironment", "alpha"]
 - ["PSo18UIFocusEnvironment", "authPlayer"]
 - !private ["PSo18UIFocusEnvironment", "barTintColor"]
@@ -2248,6 +2320,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "dismiss"]
 - !private ["PSo18UIFocusEnvironment", "downloadLatestWorldStats"]
 - ["PSo18UIFocusEnvironment", "gameCenterViewControllerDidFinish"]
+- ["PSo18UIFocusEnvironment", "getTimeString"]
+- ["PSo18UIFocusEnvironment", "gratzScreenHasBeenShown"]
 - ["PSo18UIFocusEnvironment", "hitlerFound"]
 - ["PSo18UIFocusEnvironment", "hitlerGratzPopup"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -2279,6 +2353,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "showingAd"]
 - ["PSo18UIFocusEnvironment", "siteReady"]
 - ["PSo18UIFocusEnvironment", "siteTrace"]
+- !private ["PSo18UIFocusEnvironment", "sizeToFit"]
 - !private ["PSo18UIFocusEnvironment", "startAnimating"]
 - ["PSo18UIFocusEnvironment", "startDate"]
 - ["PSo18UIFocusEnvironment", "timeTicking"]
@@ -2293,11 +2368,14 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "webViewDidStartLoad"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "activityIndicatorViewStyle"]
+- !private ["PSo11UIFocusItem", "allowsLinkPreview"]
+- !private ["PSo11UIFocusItem", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo11UIFocusItem", "alpha"]
 - !private ["PSo11UIFocusItem", "barTintColor"]
 - !private ["PSo11UIFocusItem", "delegate"]
 - !private ["PSo11UIFocusItem", "loadRequest"]
 - !private ["PSo11UIFocusItem", "scalesPageToFit"]
+- !private ["PSo11UIFocusItem", "sizeToFit"]
 - !private ["PSo11UIFocusItem", "startAnimating"]
 - !private ["CSo15UINavigationBar", "barTintColor"]
 - ["CSo15UINavigationBar", "deinit"]
@@ -2308,6 +2386,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CKContainer"]
 - !private ["CSo11UIResponder", "CKRecordID"]
 - !private ["CSo11UIResponder", "CKRecordValue"]
+- !private ["CSo11UIResponder", "ClicksViewController"]
 - ["CSo11UIResponder", "Date"]
 - !private ["CSo11UIResponder", "DispatchQueue"]
 - ["CSo11UIResponder", "Double"]
@@ -2342,6 +2421,8 @@ depends-member:
 - !private ["CSo11UIResponder", "addAction"]
 - ["CSo11UIResponder", "addTotalClicksToLocalSave"]
 - ["CSo11UIResponder", "addTotalHitlerFound"]
+- !private ["CSo11UIResponder", "allowsLinkPreview"]
+- !private ["CSo11UIResponder", "allowsPictureInPictureMediaPlayback"]
 - !private ["CSo11UIResponder", "alpha"]
 - ["CSo11UIResponder", "authPlayer"]
 - !private ["CSo11UIResponder", "barTintColor"]
@@ -2356,6 +2437,8 @@ depends-member:
 - !private ["CSo11UIResponder", "dismiss"]
 - !private ["CSo11UIResponder", "downloadLatestWorldStats"]
 - ["CSo11UIResponder", "gameCenterViewControllerDidFinish"]
+- ["CSo11UIResponder", "getTimeString"]
+- ["CSo11UIResponder", "gratzScreenHasBeenShown"]
 - ["CSo11UIResponder", "hitlerFound"]
 - ["CSo11UIResponder", "hitlerGratzPopup"]
 - ["CSo11UIResponder", "init"]
@@ -2389,6 +2472,7 @@ depends-member:
 - ["CSo11UIResponder", "showingAd"]
 - ["CSo11UIResponder", "siteReady"]
 - ["CSo11UIResponder", "siteTrace"]
+- !private ["CSo11UIResponder", "sizeToFit"]
 - !private ["CSo11UIResponder", "startAnimating"]
 - ["CSo11UIResponder", "startDate"]
 - ["CSo11UIResponder", "timeTicking"]
@@ -2403,6 +2487,7 @@ depends-member:
 - ["CSo11UIResponder", "webViewDidStartLoad"]
 - !private ["PSo30UIResponderStandardEditActions", "CKContainer"]
 - !private ["PSo30UIResponderStandardEditActions", "CKRecordID"]
+- !private ["PSo30UIResponderStandardEditActions", "ClicksViewController"]
 - ["PSo30UIResponderStandardEditActions", "Date"]
 - !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
 - !private ["PSo30UIResponderStandardEditActions", "Double"]
@@ -2429,6 +2514,8 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "addAction"]
 - ["PSo30UIResponderStandardEditActions", "addTotalClicksToLocalSave"]
 - ["PSo30UIResponderStandardEditActions", "addTotalHitlerFound"]
+- !private ["PSo30UIResponderStandardEditActions", "allowsLinkPreview"]
+- !private ["PSo30UIResponderStandardEditActions", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo30UIResponderStandardEditActions", "alpha"]
 - ["PSo30UIResponderStandardEditActions", "authPlayer"]
 - !private ["PSo30UIResponderStandardEditActions", "barTintColor"]
@@ -2443,6 +2530,8 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "dismiss"]
 - !private ["PSo30UIResponderStandardEditActions", "downloadLatestWorldStats"]
 - ["PSo30UIResponderStandardEditActions", "gameCenterViewControllerDidFinish"]
+- ["PSo30UIResponderStandardEditActions", "getTimeString"]
+- ["PSo30UIResponderStandardEditActions", "gratzScreenHasBeenShown"]
 - ["PSo30UIResponderStandardEditActions", "hitlerFound"]
 - ["PSo30UIResponderStandardEditActions", "hitlerGratzPopup"]
 - ["PSo30UIResponderStandardEditActions", "init"]
@@ -2476,6 +2565,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "showingAd"]
 - ["PSo30UIResponderStandardEditActions", "siteReady"]
 - ["PSo30UIResponderStandardEditActions", "siteTrace"]
+- !private ["PSo30UIResponderStandardEditActions", "sizeToFit"]
 - !private ["PSo30UIResponderStandardEditActions", "startAnimating"]
 - ["PSo30UIResponderStandardEditActions", "startDate"]
 - ["PSo30UIResponderStandardEditActions", "timeTicking"]
@@ -2489,12 +2579,16 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "webViewDidFinishLoad"]
 - ["PSo30UIResponderStandardEditActions", "webViewDidStartLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo20UIScrollViewDelegate", "allowsLinkPreview"]
+- !private ["PSo20UIScrollViewDelegate", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo20UIScrollViewDelegate", "alpha"]
 - !private ["PSo20UIScrollViewDelegate", "delegate"]
 - !private ["PSo20UIScrollViewDelegate", "loadRequest"]
 - !private ["PSo20UIScrollViewDelegate", "scalesPageToFit"]
+- !private ["PSo20UIScrollViewDelegate", "sizeToFit"]
 - !private ["PSo16UIStateRestoring", "CKContainer"]
 - !private ["PSo16UIStateRestoring", "CKRecordID"]
+- !private ["PSo16UIStateRestoring", "ClicksViewController"]
 - ["PSo16UIStateRestoring", "Date"]
 - !private ["PSo16UIStateRestoring", "DispatchQueue"]
 - !private ["PSo16UIStateRestoring", "Double"]
@@ -2531,6 +2625,8 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "dismiss"]
 - !private ["PSo16UIStateRestoring", "downloadLatestWorldStats"]
 - ["PSo16UIStateRestoring", "gameCenterViewControllerDidFinish"]
+- ["PSo16UIStateRestoring", "getTimeString"]
+- ["PSo16UIStateRestoring", "gratzScreenHasBeenShown"]
 - ["PSo16UIStateRestoring", "hitlerFound"]
 - ["PSo16UIStateRestoring", "hitlerGratzPopup"]
 - ["PSo16UIStateRestoring", "init"]
@@ -2574,6 +2670,7 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "CKContainer"]
 - !private ["PSo18UITraitEnvironment", "CKRecordID"]
+- !private ["PSo18UITraitEnvironment", "ClicksViewController"]
 - ["PSo18UITraitEnvironment", "Date"]
 - !private ["PSo18UITraitEnvironment", "DispatchQueue"]
 - !private ["PSo18UITraitEnvironment", "Double"]
@@ -2600,6 +2697,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - ["PSo18UITraitEnvironment", "addTotalClicksToLocalSave"]
 - ["PSo18UITraitEnvironment", "addTotalHitlerFound"]
+- !private ["PSo18UITraitEnvironment", "allowsLinkPreview"]
+- !private ["PSo18UITraitEnvironment", "allowsPictureInPictureMediaPlayback"]
 - !private ["PSo18UITraitEnvironment", "alpha"]
 - ["PSo18UITraitEnvironment", "authPlayer"]
 - !private ["PSo18UITraitEnvironment", "barTintColor"]
@@ -2614,6 +2713,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "dismiss"]
 - !private ["PSo18UITraitEnvironment", "downloadLatestWorldStats"]
 - ["PSo18UITraitEnvironment", "gameCenterViewControllerDidFinish"]
+- ["PSo18UITraitEnvironment", "getTimeString"]
+- ["PSo18UITraitEnvironment", "gratzScreenHasBeenShown"]
 - ["PSo18UITraitEnvironment", "hitlerFound"]
 - ["PSo18UITraitEnvironment", "hitlerGratzPopup"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -2645,6 +2746,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "showingAd"]
 - ["PSo18UITraitEnvironment", "siteReady"]
 - ["PSo18UITraitEnvironment", "siteTrace"]
+- !private ["PSo18UITraitEnvironment", "sizeToFit"]
 - !private ["PSo18UITraitEnvironment", "startAnimating"]
 - ["PSo18UITraitEnvironment", "startDate"]
 - ["PSo18UITraitEnvironment", "timeTicking"]
@@ -2659,16 +2761,20 @@ depends-member:
 - ["PSo18UITraitEnvironment", "webViewDidStartLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "activityIndicatorViewStyle"]
+- !private ["CSo6UIView", "allowsLinkPreview"]
+- !private ["CSo6UIView", "allowsPictureInPictureMediaPlayback"]
 - !private ["CSo6UIView", "alpha"]
 - !private ["CSo6UIView", "barTintColor"]
 - !private ["CSo6UIView", "delegate"]
 - !private ["CSo6UIView", "loadRequest"]
 - !private ["CSo6UIView", "scalesPageToFit"]
+- !private ["CSo6UIView", "sizeToFit"]
 - !private ["CSo6UIView", "startAnimating"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CKContainer"]
 - !private ["CSo16UIViewController", "CKRecordID"]
 - !private ["CSo16UIViewController", "CKRecordValue"]
+- !private ["CSo16UIViewController", "ClicksViewController"]
 - ["CSo16UIViewController", "Date"]
 - !private ["CSo16UIViewController", "DispatchQueue"]
 - ["CSo16UIViewController", "Double"]
@@ -2714,6 +2820,8 @@ depends-member:
 - !private ["CSo16UIViewController", "dismiss"]
 - !private ["CSo16UIViewController", "downloadLatestWorldStats"]
 - ["CSo16UIViewController", "gameCenterViewControllerDidFinish"]
+- ["CSo16UIViewController", "getTimeString"]
+- ["CSo16UIViewController", "gratzScreenHasBeenShown"]
 - ["CSo16UIViewController", "hitlerFound"]
 - ["CSo16UIViewController", "hitlerGratzPopup"]
 - ["CSo16UIViewController", "init"]
@@ -2755,12 +2863,16 @@ depends-member:
 - ["CSo16UIViewController", "webViewDidFinishLoad"]
 - ["CSo16UIViewController", "webViewDidStartLoad"]
 - ["CSo16UIViewController", ""]
+- !private ["CSo9UIWebView", "allowsLinkPreview"]
+- !private ["CSo9UIWebView", "allowsPictureInPictureMediaPlayback"]
 - !private ["CSo9UIWebView", "alpha"]
 - !private ["CSo9UIWebView", "delegate"]
 - !private ["CSo9UIWebView", "loadRequest"]
 - !private ["CSo9UIWebView", "scalesPageToFit"]
+- !private ["CSo9UIWebView", "sizeToFit"]
 - !private ["PSo17UIWebViewDelegate", "CKContainer"]
 - !private ["PSo17UIWebViewDelegate", "CKRecordID"]
+- !private ["PSo17UIWebViewDelegate", "ClicksViewController"]
 - ["PSo17UIWebViewDelegate", "Date"]
 - !private ["PSo17UIWebViewDelegate", "DispatchQueue"]
 - !private ["PSo17UIWebViewDelegate", "Double"]
@@ -2793,6 +2905,8 @@ depends-member:
 - !private ["PSo17UIWebViewDelegate", "createAndLoadInterstitial"]
 - !private ["PSo17UIWebViewDelegate", "currentReachabilityStatus"]
 - ["PSo17UIWebViewDelegate", "gameCenterViewControllerDidFinish"]
+- !private ["PSo17UIWebViewDelegate", "getTimeString"]
+- !private ["PSo17UIWebViewDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo17UIWebViewDelegate", "hitlerFound"]
 - !private ["PSo17UIWebViewDelegate", "hitlerGratzPopup"]
 - ["PSo17UIWebViewDelegate", "interstitial"]
@@ -2831,38 +2945,27 @@ depends-member:
 - ["PSo17UIWebViewDelegate", "webViewDidStartLoad"]
 - ["PSo17UIWebViewDelegate", ""]
 - !private ["Su", "RawValue"]
-- !private ["Su", "Stride"]
-- !private ["Su", "_DisallowMixedSignArithmetic"]
 - !private ["Su", "deinit"]
 - !private ["Vs6UInt16", "RawValue"]
-- !private ["Vs6UInt16", "Stride"]
-- !private ["Vs6UInt16", "_DisallowMixedSignArithmetic"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "RawValue"]
-- !private ["Vs6UInt32", "Stride"]
-- !private ["Vs6UInt32", "_DisallowMixedSignArithmetic"]
 - !private ["Vs6UInt32", "deinit"]
 - !private ["Vs6UInt64", "RawValue"]
-- !private ["Vs6UInt64", "Stride"]
-- !private ["Vs6UInt64", "_DisallowMixedSignArithmetic"]
 - !private ["Vs6UInt64", "deinit"]
 - !private ["Vs5UInt8", "RawValue"]
-- !private ["Vs5UInt8", "Stride"]
-- !private ["Vs5UInt8", "_DisallowMixedSignArithmetic"]
 - !private ["Vs5UInt8", "deinit"]
 - ["V10Foundation3URL", "deinit"]
 - ["V10Foundation10URLRequest", "deinit"]
 - !private ["V10Foundation10URLRequest", "description"]
 - !private ["Sc", "deinit"]
 - !private ["Ps15UnsignedInteger", "RawValue"]
-- !private ["Ps15UnsignedInteger", "Stride"]
-- !private ["Ps15UnsignedInteger", "_DisallowMixedSignArithmetic"]
 - ["CSo12UserDefaults", "deinit"]
 - !private ["CSo12UserDefaults", "setValue"]
 - !private ["CSo12UserDefaults", "standard"]
 - !private ["CSo12UserDefaults", "value"]
 - !private ["P14clicksToHitler9Utilities", "CKContainer"]
 - !private ["P14clicksToHitler9Utilities", "CKRecordID"]
+- !private ["P14clicksToHitler9Utilities", "ClicksViewController"]
 - ["P14clicksToHitler9Utilities", "Date"]
 - !private ["P14clicksToHitler9Utilities", "DispatchQueue"]
 - !private ["P14clicksToHitler9Utilities", "Double"]
@@ -2889,6 +2992,8 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "addAction"]
 - ["P14clicksToHitler9Utilities", "addTotalClicksToLocalSave"]
 - ["P14clicksToHitler9Utilities", "addTotalHitlerFound"]
+- !private ["P14clicksToHitler9Utilities", "allowsLinkPreview"]
+- !private ["P14clicksToHitler9Utilities", "allowsPictureInPictureMediaPlayback"]
 - !private ["P14clicksToHitler9Utilities", "alpha"]
 - !private ["P14clicksToHitler9Utilities", "async"]
 - ["P14clicksToHitler9Utilities", "authPlayer"]
@@ -2908,7 +3013,9 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "downloadLatestWorldStats"]
 - !private ["P14clicksToHitler9Utilities", "fetch"]
 - ["P14clicksToHitler9Utilities", "gameCenterViewControllerDidFinish"]
+- ["P14clicksToHitler9Utilities", "getTimeString"]
 - !private ["P14clicksToHitler9Utilities", "global"]
+- ["P14clicksToHitler9Utilities", "gratzScreenHasBeenShown"]
 - ["P14clicksToHitler9Utilities", "hitlerFound"]
 - ["P14clicksToHitler9Utilities", "hitlerGratzPopup"]
 - ["P14clicksToHitler9Utilities", "init"]
@@ -2952,6 +3059,7 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "showingAd"]
 - ["P14clicksToHitler9Utilities", "siteReady"]
 - ["P14clicksToHitler9Utilities", "siteTrace"]
+- !private ["P14clicksToHitler9Utilities", "sizeToFit"]
 - !private ["P14clicksToHitler9Utilities", "standard"]
 - !private ["P14clicksToHitler9Utilities", "startAnimating"]
 - ["P14clicksToHitler9Utilities", "startDate"]
@@ -2981,20 +3089,20 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "removeAll"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["Ps15_CVarArgAligned", "RawValue"]
-- !private ["Ps15_CVarArgAligned", "Stride"]
-- !private ["Ps15_CVarArgAligned", "_DisallowMixedSignArithmetic"]
 - !private ["Ps15_CVarArgAligned", "description"]
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "RawValue"]
-- !private ["Ps22_CVarArgPassedAsDouble", "Stride"]
 - !private ["Ps22_CVarArgPassedAsDouble", "description"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "activityIndicatorViewStyle"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "allowsLinkPreview"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "alpha"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "barTintColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "delegate"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "loadRequest"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "scalesPageToFit"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "sizeToFit"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "startAnimating"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
@@ -3007,21 +3115,17 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "removeAll"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "RawValue"]
-- !private ["Ps28_DisallowMixedSignArithmetic", "Stride"]
-- !private ["Ps28_DisallowMixedSignArithmetic", "_DisallowMixedSignArithmetic"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "contains"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "replacingOccurrences"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "RawValue"]
-- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "Stride"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "description"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "RawValue"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisallowMixedSignArithmetic"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "description"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "contains"]
@@ -3039,6 +3143,7 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "replacingOccurrences"]
 - !private ["Ps9_Hashable", "CKContainer"]
 - !private ["Ps9_Hashable", "CKRecordID"]
+- !private ["Ps9_Hashable", "ClicksViewController"]
 - ["Ps9_Hashable", "Date"]
 - !private ["Ps9_Hashable", "DispatchQueue"]
 - !private ["Ps9_Hashable", "Double"]
@@ -3064,7 +3169,6 @@ depends-member:
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UserDefaults"]
 - !private ["Ps9_Hashable", "_DisabledRangeIndex"]
-- !private ["Ps9_Hashable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "actionSheet"]
 - !private ["Ps9_Hashable", "activityIndicatorViewStyle"]
@@ -3073,6 +3177,8 @@ depends-member:
 - ["Ps9_Hashable", "addTotalClicksToLocalSave"]
 - ["Ps9_Hashable", "addTotalHitlerFound"]
 - !private ["Ps9_Hashable", "alert"]
+- !private ["Ps9_Hashable", "allowsLinkPreview"]
+- !private ["Ps9_Hashable", "allowsPictureInPictureMediaPlayback"]
 - !private ["Ps9_Hashable", "alpha"]
 - !private ["Ps9_Hashable", "async"]
 - ["Ps9_Hashable", "authPlayer"]
@@ -3096,7 +3202,9 @@ depends-member:
 - !private ["Ps9_Hashable", "downloadLatestWorldStats"]
 - !private ["Ps9_Hashable", "fetch"]
 - ["Ps9_Hashable", "gameCenterViewControllerDidFinish"]
+- ["Ps9_Hashable", "getTimeString"]
 - !private ["Ps9_Hashable", "global"]
+- ["Ps9_Hashable", "gratzScreenHasBeenShown"]
 - ["Ps9_Hashable", "hitlerFound"]
 - ["Ps9_Hashable", "hitlerGratzPopup"]
 - ["Ps9_Hashable", "init"]
@@ -3140,6 +3248,7 @@ depends-member:
 - ["Ps9_Hashable", "showingAd"]
 - ["Ps9_Hashable", "siteReady"]
 - ["Ps9_Hashable", "siteTrace"]
+- !private ["Ps9_Hashable", "sizeToFit"]
 - !private ["Ps9_Hashable", "standard"]
 - !private ["Ps9_Hashable", "startAnimating"]
 - ["Ps9_Hashable", "startDate"]
@@ -3164,19 +3273,16 @@ depends-member:
 - !private ["Ps14_Incrementable", "RawValue"]
 - !private ["Ps14_Incrementable", "Stride"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
-- !private ["Ps14_Incrementable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps14_Incrementable", "init"]
 - !private ["Ps8_Integer", "IntegerLiteralType"]
 - !private ["Ps8_Integer", "RawValue"]
 - !private ["Ps8_Integer", "Stride"]
 - !private ["Ps8_Integer", "_DisabledRangeIndex"]
-- !private ["Ps8_Integer", "_DisallowMixedSignArithmetic"]
 - !private ["Ps8_Integer", "init"]
 - !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps18_IntegerArithmetic", "RawValue"]
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
-- !private ["Ps18_IntegerArithmetic", "_DisallowMixedSignArithmetic"]
 - !private ["Ps18_IntegerArithmetic", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
@@ -3187,7 +3293,6 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Stride"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
-- !private ["Ps21_ObjectiveCBridgeable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "append"]
@@ -3209,12 +3314,9 @@ depends-member:
 - !private ["Ps11_Strideable", "RawValue"]
 - !private ["Ps11_Strideable", "Stride"]
 - !private ["Ps11_Strideable", "_DisabledRangeIndex"]
-- !private ["Ps11_Strideable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps11_Strideable", "description"]
 - !private ["Ps11_Strideable", "init"]
 - !private ["Ps14_StringElement", "RawValue"]
-- !private ["Ps14_StringElement", "Stride"]
-- !private ["Ps14_StringElement", "_DisallowMixedSignArithmetic"]
 - !private ["V4simd7double2", "RawValue"]
 - !private ["V4simd7double2", "deinit"]
 - !private ["V4simd9double2x2", "deinit"]
@@ -3329,7 +3431,6 @@ depends-nominal:
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
 - !private "PSo16NSMutableCopying"
-- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
@@ -3537,4 +3638,4 @@ depends-external:
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
-interface-hash: "a50c6f18514ca9ae7e432394958b9dbd"
+interface-hash: "9ad8fd489b95ca755e0b08a68830c69c"

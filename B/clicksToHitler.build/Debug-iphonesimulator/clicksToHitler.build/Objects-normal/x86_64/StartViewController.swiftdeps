@@ -6,63 +6,65 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler19StartViewController", ""]
 provides-dynamic-lookup:
-- "showLeaderBoard"
-- "gameCenterButton"
-- "startButtonPushed"
-- "startText"
+- "didReceiveMemoryWarning"
+- "invisButton"
+- "animateSpeed"
+- "viewDidAppear"
 - "rotateHitlerPlus"
+- "startButtonPushed"
+- "hitlerStart"
+- "showLeaderBoard"
+- "downloadLatestWorldStats"
+- "animateAngle"
+- "resetLocalSave"
+- "checkInternet"
+- "rotateHitlerMinus"
+- "startText"
+- "loggedIn"
+- "gameCenterButton"
+- "viewDidLoad"
 - "authPlayer"
 - "gameCenterViewControllerDidFinish"
-- "viewDidLoad"
-- "downloadLatestWorldStats"
-- "rotateHitlerMinus"
-- "loggedIn"
-- "viewDidAppear"
-- "invisButton"
-- "animateAngle"
-- "checkInternet"
-- "resetLocalSave"
-- "didReceiveMemoryWarning"
-- "hitlerStart"
-- "animateSpeed"
 depends-top-level:
-- !private "Void"
-- "UILabel"
-- !private "=="
-- !private "UIAlertAction"
-- "AssignmentPrecedence"
-- !private "UIAlertController"
-- !private "CastingPrecedence"
-- "UIImageView"
-- "Double"
-- "Bool"
-- !private "-"
-- !private "CGFloat"
-- !private "print"
-- !private "String"
-- !private "UIAlertActionStyle"
-- !private "CGAffineTransform"
-- "UIViewController"
 - "StartViewController"
-- !private "CKContainer"
-- !private "GKLocalPlayer"
-- !private "Int"
-- "GKGameCenterControllerDelegate"
-- !private "UIView"
-- "BooleanLiteralType"
-- !private "UIAlertControllerStyle"
+- "UIImageView"
+- !private "=="
+- !private "print"
+- "AssignmentPrecedence"
+- "UIViewController"
 - !private "!="
-- !private "StringLiteralType"
-- !private "CKRecordID"
-- !private "UserDefaults"
+- !private "Void"
 - "GKGameCenterViewController"
+- !private "String"
+- !private "CGAffineTransform"
+- !private "Int"
+- !private "CastingPrecedence"
+- !private "CGFloat"
 - !private "!"
+- "UILabel"
+- !private "UIAlertController"
+- !private "UIView"
+- !private "GKLocalPlayer"
+- !private "DispatchQueue"
+- "Double"
+- !private "UIAlertAction"
+- !private "CKRecordID"
+- !private "-"
+- !private "UIAlertControllerStyle"
+- "BooleanLiteralType"
+- !private "UIAlertActionStyle"
+- "GKGameCenterControllerDelegate"
+- !private "StringLiteralType"
+- "Bool"
+- !private "UserDefaults"
+- !private "CKContainer"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
 - !private ["Ps9AnyObject", "CGFloat"]
 - !private ["Ps9AnyObject", "CKContainer"]
 - !private ["Ps9AnyObject", "CKRecordID"]
+- !private ["Ps9AnyObject", "DispatchQueue"]
 - !private ["Ps9AnyObject", "GKGameCenterViewController"]
 - !private ["Ps9AnyObject", "GKLocalPlayer"]
 - !private ["Ps9AnyObject", "StartViewController"]
@@ -77,6 +79,7 @@ depends-member:
 - !private ["Ps9AnyObject", "animate"]
 - ["Ps9AnyObject", "animateAngle"]
 - ["Ps9AnyObject", "animateSpeed"]
+- !private ["Ps9AnyObject", "async"]
 - ["Ps9AnyObject", "authPlayer"]
 - !private ["Ps9AnyObject", "authenticateHandler"]
 - ["Ps9AnyObject", "checkInternet"]
@@ -89,12 +92,14 @@ depends-member:
 - ["Ps9AnyObject", "gameCenterButton"]
 - !private ["Ps9AnyObject", "gameCenterDelegate"]
 - ["Ps9AnyObject", "gameCenterViewControllerDidFinish"]
+- !private ["Ps9AnyObject", "global"]
 - ["Ps9AnyObject", "hitlerStart"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "invisButton"]
 - !private ["Ps9AnyObject", "isAuthenticated"]
 - !private ["Ps9AnyObject", "localPlayer"]
 - ["Ps9AnyObject", "loggedIn"]
+- !private ["Ps9AnyObject", "main"]
 - !private ["Ps9AnyObject", "present"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "publicCloudDatabase"]
@@ -145,6 +150,7 @@ depends-member:
 - !private ["Ps7CVarArg", "CGFloat"]
 - !private ["Ps7CVarArg", "CKContainer"]
 - !private ["Ps7CVarArg", "CKRecordID"]
+- !private ["Ps7CVarArg", "DispatchQueue"]
 - !private ["Ps7CVarArg", "GKGameCenterViewController"]
 - !private ["Ps7CVarArg", "GKLocalPlayer"]
 - !private ["Ps7CVarArg", "StartViewController"]
@@ -159,6 +165,7 @@ depends-member:
 - !private ["Ps7CVarArg", "animate"]
 - ["Ps7CVarArg", "animateAngle"]
 - ["Ps7CVarArg", "animateSpeed"]
+- !private ["Ps7CVarArg", "async"]
 - ["Ps7CVarArg", "authPlayer"]
 - !private ["Ps7CVarArg", "authenticateHandler"]
 - ["Ps7CVarArg", "checkInternet"]
@@ -171,12 +178,14 @@ depends-member:
 - ["Ps7CVarArg", "gameCenterButton"]
 - !private ["Ps7CVarArg", "gameCenterDelegate"]
 - ["Ps7CVarArg", "gameCenterViewControllerDidFinish"]
+- !private ["Ps7CVarArg", "global"]
 - ["Ps7CVarArg", "hitlerStart"]
 - !private ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "invisButton"]
 - !private ["Ps7CVarArg", "isAuthenticated"]
 - !private ["Ps7CVarArg", "localPlayer"]
 - ["Ps7CVarArg", "loggedIn"]
+- !private ["Ps7CVarArg", "main"]
 - !private ["Ps7CVarArg", "present"]
 - !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "publicCloudDatabase"]
@@ -206,6 +215,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
 - !private ["Ps28CustomDebugStringConvertible", "CKContainer"]
 - !private ["Ps28CustomDebugStringConvertible", "CKRecordID"]
+- !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
 - !private ["Ps28CustomDebugStringConvertible", "GKGameCenterViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "GKLocalPlayer"]
 - !private ["Ps28CustomDebugStringConvertible", "StartViewController"]
@@ -220,6 +230,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "animate"]
 - ["Ps28CustomDebugStringConvertible", "animateAngle"]
 - ["Ps28CustomDebugStringConvertible", "animateSpeed"]
+- !private ["Ps28CustomDebugStringConvertible", "async"]
 - ["Ps28CustomDebugStringConvertible", "authPlayer"]
 - !private ["Ps28CustomDebugStringConvertible", "authenticateHandler"]
 - ["Ps28CustomDebugStringConvertible", "checkInternet"]
@@ -232,12 +243,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "gameCenterButton"]
 - !private ["Ps28CustomDebugStringConvertible", "gameCenterDelegate"]
 - ["Ps28CustomDebugStringConvertible", "gameCenterViewControllerDidFinish"]
+- !private ["Ps28CustomDebugStringConvertible", "global"]
 - ["Ps28CustomDebugStringConvertible", "hitlerStart"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "invisButton"]
 - !private ["Ps28CustomDebugStringConvertible", "isAuthenticated"]
 - !private ["Ps28CustomDebugStringConvertible", "localPlayer"]
 - ["Ps28CustomDebugStringConvertible", "loggedIn"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "publicCloudDatabase"]
@@ -269,6 +282,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGFloat"]
 - !private ["Ps23CustomStringConvertible", "CKContainer"]
 - !private ["Ps23CustomStringConvertible", "CKRecordID"]
+- !private ["Ps23CustomStringConvertible", "DispatchQueue"]
 - !private ["Ps23CustomStringConvertible", "GKGameCenterViewController"]
 - !private ["Ps23CustomStringConvertible", "GKLocalPlayer"]
 - !private ["Ps23CustomStringConvertible", "StartViewController"]
@@ -284,6 +298,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "animate"]
 - ["Ps23CustomStringConvertible", "animateAngle"]
 - ["Ps23CustomStringConvertible", "animateSpeed"]
+- !private ["Ps23CustomStringConvertible", "async"]
 - ["Ps23CustomStringConvertible", "authPlayer"]
 - !private ["Ps23CustomStringConvertible", "authenticateHandler"]
 - ["Ps23CustomStringConvertible", "checkInternet"]
@@ -296,12 +311,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "gameCenterButton"]
 - !private ["Ps23CustomStringConvertible", "gameCenterDelegate"]
 - ["Ps23CustomStringConvertible", "gameCenterViewControllerDidFinish"]
+- !private ["Ps23CustomStringConvertible", "global"]
 - ["Ps23CustomStringConvertible", "hitlerStart"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "invisButton"]
 - !private ["Ps23CustomStringConvertible", "isAuthenticated"]
 - !private ["Ps23CustomStringConvertible", "localPlayer"]
 - ["Ps23CustomStringConvertible", "loggedIn"]
+- !private ["Ps23CustomStringConvertible", "main"]
 - !private ["Ps23CustomStringConvertible", "present"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "publicCloudDatabase"]
@@ -325,11 +342,19 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - !private ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["CSo14DispatchObject", "async"]
+- !private ["CSo14DispatchObject", "global"]
+- !private ["CSo14DispatchObject", "main"]
+- !private ["CSo13DispatchQueue", "async"]
+- ["CSo13DispatchQueue", "deinit"]
+- !private ["CSo13DispatchQueue", "global"]
+- !private ["CSo13DispatchQueue", "main"]
 - ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGAffineTransform"]
 - !private ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "CKContainer"]
 - !private ["Ps9Equatable", "CKRecordID"]
+- !private ["Ps9Equatable", "DispatchQueue"]
 - !private ["Ps9Equatable", "GKGameCenterViewController"]
 - !private ["Ps9Equatable", "GKLocalPlayer"]
 - !private ["Ps9Equatable", "StartViewController"]
@@ -347,8 +372,10 @@ depends-member:
 - !private ["Ps9Equatable", "animate"]
 - ["Ps9Equatable", "animateAngle"]
 - ["Ps9Equatable", "animateSpeed"]
+- !private ["Ps9Equatable", "async"]
 - ["Ps9Equatable", "authPlayer"]
 - !private ["Ps9Equatable", "authenticateHandler"]
+- !private ["Ps9Equatable", "background"]
 - !private ["Ps9Equatable", "cancel"]
 - ["Ps9Equatable", "checkInternet"]
 - !private ["Ps9Equatable", "currentReachabilityStatus"]
@@ -361,12 +388,14 @@ depends-member:
 - ["Ps9Equatable", "gameCenterButton"]
 - !private ["Ps9Equatable", "gameCenterDelegate"]
 - ["Ps9Equatable", "gameCenterViewControllerDidFinish"]
+- !private ["Ps9Equatable", "global"]
 - ["Ps9Equatable", "hitlerStart"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "invisButton"]
 - !private ["Ps9Equatable", "isAuthenticated"]
 - !private ["Ps9Equatable", "localPlayer"]
 - ["Ps9Equatable", "loggedIn"]
+- !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "present"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "publicCloudDatabase"]
@@ -407,6 +436,7 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "CGFloat"]
 - !private ["PSo30GKGameCenterControllerDelegate", "CKContainer"]
 - !private ["PSo30GKGameCenterControllerDelegate", "CKRecordID"]
+- !private ["PSo30GKGameCenterControllerDelegate", "DispatchQueue"]
 - !private ["PSo30GKGameCenterControllerDelegate", "GKGameCenterViewController"]
 - !private ["PSo30GKGameCenterControllerDelegate", "GKLocalPlayer"]
 - !private ["PSo30GKGameCenterControllerDelegate", "StartViewController"]
@@ -427,7 +457,6 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "hitlerStart"]
 - !private ["PSo30GKGameCenterControllerDelegate", "present"]
 - !private ["PSo30GKGameCenterControllerDelegate", "print"]
-- !private ["PSo30GKGameCenterControllerDelegate", "resetLocalSave"]
 - !private ["PSo30GKGameCenterControllerDelegate", "rotateHitlerMinus"]
 - !private ["PSo30GKGameCenterControllerDelegate", "rotateHitlerPlus"]
 - !private ["PSo30GKGameCenterControllerDelegate", "showLeaderBoard"]
@@ -453,6 +482,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGFloat"]
 - !private ["Ps8Hashable", "CKContainer"]
 - !private ["Ps8Hashable", "CKRecordID"]
+- !private ["Ps8Hashable", "DispatchQueue"]
 - !private ["Ps8Hashable", "GKGameCenterViewController"]
 - !private ["Ps8Hashable", "GKLocalPlayer"]
 - !private ["Ps8Hashable", "StartViewController"]
@@ -470,8 +500,10 @@ depends-member:
 - !private ["Ps8Hashable", "animate"]
 - ["Ps8Hashable", "animateAngle"]
 - ["Ps8Hashable", "animateSpeed"]
+- !private ["Ps8Hashable", "async"]
 - ["Ps8Hashable", "authPlayer"]
 - !private ["Ps8Hashable", "authenticateHandler"]
+- !private ["Ps8Hashable", "background"]
 - !private ["Ps8Hashable", "cancel"]
 - ["Ps8Hashable", "checkInternet"]
 - !private ["Ps8Hashable", "currentReachabilityStatus"]
@@ -484,12 +516,14 @@ depends-member:
 - ["Ps8Hashable", "gameCenterButton"]
 - !private ["Ps8Hashable", "gameCenterDelegate"]
 - ["Ps8Hashable", "gameCenterViewControllerDidFinish"]
+- !private ["Ps8Hashable", "global"]
 - ["Ps8Hashable", "hitlerStart"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "invisButton"]
 - !private ["Ps8Hashable", "isAuthenticated"]
 - !private ["Ps8Hashable", "localPlayer"]
 - ["Ps8Hashable", "loggedIn"]
+- !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "present"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "publicCloudDatabase"]
@@ -527,6 +561,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "CKContainer"]
 - !private ["PSo8NSCoding", "CKRecordID"]
+- !private ["PSo8NSCoding", "DispatchQueue"]
 - !private ["PSo8NSCoding", "GKGameCenterViewController"]
 - !private ["PSo8NSCoding", "GKLocalPlayer"]
 - !private ["PSo8NSCoding", "StartViewController"]
@@ -579,6 +614,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGFloat"]
 - !private ["PSo26NSExtensionRequestHandling", "CKContainer"]
 - !private ["PSo26NSExtensionRequestHandling", "CKRecordID"]
+- !private ["PSo26NSExtensionRequestHandling", "DispatchQueue"]
 - !private ["PSo26NSExtensionRequestHandling", "GKGameCenterViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "GKLocalPlayer"]
 - !private ["PSo26NSExtensionRequestHandling", "StartViewController"]
@@ -625,6 +661,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CKContainer"]
 - !private ["CSo8NSObject", "CKRecordID"]
+- !private ["CSo8NSObject", "DispatchQueue"]
 - ["CSo8NSObject", "Double"]
 - ["CSo8NSObject", "GKGameCenterViewController"]
 - !private ["CSo8NSObject", "GKLocalPlayer"]
@@ -644,6 +681,7 @@ depends-member:
 - !private ["CSo8NSObject", "animate"]
 - ["CSo8NSObject", "animateAngle"]
 - ["CSo8NSObject", "animateSpeed"]
+- !private ["CSo8NSObject", "async"]
 - ["CSo8NSObject", "authPlayer"]
 - !private ["CSo8NSObject", "authenticateHandler"]
 - ["CSo8NSObject", "checkInternet"]
@@ -656,12 +694,14 @@ depends-member:
 - ["CSo8NSObject", "gameCenterButton"]
 - !private ["CSo8NSObject", "gameCenterDelegate"]
 - ["CSo8NSObject", "gameCenterViewControllerDidFinish"]
+- !private ["CSo8NSObject", "global"]
 - ["CSo8NSObject", "hitlerStart"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "invisButton"]
 - !private ["CSo8NSObject", "isAuthenticated"]
 - !private ["CSo8NSObject", "localPlayer"]
 - ["CSo8NSObject", "loggedIn"]
+- !private ["CSo8NSObject", "main"]
 - !private ["CSo8NSObject", "present"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "publicCloudDatabase"]
@@ -688,6 +728,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGFloat"]
 - !private ["PSo16NSObjectProtocol", "CKContainer"]
 - !private ["PSo16NSObjectProtocol", "CKRecordID"]
+- !private ["PSo16NSObjectProtocol", "DispatchQueue"]
 - !private ["PSo16NSObjectProtocol", "GKGameCenterViewController"]
 - !private ["PSo16NSObjectProtocol", "GKLocalPlayer"]
 - !private ["PSo16NSObjectProtocol", "StartViewController"]
@@ -702,6 +743,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "animate"]
 - ["PSo16NSObjectProtocol", "animateAngle"]
 - ["PSo16NSObjectProtocol", "animateSpeed"]
+- !private ["PSo16NSObjectProtocol", "async"]
 - ["PSo16NSObjectProtocol", "authPlayer"]
 - !private ["PSo16NSObjectProtocol", "authenticateHandler"]
 - ["PSo16NSObjectProtocol", "checkInternet"]
@@ -714,12 +756,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", "gameCenterButton"]
 - !private ["PSo16NSObjectProtocol", "gameCenterDelegate"]
 - ["PSo16NSObjectProtocol", "gameCenterViewControllerDidFinish"]
+- !private ["PSo16NSObjectProtocol", "global"]
 - ["PSo16NSObjectProtocol", "hitlerStart"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "invisButton"]
 - !private ["PSo16NSObjectProtocol", "isAuthenticated"]
 - !private ["PSo16NSObjectProtocol", "localPlayer"]
 - ["PSo16NSObjectProtocol", "loggedIn"]
+- !private ["PSo16NSObjectProtocol", "main"]
 - !private ["PSo16NSObjectProtocol", "present"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "publicCloudDatabase"]
@@ -746,7 +790,12 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["CSo8NSString", "init"]
+- !private ["CSo9OS_object", "async"]
+- !private ["CSo9OS_object", "global"]
+- !private ["CSo9OS_object", "main"]
 - ["Sq", "deinit"]
+- !private ["OV8Dispatch11DispatchQoS8QoSClass", "background"]
+- ["OV8Dispatch11DispatchQoS8QoSClass", "deinit"]
 - !private ["Ps16RawRepresentable", "actionSheet"]
 - !private ["Ps16RawRepresentable", "alert"]
 - !private ["Ps16RawRepresentable", "cancel"]
@@ -758,6 +807,7 @@ depends-member:
 - !private ["C14clicksToHitler19StartViewController", "CGFloat"]
 - !private ["C14clicksToHitler19StartViewController", "CKContainer"]
 - !private ["C14clicksToHitler19StartViewController", "CKRecordID"]
+- !private ["C14clicksToHitler19StartViewController", "DispatchQueue"]
 - ["C14clicksToHitler19StartViewController", "Double"]
 - ["C14clicksToHitler19StartViewController", "GKGameCenterViewController"]
 - !private ["C14clicksToHitler19StartViewController", "GKLocalPlayer"]
@@ -829,6 +879,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGFloat"]
 - !private ["PSo21UIAppearanceContainer", "CKContainer"]
 - !private ["PSo21UIAppearanceContainer", "CKRecordID"]
+- !private ["PSo21UIAppearanceContainer", "DispatchQueue"]
 - !private ["PSo21UIAppearanceContainer", "GKGameCenterViewController"]
 - !private ["PSo21UIAppearanceContainer", "GKLocalPlayer"]
 - !private ["PSo21UIAppearanceContainer", "StartViewController"]
@@ -878,6 +929,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGFloat"]
 - !private ["PSo18UIContentContainer", "CKContainer"]
 - !private ["PSo18UIContentContainer", "CKRecordID"]
+- !private ["PSo18UIContentContainer", "DispatchQueue"]
 - !private ["PSo18UIContentContainer", "GKGameCenterViewController"]
 - !private ["PSo18UIContentContainer", "GKLocalPlayer"]
 - !private ["PSo18UIContentContainer", "StartViewController"]
@@ -933,6 +985,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGFloat"]
 - !private ["PSo18UIFocusEnvironment", "CKContainer"]
 - !private ["PSo18UIFocusEnvironment", "CKRecordID"]
+- !private ["PSo18UIFocusEnvironment", "DispatchQueue"]
 - !private ["PSo18UIFocusEnvironment", "GKGameCenterViewController"]
 - !private ["PSo18UIFocusEnvironment", "GKLocalPlayer"]
 - !private ["PSo18UIFocusEnvironment", "StartViewController"]
@@ -993,6 +1046,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "CKContainer"]
 - !private ["CSo11UIResponder", "CKRecordID"]
+- !private ["CSo11UIResponder", "DispatchQueue"]
 - ["CSo11UIResponder", "Double"]
 - ["CSo11UIResponder", "GKGameCenterViewController"]
 - !private ["CSo11UIResponder", "GKLocalPlayer"]
@@ -1046,6 +1100,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "CGFloat"]
 - !private ["PSo30UIResponderStandardEditActions", "CKContainer"]
 - !private ["PSo30UIResponderStandardEditActions", "CKRecordID"]
+- !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
 - !private ["PSo30UIResponderStandardEditActions", "GKGameCenterViewController"]
 - !private ["PSo30UIResponderStandardEditActions", "GKLocalPlayer"]
 - !private ["PSo30UIResponderStandardEditActions", "StartViewController"]
@@ -1095,6 +1150,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGFloat"]
 - !private ["PSo16UIStateRestoring", "CKContainer"]
 - !private ["PSo16UIStateRestoring", "CKRecordID"]
+- !private ["PSo16UIStateRestoring", "DispatchQueue"]
 - !private ["PSo16UIStateRestoring", "GKGameCenterViewController"]
 - !private ["PSo16UIStateRestoring", "GKLocalPlayer"]
 - !private ["PSo16UIStateRestoring", "StartViewController"]
@@ -1142,6 +1198,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGFloat"]
 - !private ["PSo18UITraitEnvironment", "CKContainer"]
 - !private ["PSo18UITraitEnvironment", "CKRecordID"]
+- !private ["PSo18UITraitEnvironment", "DispatchQueue"]
 - !private ["PSo18UITraitEnvironment", "GKGameCenterViewController"]
 - !private ["PSo18UITraitEnvironment", "GKLocalPlayer"]
 - !private ["PSo18UITraitEnvironment", "StartViewController"]
@@ -1197,6 +1254,7 @@ depends-member:
 - !private ["CSo16UIViewController", "CGFloat"]
 - !private ["CSo16UIViewController", "CKContainer"]
 - !private ["CSo16UIViewController", "CKRecordID"]
+- !private ["CSo16UIViewController", "DispatchQueue"]
 - ["CSo16UIViewController", "Double"]
 - ["CSo16UIViewController", "GKGameCenterViewController"]
 - !private ["CSo16UIViewController", "GKLocalPlayer"]
@@ -1259,6 +1317,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "CGFloat"]
 - !private ["P14clicksToHitler9Utilities", "CKContainer"]
 - !private ["P14clicksToHitler9Utilities", "CKRecordID"]
+- !private ["P14clicksToHitler9Utilities", "DispatchQueue"]
 - !private ["P14clicksToHitler9Utilities", "GKGameCenterViewController"]
 - !private ["P14clicksToHitler9Utilities", "GKLocalPlayer"]
 - !private ["P14clicksToHitler9Utilities", "StartViewController"]
@@ -1273,6 +1332,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "animate"]
 - ["P14clicksToHitler9Utilities", "animateAngle"]
 - ["P14clicksToHitler9Utilities", "animateSpeed"]
+- !private ["P14clicksToHitler9Utilities", "async"]
 - ["P14clicksToHitler9Utilities", "authPlayer"]
 - !private ["P14clicksToHitler9Utilities", "authenticateHandler"]
 - ["P14clicksToHitler9Utilities", "checkInternet"]
@@ -1285,12 +1345,14 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "gameCenterButton"]
 - !private ["P14clicksToHitler9Utilities", "gameCenterDelegate"]
 - ["P14clicksToHitler9Utilities", "gameCenterViewControllerDidFinish"]
+- !private ["P14clicksToHitler9Utilities", "global"]
 - ["P14clicksToHitler9Utilities", "hitlerStart"]
 - !private ["P14clicksToHitler9Utilities", "init"]
 - ["P14clicksToHitler9Utilities", "invisButton"]
 - !private ["P14clicksToHitler9Utilities", "isAuthenticated"]
 - !private ["P14clicksToHitler9Utilities", "localPlayer"]
 - ["P14clicksToHitler9Utilities", "loggedIn"]
+- !private ["P14clicksToHitler9Utilities", "main"]
 - !private ["P14clicksToHitler9Utilities", "present"]
 - !private ["P14clicksToHitler9Utilities", "print"]
 - !private ["P14clicksToHitler9Utilities", "publicCloudDatabase"]
@@ -1331,6 +1393,7 @@ depends-member:
 - !private ["Ps9_Hashable", "CGFloat"]
 - !private ["Ps9_Hashable", "CKContainer"]
 - !private ["Ps9_Hashable", "CKRecordID"]
+- !private ["Ps9_Hashable", "DispatchQueue"]
 - !private ["Ps9_Hashable", "GKGameCenterViewController"]
 - !private ["Ps9_Hashable", "GKLocalPlayer"]
 - !private ["Ps9_Hashable", "StartViewController"]
@@ -1348,8 +1411,10 @@ depends-member:
 - !private ["Ps9_Hashable", "animate"]
 - ["Ps9_Hashable", "animateAngle"]
 - ["Ps9_Hashable", "animateSpeed"]
+- !private ["Ps9_Hashable", "async"]
 - ["Ps9_Hashable", "authPlayer"]
 - !private ["Ps9_Hashable", "authenticateHandler"]
+- !private ["Ps9_Hashable", "background"]
 - !private ["Ps9_Hashable", "cancel"]
 - ["Ps9_Hashable", "checkInternet"]
 - !private ["Ps9_Hashable", "currentReachabilityStatus"]
@@ -1362,12 +1427,14 @@ depends-member:
 - ["Ps9_Hashable", "gameCenterButton"]
 - !private ["Ps9_Hashable", "gameCenterDelegate"]
 - ["Ps9_Hashable", "gameCenterViewControllerDidFinish"]
+- !private ["Ps9_Hashable", "global"]
 - ["Ps9_Hashable", "hitlerStart"]
 - !private ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "invisButton"]
 - !private ["Ps9_Hashable", "isAuthenticated"]
 - !private ["Ps9_Hashable", "localPlayer"]
 - ["Ps9_Hashable", "loggedIn"]
+- !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "present"]
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "publicCloudDatabase"]
@@ -1416,6 +1483,8 @@ depends-nominal:
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- !private "CSo14DispatchObject"
+- "CSo13DispatchQueue"
 - "Sd"
 - "Ps9Equatable"
 - !private "Ps5Error"
@@ -1452,7 +1521,9 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
+- !private "CSo9OS_object"
 - "Sq"
+- "OV8Dispatch11DispatchQoS8QoSClass"
 - !private "Ps16RawRepresentable"
 - "OE14clicksToHitlerCSo8NSObject18ReachabilityStatus"
 - !private "Ps12SignedNumber"
