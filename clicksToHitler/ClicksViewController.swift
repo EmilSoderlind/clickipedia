@@ -314,7 +314,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             checkLeastClicks(clicks: clicks)
             updateBestTime(time: time)
             updateAverage(clicks: clicks)
-            
+            updatingLeaderboardsFromDeviceSave()
             
             // Cloudkit stuff
             
@@ -370,41 +370,33 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
                 }
             }
             
+            
+            // Build finish message
             siteTrace.append(parseStringFromLink(oldLink: request.description))
             
-            
             clicksLabel.title = "Clicks: \(clicks)"
-            print("TRACE: \(siteTrace)")
-            
-            
             var traceString: String = ""
             var index = 0
             
             for i in siteTrace{
-                
                 if(index != 0){
                     traceString = traceString + "\n" + siteTrace[index]
                 }else{
                     traceString = siteTrace[0]
                 }
-                
                 index = index + 1
-                
             }
             
             hitlerGratzPopup = UIAlertController(title: "Congratulations!", message: "You found Adolf Hitler in: \n\(clicks) clicks \nand\n\(ClicksViewController.getTimeString(time: time))\n\n\(traceString)", preferredStyle: UIAlertControllerStyle.alert)
-            
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
                 StartViewController.downloadLatestWorldStats()
             }
-            
             let againAction = UIAlertAction(title: "Try again!", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in self.resetButton(self)
                 StartViewController.downloadLatestWorldStats()
             }
             
             hitlerGratzPopup.addAction(okAction)
             hitlerGratzPopup.addAction(againAction)
-            
         }
         return true;
     }
@@ -720,5 +712,27 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             return "\(round(100*timeCopy)/100) sec"
         }
     }
+    
+    // Check if there is better stats saved localy, otherwise we only upload the latest.
+    func updatingLeaderboardsFromDeviceSave(){
+        
+        if let totalFounds = UserDefaults.standard.value(forKey: "totalFounds") as? Int{
+            saveFoundsLeaderboard(founds: totalFounds)
+        }
+        
+        
+        if let leastClicks = UserDefaults.standard.value(forKey: "leastClicks") as? Int{
+            saveLeastClicksToLeaderboards(clicks: leastClicks)
+        }
+        
+        
+        if let average = UserDefaults.standard.value(forKey: "average") as? Double{
+            saveAverageToLeaderboards(average: average)
+        }
+        
+        
+        if let bestTime = UserDefaults.standard.value(forKey: "bestTime") as? Double{
+            saveBestTimeToLeaderboards(time: bestTime)
+        }
+    }
 }
-

@@ -193,13 +193,14 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
                         print("Giving up showing leaderboards, fuck it.")
                         return
                     }
-                    
-                    
                 }
-                
                 DispatchQueue.main.async {
-                    print("Authenticated!")
-                    self.showLeaderBoard()
+                    if(GKLocalPlayer.localPlayer().isAuthenticated){
+                        print("Authenticated!")
+                        self.showLeaderBoard()
+                    }else{
+                        print("Giving up showing leaderboards, fuck it.")
+                    }
                 }
             }
         }

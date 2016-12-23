@@ -6,65 +6,61 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler19StartViewController", ""]
 provides-dynamic-lookup:
-- "viewDidAppear"
-- "animateAngle"
-- "gameCenterViewControllerDidFinish"
-- "hitlerStart"
-- "animateSpeed"
 - "checkInternet"
-- "rotateHitlerMinus"
-- "invisButton"
+- "gameCenterButton"
+- "gameCenterViewControllerDidFinish"
+- "showLeaderBoard"
+- "startText"
+- "resetLocalSave"
 - "viewDidLoad"
 - "authPlayer"
-- "didReceiveMemoryWarning"
 - "startButtonPushed"
-- "rotateHitlerPlus"
-- "resetLocalSave"
-- "loggedIn"
-- "gameCenterButton"
+- "animateSpeed"
+- "rotateHitlerMinus"
+- "hitlerStart"
 - "downloadLatestWorldStats"
-- "startText"
-- "showLeaderBoard"
+- "rotateHitlerPlus"
+- "viewDidAppear"
+- "invisButton"
+- "didReceiveMemoryWarning"
+- "animateAngle"
+- "loggedIn"
 depends-top-level:
-- !private "StringLiteralType"
-- "AssignmentPrecedence"
-- "GKGameCenterControllerDelegate"
-- !private "CKContainer"
-- !private "CGAffineTransform"
-- !private "!"
-- !private "UIView"
-- !private "Int"
-- "UIImageView"
+- !private "CastingPrecedence"
 - !private "<"
 - !private "UIAlertActionStyle"
 - !private "Date"
-- "BooleanLiteralType"
-- !private "!="
-- !private "round"
-- !private "CKRecordID"
-- !private "print"
-- !private "UIAlertAction"
-- !private "-"
-- !private "UIAlertController"
 - !private "DispatchQueue"
-- !private "UserDefaults"
-- "UILabel"
-- "Double"
-- !private "GKLocalPlayer"
-- "UnicodeScalarType"
-- !private "CGFloat"
-- "StartViewController"
-- !private "CastingPrecedence"
-- !private "Void"
-- "Bool"
 - !private "UIAlertControllerStyle"
-- !private "=="
+- !private "GKLocalPlayer"
+- !private "UIAlertAction"
+- !private "StringLiteralType"
+- !private "CKContainer"
+- "GKGameCenterControllerDelegate"
+- "BooleanLiteralType"
+- !private "-"
+- !private "CKRecordID"
+- "Bool"
+- !private "UIView"
+- !private "Void"
 - !private "String"
-- !private "%"
-- "GKGameCenterViewController"
+- !private "print"
+- !private "CGAffineTransform"
+- !private "!="
+- !private "UserDefaults"
 - "UIViewController"
+- "StartViewController"
+- "GKGameCenterViewController"
+- !private "Int"
+- !private "!"
+- "UILabel"
+- !private "UIAlertController"
+- !private "CGFloat"
+- !private "=="
+- "AssignmentPrecedence"
+- "UIImageView"
+- "Double"
 depends-member:
-- !private ["Ps16AbsoluteValuable", "boolValue"]
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
 - !private ["Ps9AnyObject", "CGFloat"]
@@ -115,7 +111,6 @@ depends-member:
 - !private ["Ps9AnyObject", "rootViewController"]
 - ["Ps9AnyObject", "rotateHitlerMinus"]
 - ["Ps9AnyObject", "rotateHitlerPlus"]
-- !private ["Ps9AnyObject", "round"]
 - !private ["Ps9AnyObject", "selectedIndex"]
 - !private ["Ps9AnyObject", "setValue"]
 - ["Ps9AnyObject", "showLeaderBoard"]
@@ -131,7 +126,6 @@ depends-member:
 - ["Ps9AnyObject", "viewDidLoad"]
 - !private ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
-- !private ["Ps19BinaryFloatingPoint", "boolValue"]
 - !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
@@ -178,7 +172,6 @@ depends-member:
 - !private ["Ps7CVarArg", "async"]
 - ["Ps7CVarArg", "authPlayer"]
 - !private ["Ps7CVarArg", "authenticateHandler"]
-- !private ["Ps7CVarArg", "boolValue"]
 - ["Ps7CVarArg", "checkInternet"]
 - !private ["Ps7CVarArg", "currentReachabilityStatus"]
 - !private ["Ps7CVarArg", "default"]
@@ -205,7 +198,6 @@ depends-member:
 - !private ["Ps7CVarArg", "rootViewController"]
 - ["Ps7CVarArg", "rotateHitlerMinus"]
 - ["Ps7CVarArg", "rotateHitlerPlus"]
-- !private ["Ps7CVarArg", "round"]
 - !private ["Ps7CVarArg", "selectedIndex"]
 - !private ["Ps7CVarArg", "setValue"]
 - ["Ps7CVarArg", "showLeaderBoard"]
@@ -222,7 +214,6 @@ depends-member:
 - !private ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
-- !private ["Ps10Comparable", "boolValue"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps10Comparable", "timeIntervalSinceNow"]
 - !private ["Ps28CustomDebugStringConvertible", "CGAffineTransform"]
@@ -248,7 +239,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "async"]
 - ["Ps28CustomDebugStringConvertible", "authPlayer"]
 - !private ["Ps28CustomDebugStringConvertible", "authenticateHandler"]
-- !private ["Ps28CustomDebugStringConvertible", "boolValue"]
 - ["Ps28CustomDebugStringConvertible", "checkInternet"]
 - !private ["Ps28CustomDebugStringConvertible", "currentReachabilityStatus"]
 - !private ["Ps28CustomDebugStringConvertible", "default"]
@@ -275,7 +265,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "rootViewController"]
 - ["Ps28CustomDebugStringConvertible", "rotateHitlerMinus"]
 - ["Ps28CustomDebugStringConvertible", "rotateHitlerPlus"]
-- !private ["Ps28CustomDebugStringConvertible", "round"]
 - !private ["Ps28CustomDebugStringConvertible", "selectedIndex"]
 - !private ["Ps28CustomDebugStringConvertible", "setValue"]
 - ["Ps28CustomDebugStringConvertible", "showLeaderBoard"]
@@ -293,11 +282,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "boolValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSinceNow"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
-- !private ["Ps17CustomReflectable", "boolValue"]
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "timeIntervalSinceNow"]
 - !private ["Ps23CustomStringConvertible", "CGAffineTransform"]
@@ -324,7 +311,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "async"]
 - ["Ps23CustomStringConvertible", "authPlayer"]
 - !private ["Ps23CustomStringConvertible", "authenticateHandler"]
-- !private ["Ps23CustomStringConvertible", "boolValue"]
 - ["Ps23CustomStringConvertible", "checkInternet"]
 - !private ["Ps23CustomStringConvertible", "currentReachabilityStatus"]
 - !private ["Ps23CustomStringConvertible", "default"]
@@ -351,7 +337,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "rootViewController"]
 - ["Ps23CustomStringConvertible", "rotateHitlerMinus"]
 - ["Ps23CustomStringConvertible", "rotateHitlerPlus"]
-- !private ["Ps23CustomStringConvertible", "round"]
 - !private ["Ps23CustomStringConvertible", "selectedIndex"]
 - !private ["Ps23CustomStringConvertible", "setValue"]
 - ["Ps23CustomStringConvertible", "showLeaderBoard"]
@@ -378,7 +363,6 @@ depends-member:
 - ["CSo13DispatchQueue", "deinit"]
 - !private ["CSo13DispatchQueue", "global"]
 - !private ["CSo13DispatchQueue", "main"]
-- !private ["Sd", "boolValue"]
 - ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGAffineTransform"]
 - !private ["Ps9Equatable", "CGFloat"]
@@ -407,7 +391,6 @@ depends-member:
 - ["Ps9Equatable", "authPlayer"]
 - !private ["Ps9Equatable", "authenticateHandler"]
 - !private ["Ps9Equatable", "background"]
-- !private ["Ps9Equatable", "boolValue"]
 - !private ["Ps9Equatable", "cancel"]
 - ["Ps9Equatable", "checkInternet"]
 - !private ["Ps9Equatable", "currentReachabilityStatus"]
@@ -436,7 +419,6 @@ depends-member:
 - !private ["Ps9Equatable", "rootViewController"]
 - ["Ps9Equatable", "rotateHitlerMinus"]
 - ["Ps9Equatable", "rotateHitlerPlus"]
-- !private ["Ps9Equatable", "round"]
 - !private ["Ps9Equatable", "selectedIndex"]
 - !private ["Ps9Equatable", "setValue"]
 - ["Ps9Equatable", "showLeaderBoard"]
@@ -456,15 +438,12 @@ depends-member:
 - !private ["Ps5Error", "deinit"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps25ExpressibleByFloatLiteral", "boolValue"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "boolValue"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
-- !private ["Ps13FloatingPoint", "boolValue"]
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["CSo12GKBasePlayer", "authenticateHandler"]
 - !private ["CSo12GKBasePlayer", "isAuthenticated"]
@@ -497,7 +476,6 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "print"]
 - !private ["PSo30GKGameCenterControllerDelegate", "rotateHitlerMinus"]
 - !private ["PSo30GKGameCenterControllerDelegate", "rotateHitlerPlus"]
-- !private ["PSo30GKGameCenterControllerDelegate", "round"]
 - !private ["PSo30GKGameCenterControllerDelegate", "showLeaderBoard"]
 - !private ["PSo30GKGameCenterControllerDelegate", "startText"]
 - !private ["PSo30GKGameCenterControllerDelegate", "tabBarController"]
@@ -544,7 +522,6 @@ depends-member:
 - ["Ps8Hashable", "authPlayer"]
 - !private ["Ps8Hashable", "authenticateHandler"]
 - !private ["Ps8Hashable", "background"]
-- !private ["Ps8Hashable", "boolValue"]
 - !private ["Ps8Hashable", "cancel"]
 - ["Ps8Hashable", "checkInternet"]
 - !private ["Ps8Hashable", "currentReachabilityStatus"]
@@ -573,7 +550,6 @@ depends-member:
 - !private ["Ps8Hashable", "rootViewController"]
 - ["Ps8Hashable", "rotateHitlerMinus"]
 - ["Ps8Hashable", "rotateHitlerPlus"]
-- !private ["Ps8Hashable", "round"]
 - !private ["Ps8Hashable", "selectedIndex"]
 - !private ["Ps8Hashable", "setValue"]
 - ["Ps8Hashable", "showLeaderBoard"]
@@ -597,7 +573,6 @@ depends-member:
 - !private ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps25LosslessStringConvertible", "boolValue"]
 - !private ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "init"]
 - ["CSo7NSCoder", "deinit"]
@@ -640,7 +615,6 @@ depends-member:
 - !private ["PSo8NSCoding", "rootViewController"]
 - ["PSo8NSCoding", "rotateHitlerMinus"]
 - ["PSo8NSCoding", "rotateHitlerPlus"]
-- !private ["PSo8NSCoding", "round"]
 - !private ["PSo8NSCoding", "selectedIndex"]
 - ["PSo8NSCoding", "showLeaderBoard"]
 - ["PSo8NSCoding", "startButtonPushed"]
@@ -693,7 +667,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "resetLocalSave"]
 - ["PSo26NSExtensionRequestHandling", "rotateHitlerMinus"]
 - ["PSo26NSExtensionRequestHandling", "rotateHitlerPlus"]
-- !private ["PSo26NSExtensionRequestHandling", "round"]
 - !private ["PSo26NSExtensionRequestHandling", "selectedIndex"]
 - ["PSo26NSExtensionRequestHandling", "showLeaderBoard"]
 - ["PSo26NSExtensionRequestHandling", "startButtonPushed"]
@@ -759,7 +732,6 @@ depends-member:
 - !private ["CSo8NSObject", "rootViewController"]
 - ["CSo8NSObject", "rotateHitlerMinus"]
 - ["CSo8NSObject", "rotateHitlerPlus"]
-- !private ["CSo8NSObject", "round"]
 - !private ["CSo8NSObject", "selectedIndex"]
 - !private ["CSo8NSObject", "setValue"]
 - ["CSo8NSObject", "showLeaderBoard"]
@@ -823,7 +795,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "rootViewController"]
 - ["PSo16NSObjectProtocol", "rotateHitlerMinus"]
 - ["PSo16NSObjectProtocol", "rotateHitlerPlus"]
-- !private ["PSo16NSObjectProtocol", "round"]
 - !private ["PSo16NSObjectProtocol", "selectedIndex"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
 - ["PSo16NSObjectProtocol", "showLeaderBoard"]
@@ -855,7 +826,6 @@ depends-member:
 - ["OE14clicksToHitlerCSo8NSObject18ReachabilityStatus", "deinit"]
 - !private ["P10Foundation20ReferenceConvertible", "init"]
 - !private ["P10Foundation20ReferenceConvertible", "timeIntervalSinceNow"]
-- !private ["Ps12SignedNumber", "boolValue"]
 - !private ["Ps12SignedNumber", "init"]
 - ["C14clicksToHitler19StartViewController", "Bool"]
 - !private ["C14clicksToHitler19StartViewController", "CGAffineTransform"]
@@ -898,7 +868,6 @@ depends-member:
 - ["C14clicksToHitler19StartViewController", "resetLocalSave"]
 - ["C14clicksToHitler19StartViewController", "rotateHitlerMinus"]
 - ["C14clicksToHitler19StartViewController", "rotateHitlerPlus"]
-- !private ["C14clicksToHitler19StartViewController", "round"]
 - ["C14clicksToHitler19StartViewController", "showLeaderBoard"]
 - ["C14clicksToHitler19StartViewController", "startButtonPushed"]
 - ["C14clicksToHitler19StartViewController", "startText"]
@@ -906,7 +875,6 @@ depends-member:
 - !private ["C14clicksToHitler19StartViewController", "view"]
 - ["C14clicksToHitler19StartViewController", "viewDidAppear"]
 - ["C14clicksToHitler19StartViewController", "viewDidLoad"]
-- !private ["Ps10Strideable", "boolValue"]
 - !private ["Ps10Strideable", "init"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -972,7 +940,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "rootViewController"]
 - ["PSo21UIAppearanceContainer", "rotateHitlerMinus"]
 - ["PSo21UIAppearanceContainer", "rotateHitlerPlus"]
-- !private ["PSo21UIAppearanceContainer", "round"]
 - !private ["PSo21UIAppearanceContainer", "selectedIndex"]
 - ["PSo21UIAppearanceContainer", "showLeaderBoard"]
 - ["PSo21UIAppearanceContainer", "startButtonPushed"]
@@ -1022,7 +989,6 @@ depends-member:
 - ["PSo18UIContentContainer", "resetLocalSave"]
 - ["PSo18UIContentContainer", "rotateHitlerMinus"]
 - ["PSo18UIContentContainer", "rotateHitlerPlus"]
-- !private ["PSo18UIContentContainer", "round"]
 - !private ["PSo18UIContentContainer", "selectedIndex"]
 - ["PSo18UIContentContainer", "showLeaderBoard"]
 - ["PSo18UIContentContainer", "startButtonPushed"]
@@ -1082,7 +1048,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "rootViewController"]
 - ["PSo18UIFocusEnvironment", "rotateHitlerMinus"]
 - ["PSo18UIFocusEnvironment", "rotateHitlerPlus"]
-- !private ["PSo18UIFocusEnvironment", "round"]
 - !private ["PSo18UIFocusEnvironment", "selectedIndex"]
 - ["PSo18UIFocusEnvironment", "showLeaderBoard"]
 - ["PSo18UIFocusEnvironment", "startButtonPushed"]
@@ -1150,7 +1115,6 @@ depends-member:
 - !private ["CSo11UIResponder", "rootViewController"]
 - ["CSo11UIResponder", "rotateHitlerMinus"]
 - ["CSo11UIResponder", "rotateHitlerPlus"]
-- !private ["CSo11UIResponder", "round"]
 - !private ["CSo11UIResponder", "selectedIndex"]
 - ["CSo11UIResponder", "showLeaderBoard"]
 - ["CSo11UIResponder", "startButtonPushed"]
@@ -1201,7 +1165,6 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "rootViewController"]
 - ["PSo30UIResponderStandardEditActions", "rotateHitlerMinus"]
 - ["PSo30UIResponderStandardEditActions", "rotateHitlerPlus"]
-- !private ["PSo30UIResponderStandardEditActions", "round"]
 - !private ["PSo30UIResponderStandardEditActions", "selectedIndex"]
 - ["PSo30UIResponderStandardEditActions", "showLeaderBoard"]
 - ["PSo30UIResponderStandardEditActions", "startButtonPushed"]
@@ -1251,7 +1214,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "resetLocalSave"]
 - ["PSo16UIStateRestoring", "rotateHitlerMinus"]
 - ["PSo16UIStateRestoring", "rotateHitlerPlus"]
-- !private ["PSo16UIStateRestoring", "round"]
 - !private ["PSo16UIStateRestoring", "selectedIndex"]
 - ["PSo16UIStateRestoring", "showLeaderBoard"]
 - ["PSo16UIStateRestoring", "startButtonPushed"]
@@ -1303,7 +1265,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "rootViewController"]
 - ["PSo18UITraitEnvironment", "rotateHitlerMinus"]
 - ["PSo18UITraitEnvironment", "rotateHitlerPlus"]
-- !private ["PSo18UITraitEnvironment", "round"]
 - !private ["PSo18UITraitEnvironment", "selectedIndex"]
 - ["PSo18UITraitEnvironment", "showLeaderBoard"]
 - ["PSo18UITraitEnvironment", "startButtonPushed"]
@@ -1365,7 +1326,6 @@ depends-member:
 - ["CSo16UIViewController", "resetLocalSave"]
 - ["CSo16UIViewController", "rotateHitlerMinus"]
 - ["CSo16UIViewController", "rotateHitlerPlus"]
-- !private ["CSo16UIViewController", "round"]
 - !private ["CSo16UIViewController", "selectedIndex"]
 - ["CSo16UIViewController", "showLeaderBoard"]
 - ["CSo16UIViewController", "startButtonPushed"]
@@ -1436,7 +1396,6 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "rootViewController"]
 - ["P14clicksToHitler9Utilities", "rotateHitlerMinus"]
 - ["P14clicksToHitler9Utilities", "rotateHitlerPlus"]
-- !private ["P14clicksToHitler9Utilities", "round"]
 - !private ["P14clicksToHitler9Utilities", "selectedIndex"]
 - !private ["P14clicksToHitler9Utilities", "setValue"]
 - ["P14clicksToHitler9Utilities", "showLeaderBoard"]
@@ -1452,9 +1411,7 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "viewDidLoad"]
 - !private ["P14clicksToHitler9Utilities", "window"]
 - ["P14clicksToHitler9Utilities", ""]
-- !private ["Ps15_CVarArgAligned", "boolValue"]
 - !private ["Ps15_CVarArgAligned", "init"]
-- !private ["Ps22_CVarArgPassedAsDouble", "boolValue"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "animate"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "rootViewController"]
@@ -1463,8 +1420,6 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "window"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "boolValue"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "boolValue"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
@@ -1496,7 +1451,6 @@ depends-member:
 - ["Ps9_Hashable", "authPlayer"]
 - !private ["Ps9_Hashable", "authenticateHandler"]
 - !private ["Ps9_Hashable", "background"]
-- !private ["Ps9_Hashable", "boolValue"]
 - !private ["Ps9_Hashable", "cancel"]
 - ["Ps9_Hashable", "checkInternet"]
 - !private ["Ps9_Hashable", "currentReachabilityStatus"]
@@ -1525,7 +1479,6 @@ depends-member:
 - !private ["Ps9_Hashable", "rootViewController"]
 - ["Ps9_Hashable", "rotateHitlerMinus"]
 - ["Ps9_Hashable", "rotateHitlerPlus"]
-- !private ["Ps9_Hashable", "round"]
 - !private ["Ps9_Hashable", "selectedIndex"]
 - !private ["Ps9_Hashable", "setValue"]
 - ["Ps9_Hashable", "showLeaderBoard"]
@@ -1543,11 +1496,9 @@ depends-member:
 - !private ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "boolValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "timeIntervalSinceNow"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
-- !private ["Ps11_Strideable", "boolValue"]
 - !private ["Ps11_Strideable", "init"]
 depends-nominal:
 - !private "Ps16AbsoluteValuable"
@@ -1659,8 +1610,6 @@ depends-nominal:
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
-- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
