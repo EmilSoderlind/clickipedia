@@ -6,104 +6,105 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler20ClicksViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "updateAverage"
 - "removeLoadingInd"
-- "createAndLoadInterstitial"
-- "getTimeString"
-- "authPlayer"
 - "clicksLabel"
-- "hitlerGratzPopup"
-- "gratzScreenHasBeenShown"
-- "checkInternet"
-- "updateBestTime"
-- "saveFoundsLeaderboard"
-- "clicks"
-- "loadingIndicator"
-- "resetButton"
-- "web"
-- "parseStringFromLink"
-- "webViewDidFinishLoad"
-- "addTotalClicksToLocalSave"
-- "saveBestTimeToLeaderboards"
-- "saveAverageToLeaderboards"
-- "siteTrace"
-- "interstitialDidDismissScreen"
-- "timeTicking"
-- "updateTimeLabel"
-- "webView"
-- "addTotalHitlerFound"
-- "didReceiveMemoryWarning"
-- "hitlerFound"
-- "saveLeastClicksToLeaderboards"
-- "checkLeastClicks"
-- "siteReady"
+- "getTimeString"
 - "startDate"
+- "updateAverage"
+- "interstitial"
+- "saveLeastClicksToLeaderboards"
+- "viewDidLoad"
+- "createAndLoadInterstitial"
+- "updatingLeaderboardsFromDeviceSave"
+- "authPlayer"
+- "updateBestTime"
+- "timeTicking"
 - "viewDidAppear"
 - "showAd"
-- "interstitial"
-- "gameCenterViewControllerDidFinish"
+- "hitlerGratzPopup"
+- "parseStringFromLink"
+- "interstitialDidDismissScreen"
+- "saveAverageToLeaderboards"
+- "siteReady"
+- "addTotalClicksToLocalSave"
+- "didReceiveMemoryWarning"
+- "webView"
+- "checkLeastClicks"
+- "saveFoundsLeaderboard"
 - "showingAd"
+- "saveBestTimeToLeaderboards"
+- "addTotalHitlerFound"
+- "loadingIndicator"
+- "updateTimeLabel"
+- "siteTrace"
+- "web"
+- "resetButton"
+- "clicks"
+- "gameCenterViewControllerDidFinish"
+- "webViewDidFinishLoad"
+- "hitlerFound"
+- "checkInternet"
+- "gratzScreenHasBeenShown"
 depends-top-level:
-- !private "round"
-- !private "StringLiteralType"
-- "UIWebView"
-- !private "DispatchQueue"
-- "GKGameCenterViewController"
-- !private "UIAlertControllerStyle"
-- !private "UnicodeScalarType"
-- "UIAlertController"
-- !private ">"
-- !private "-"
-- !private "kGADSimulatorID"
-- !private ">="
-- !private "CKContainer"
-- !private "UserDefaults"
-- "BooleanLiteralType"
-- !private "UIActivityIndicatorViewStyle"
-- !private "print"
-- !private "NSURLRequest"
-- !private "+"
-- !private "UIColor"
-- "UIActivityIndicatorView"
-- !private "!"
-- !private "GKLocalPlayer"
-- "UIWebViewNavigationType"
-- !private "URL"
-- !private "GADRequest"
-- !private "Array"
-- !private "UIApplication"
-- "UIViewController"
-- "Bool"
-- !private "UIAlertAction"
-- "String"
-- "UIWebViewDelegate"
-- "Double"
-- !private "CKRecordID"
-- !private "NSURL"
-- "URLRequest"
-- !private "UIAlertActionStyle"
-- !private "/"
-- "ClicksViewController"
-- !private "&&"
-- !private "GKScore"
-- !private "+="
-- !private "CKRecordValue"
-- "UIBarButtonItem"
-- !private "!="
-- "Date"
 - !private "StartViewController"
-- !private "Int64"
+- !private "NSURL"
 - "GADInterstitial"
-- !private "Void"
-- !private "*"
-- "Int"
-- "GKGameCenterControllerDelegate"
-- !private "<"
-- "AssignmentPrecedence"
-- "CastingPrecedence"
-- "GADInterstitialDelegate"
+- "Date"
+- !private "UserDefaults"
+- !private "StringLiteralType"
+- "URLRequest"
 - !private "=="
+- "GADInterstitialDelegate"
+- "BooleanLiteralType"
+- !private "GKScore"
+- "GKGameCenterControllerDelegate"
+- !private ">"
+- "UIWebView"
+- !private "kGADSimulatorID"
+- "GKGameCenterViewController"
+- !private "Int64"
+- !private "UIColor"
+- !private "GKLocalPlayer"
+- !private "UnicodeScalarType"
+- !private "GADRequest"
+- "Int"
+- !private "!"
+- !private "Array"
+- !private "UIActivityIndicatorViewStyle"
+- "UIAlertController"
+- "UIWebViewNavigationType"
+- "UIBarButtonItem"
+- !private "DispatchQueue"
+- !private "<"
+- "UIActivityIndicatorView"
+- !private "UIAlertActionStyle"
+- !private "CKRecordValue"
+- !private "-"
+- !private "UIAlertControllerStyle"
+- !private "&&"
+- !private "UIAlertAction"
+- !private "round"
+- "Bool"
+- !private "CKRecordID"
+- !private "/"
+- !private "*"
+- !private "CKContainer"
+- !private ">="
+- !private "NSURLRequest"
+- !private "Void"
+- !private "print"
+- "UIViewController"
+- "String"
+- !private "!="
+- "UIWebViewDelegate"
+- !private "+="
+- !private "+"
+- !private "UIApplication"
+- "CastingPrecedence"
+- "ClicksViewController"
+- "Double"
+- "AssignmentPrecedence"
+- !private "URL"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "RawValue"]
 - !private ["Ps16AbsoluteValuable", "description"]
@@ -216,6 +217,7 @@ depends-member:
 - ["Ps9AnyObject", "updateAverage"]
 - ["Ps9AnyObject", "updateBestTime"]
 - ["Ps9AnyObject", "updateTimeLabel"]
+- ["Ps9AnyObject", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", "viewDidAppear"]
 - ["Ps9AnyObject", "viewDidLoad"]
@@ -422,6 +424,7 @@ depends-member:
 - ["Ps7CVarArg", "updateAverage"]
 - ["Ps7CVarArg", "updateBestTime"]
 - ["Ps7CVarArg", "updateTimeLabel"]
+- ["Ps7CVarArg", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps7CVarArg", "value"]
 - ["Ps7CVarArg", "viewDidAppear"]
 - ["Ps7CVarArg", "viewDidLoad"]
@@ -513,6 +516,7 @@ depends-member:
 - ["C14clicksToHitler20ClicksViewController", "updateAverage"]
 - ["C14clicksToHitler20ClicksViewController", "updateBestTime"]
 - ["C14clicksToHitler20ClicksViewController", "updateTimeLabel"]
+- ["C14clicksToHitler20ClicksViewController", "updatingLeaderboardsFromDeviceSave"]
 - ["C14clicksToHitler20ClicksViewController", "viewDidAppear"]
 - ["C14clicksToHitler20ClicksViewController", "viewDidLoad"]
 - ["C14clicksToHitler20ClicksViewController", "web"]
@@ -658,6 +662,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "updateAverage"]
 - ["Ps28CustomDebugStringConvertible", "updateBestTime"]
 - ["Ps28CustomDebugStringConvertible", "updateTimeLabel"]
+- ["Ps28CustomDebugStringConvertible", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
@@ -818,6 +823,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "updateAverage"]
 - ["Ps23CustomStringConvertible", "updateBestTime"]
 - ["Ps23CustomStringConvertible", "updateTimeLabel"]
+- ["Ps23CustomStringConvertible", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", "viewDidAppear"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
@@ -971,6 +977,7 @@ depends-member:
 - ["Ps9Equatable", "updateAverage"]
 - ["Ps9Equatable", "updateBestTime"]
 - ["Ps9Equatable", "updateTimeLabel"]
+- ["Ps9Equatable", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps9Equatable", "value"]
 - ["Ps9Equatable", "viewDidAppear"]
 - ["Ps9Equatable", "viewDidLoad"]
@@ -1091,6 +1098,7 @@ depends-member:
 - !private ["PSo13GADAdDelegate", "updateAverage"]
 - !private ["PSo13GADAdDelegate", "updateBestTime"]
 - !private ["PSo13GADAdDelegate", "updateTimeLabel"]
+- !private ["PSo13GADAdDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo13GADAdDelegate", "web"]
 - ["PSo13GADAdDelegate", "webView"]
 - ["PSo13GADAdDelegate", "webViewDidFinishLoad"]
@@ -1171,6 +1179,7 @@ depends-member:
 - !private ["PSo23GADInterstitialDelegate", "updateAverage"]
 - !private ["PSo23GADInterstitialDelegate", "updateBestTime"]
 - !private ["PSo23GADInterstitialDelegate", "updateTimeLabel"]
+- !private ["PSo23GADInterstitialDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo23GADInterstitialDelegate", "web"]
 - ["PSo23GADInterstitialDelegate", "webView"]
 - ["PSo23GADInterstitialDelegate", "webViewDidFinishLoad"]
@@ -1252,6 +1261,7 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "updateAverage"]
 - !private ["PSo30GKGameCenterControllerDelegate", "updateBestTime"]
 - !private ["PSo30GKGameCenterControllerDelegate", "updateTimeLabel"]
+- !private ["PSo30GKGameCenterControllerDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo30GKGameCenterControllerDelegate", "web"]
 - ["PSo30GKGameCenterControllerDelegate", "webView"]
 - ["PSo30GKGameCenterControllerDelegate", "webViewDidFinishLoad"]
@@ -1392,6 +1402,7 @@ depends-member:
 - ["Ps8Hashable", "updateAverage"]
 - ["Ps8Hashable", "updateBestTime"]
 - ["Ps8Hashable", "updateTimeLabel"]
+- ["Ps8Hashable", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", "viewDidAppear"]
 - ["Ps8Hashable", "viewDidLoad"]
@@ -1577,6 +1588,7 @@ depends-member:
 - ["PSo8NSCoding", "updateAverage"]
 - ["PSo8NSCoding", "updateBestTime"]
 - ["PSo8NSCoding", "updateTimeLabel"]
+- ["PSo8NSCoding", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo8NSCoding", "value"]
 - ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -1665,6 +1677,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "updateAverage"]
 - ["PSo26NSExtensionRequestHandling", "updateBestTime"]
 - ["PSo26NSExtensionRequestHandling", "updateTimeLabel"]
+- ["PSo26NSExtensionRequestHandling", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "web"]
@@ -1792,6 +1805,7 @@ depends-member:
 - ["CSo8NSObject", "updateAverage"]
 - ["CSo8NSObject", "updateBestTime"]
 - ["CSo8NSObject", "updateTimeLabel"]
+- ["CSo8NSObject", "updatingLeaderboardsFromDeviceSave"]
 - !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
@@ -1906,6 +1920,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "updateAverage"]
 - ["PSo16NSObjectProtocol", "updateBestTime"]
 - ["PSo16NSObjectProtocol", "updateTimeLabel"]
+- ["PSo16NSObjectProtocol", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
@@ -2160,6 +2175,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "updateAverage"]
 - ["PSo21UIAppearanceContainer", "updateBestTime"]
 - ["PSo21UIAppearanceContainer", "updateTimeLabel"]
+- ["PSo21UIAppearanceContainer", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "web"]
@@ -2250,6 +2266,7 @@ depends-member:
 - ["PSo18UIContentContainer", "updateAverage"]
 - ["PSo18UIContentContainer", "updateBestTime"]
 - ["PSo18UIContentContainer", "updateTimeLabel"]
+- ["PSo18UIContentContainer", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "web"]
@@ -2362,6 +2379,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "updateAverage"]
 - ["PSo18UIFocusEnvironment", "updateBestTime"]
 - ["PSo18UIFocusEnvironment", "updateTimeLabel"]
+- ["PSo18UIFocusEnvironment", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "web"]
@@ -2481,6 +2499,7 @@ depends-member:
 - ["CSo11UIResponder", "updateAverage"]
 - ["CSo11UIResponder", "updateBestTime"]
 - ["CSo11UIResponder", "updateTimeLabel"]
+- ["CSo11UIResponder", "updatingLeaderboardsFromDeviceSave"]
 - ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "web"]
@@ -2574,6 +2593,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "updateAverage"]
 - ["PSo30UIResponderStandardEditActions", "updateBestTime"]
 - ["PSo30UIResponderStandardEditActions", "updateTimeLabel"]
+- ["PSo30UIResponderStandardEditActions", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo30UIResponderStandardEditActions", "viewDidAppear"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", "web"]
@@ -2663,6 +2683,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "updateAverage"]
 - ["PSo16UIStateRestoring", "updateBestTime"]
 - ["PSo16UIStateRestoring", "updateTimeLabel"]
+- ["PSo16UIStateRestoring", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "web"]
@@ -2755,6 +2776,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "updateAverage"]
 - ["PSo18UITraitEnvironment", "updateBestTime"]
 - ["PSo18UITraitEnvironment", "updateTimeLabel"]
+- ["PSo18UITraitEnvironment", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "web"]
@@ -2858,6 +2880,7 @@ depends-member:
 - ["CSo16UIViewController", "updateAverage"]
 - ["CSo16UIViewController", "updateBestTime"]
 - ["CSo16UIViewController", "updateTimeLabel"]
+- ["CSo16UIViewController", "updatingLeaderboardsFromDeviceSave"]
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "web"]
@@ -2941,6 +2964,7 @@ depends-member:
 - !private ["PSo17UIWebViewDelegate", "updateAverage"]
 - !private ["PSo17UIWebViewDelegate", "updateBestTime"]
 - !private ["PSo17UIWebViewDelegate", "updateTimeLabel"]
+- !private ["PSo17UIWebViewDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo17UIWebViewDelegate", "web"]
 - ["PSo17UIWebViewDelegate", "webView"]
 - ["PSo17UIWebViewDelegate", "webViewDidFinishLoad"]
@@ -3072,6 +3096,7 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "updateAverage"]
 - ["P14clicksToHitler9Utilities", "updateBestTime"]
 - ["P14clicksToHitler9Utilities", "updateTimeLabel"]
+- ["P14clicksToHitler9Utilities", "updatingLeaderboardsFromDeviceSave"]
 - !private ["P14clicksToHitler9Utilities", "value"]
 - ["P14clicksToHitler9Utilities", "viewDidAppear"]
 - ["P14clicksToHitler9Utilities", "viewDidLoad"]
@@ -3262,6 +3287,7 @@ depends-member:
 - ["Ps9_Hashable", "updateAverage"]
 - ["Ps9_Hashable", "updateBestTime"]
 - ["Ps9_Hashable", "updateTimeLabel"]
+- ["Ps9_Hashable", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps9_Hashable", "value"]
 - ["Ps9_Hashable", "viewDidAppear"]
 - ["Ps9_Hashable", "viewDidLoad"]
@@ -3641,4 +3667,4 @@ depends-external:
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
-interface-hash: "9ad8fd489b95ca755e0b08a68830c69c"
+interface-hash: "75ff9e501c6270484436150d0937a63e"

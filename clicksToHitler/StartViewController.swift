@@ -47,8 +47,6 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
         
         if(String(describing: currentReachabilityStatus) == "notReachable"){
             print("NO INTERNET CONNECTION")
-            
-            
             let alertController = UIAlertController(title: "No internet connection", message: "You will need a internet connection for this game", preferredStyle: UIAlertControllerStyle.actionSheet)
             
             let okAction = UIAlertAction(title: "Retry", style: UIAlertActionStyle.destructive) { (result : UIAlertAction) -> Void in
@@ -59,13 +57,8 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: {
-                
                 self.checkInternet()
-                
             })
-            
-            
-            
         }else{
             print(currentReachabilityStatus)
         }
@@ -116,20 +109,17 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
             guard let fetchedPlace = fetchedPlace else {
                 // handle errors here
                 
-                print("\n\n")
-                print("Fetch error: \(error)")
-                print("\n\n")
+                print("\n")
+                print("Fetch (CloudKIt) error: \(error.debugDescription)")
+                print("\n")
                 
                 if(error != nil){
-                    print("NOT LOGGED IN TO iCLOUD")
+                    print("NOT LOGGED IN TO iCLOUD?")
                 }
                 
                 
                 return
             }
-            
-            
-            
             var totalClicks = fetchedPlace["totalClicks"]! as! Int
             var averageClicks = fetchedPlace["averageClicks"]! as! Double
             var bestTime = fetchedPlace["bestTime"]! as! Double
@@ -142,13 +132,11 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
             print("world found hitler times: \(foundHitlerTimes)")
             print("world least clicks: \(leastClicks)")
 
-            
             UserDefaults.standard.setValue(totalClicks, forKey: "worldTotalClicks")
             UserDefaults.standard.setValue(averageClicks, forKey: "worldAverageClicks")
             UserDefaults.standard.setValue(bestTime, forKey: "worldBestTime")
             UserDefaults.standard.setValue(foundHitlerTimes, forKey: "worldFoundHitlerTimes")
             UserDefaults.standard.setValue(leastClicks, forKey: "worldLeastClicks")
-            
             
             print("Download latest worldstats - Done")
         }
@@ -249,6 +237,8 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
                         })
                     
                     
+                } else {
+                    ClicksViewController.updatingLeaderboardsFromDeviceSave()
                 }
                 
             }

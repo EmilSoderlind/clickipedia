@@ -314,7 +314,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             checkLeastClicks(clicks: clicks)
             updateBestTime(time: time)
             updateAverage(clicks: clicks)
-            updatingLeaderboardsFromDeviceSave()
+            ClicksViewController.updatingLeaderboardsFromDeviceSave()
             
             // Cloudkit stuff
             
@@ -464,13 +464,13 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             
             UserDefaults.standard.setValue(oldFounds + 1, forKey: "totalFounds")
             
-            saveFoundsLeaderboard(founds: oldFounds + 1)
+            ClicksViewController.saveFoundsLeaderboard(founds: oldFounds + 1)
             
         }else{
             
             UserDefaults.standard.setValue(1, forKey: "totalFounds")
             
-            saveFoundsLeaderboard(founds: 1)
+            ClicksViewController.saveFoundsLeaderboard(founds: 1)
 
             
         }
@@ -482,7 +482,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             print("OldBest Time: \(oldBestTime)")
             print("newTime: \(time)")
             
-            saveBestTimeToLeaderboards(time: time)
+            ClicksViewController.saveBestTimeToLeaderboards(time: time)
             
             if(time < oldBestTime){
                 UserDefaults.standard.setValue(time, forKey: "bestTime")
@@ -506,7 +506,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             totalClicks = Double(totalClicksSave)
         }
         
-        saveAverageToLeaderboards(average: totalClicks/hitlerFound)
+        ClicksViewController.saveAverageToLeaderboards(average: totalClicks/hitlerFound)
         
         UserDefaults.standard.setValue(totalClicks/hitlerFound, forKey: "average")
 
@@ -515,7 +515,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     func checkLeastClicks(clicks: Int){
         if let oldLeast = UserDefaults.standard.value(forKey: "leastClicks") as? Int{
             
-            saveLeastClicksToLeaderboards(clicks: clicks)
+            ClicksViewController.saveLeastClicksToLeaderboards(clicks: clicks)
 
             
             if(oldLeast > clicks){
@@ -531,7 +531,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     // Leaderboard stuff
     
-    func saveLeastClicksToLeaderboards(clicks: Int){
+    static func saveLeastClicksToLeaderboards(clicks: Int){
         print("\nReporting Least clicks to Leaderboards")
 
         
@@ -563,7 +563,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         
     }
     
-    func saveAverageToLeaderboards(average: Double){
+    static func saveAverageToLeaderboards(average: Double){
         print("\nReporting Average to Leaderboards")
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
@@ -597,7 +597,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         
     }
     
-    func saveBestTimeToLeaderboards(time : Double){
+    static func saveBestTimeToLeaderboards(time : Double){
         print("\nReporting bestTime to Leaderboards")
 
         
@@ -629,7 +629,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         
     }
     
-    func saveFoundsLeaderboard(founds : Int){
+    static func saveFoundsLeaderboard(founds : Int){
         print("\nReporting Founds to Leaderboards")
 
         
@@ -714,7 +714,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     }
     
     // Check if there is better stats saved localy, otherwise we only upload the latest.
-    func updatingLeaderboardsFromDeviceSave(){
+    static func updatingLeaderboardsFromDeviceSave(){
         
         if let totalFounds = UserDefaults.standard.value(forKey: "totalFounds") as? Int{
             saveFoundsLeaderboard(founds: totalFounds)
