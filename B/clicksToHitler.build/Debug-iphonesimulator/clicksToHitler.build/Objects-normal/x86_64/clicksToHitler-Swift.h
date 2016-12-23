@@ -181,13 +181,14 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 - (void)updateBestTimeWithTime:(double)time;
 - (void)updateAverageWithClicks:(NSInteger)clicks;
 - (void)checkLeastClicksWithClicks:(NSInteger)clicks;
-- (void)saveLeastClicksToLeaderboardsWithClicks:(NSInteger)clicks;
-- (void)saveAverageToLeaderboardsWithAverage:(double)average;
-- (void)saveBestTimeToLeaderboardsWithTime:(double)time;
-- (void)saveFoundsLeaderboardWithFounds:(NSInteger)founds;
++ (void)saveLeastClicksToLeaderboardsWithClicks:(NSInteger)clicks;
++ (void)saveAverageToLeaderboardsWithAverage:(double)average;
++ (void)saveBestTimeToLeaderboardsWithTime:(double)time;
++ (void)saveFoundsLeaderboardWithFounds:(NSInteger)founds;
 - (void)authPlayer;
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController * _Nonnull)gameCenterViewController;
 + (NSString * _Nonnull)getTimeStringWithTime:(double)time;
++ (void)updatingLeaderboardsFromDeviceSave;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

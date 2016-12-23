@@ -6,104 +6,109 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler20ClicksViewController", ""]
 provides-dynamic-lookup:
-- "getTimeString"
-- "timeTicking"
-- "viewDidAppear"
-- "hitlerGratzPopup"
-- "clicks"
-- "removeLoadingInd"
-- "updateBestTime"
-- "startDate"
-- "interstitial"
-- "addTotalHitlerFound"
-- "didReceiveMemoryWarning"
-- "checkLeastClicks"
-- "clicksLabel"
-- "showAd"
-- "saveLeastClicksToLeaderboards"
-- "addTotalClicksToLocalSave"
-- "interstitialDidDismissScreen"
-- "siteTrace"
-- "web"
-- "resetButton"
-- "createAndLoadInterstitial"
-- "webView"
-- "viewDidLoad"
-- "hitlerFound"
-- "gratzScreenHasBeenShown"
-- "webViewDidFinishLoad"
-- "updateTimeLabel"
-- "checkInternet"
 - "authPlayer"
-- "siteReady"
-- "gameCenterViewControllerDidFinish"
-- "parseStringFromLink"
-- "updateAverage"
 - "showingAd"
 - "loadingIndicator"
+- "addTotalClicksToLocalSave"
+- "clicks"
+- "viewDidLoad"
+- "updateTimeLabel"
 - "saveAverageToLeaderboards"
+- "siteReady"
+- "webView"
+- "webViewDidFinishLoad"
+- "hitlerGratzPopup"
+- "checkLeastClicks"
+- "didReceiveMemoryWarning"
+- "timeTicking"
+- "interstitialDidDismissScreen"
+- "viewDidAppear"
+- "saveLeastClicksToLeaderboards"
+- "addTotalHitlerFound"
+- "gameCenterViewControllerDidFinish"
+- "updateAverage"
+- "startDate"
+- "updateBestTime"
+- "removeLoadingInd"
+- "clicksLabel"
+- "showAd"
+- "hitlerFound"
+- "gratzScreenHasBeenShown"
 - "saveBestTimeToLeaderboards"
+- "checkInternet"
+- "parseStringFromLink"
+- "siteTrace"
+- "interstitial"
+- "updatingLeaderboardsFromDeviceSave"
+- "createAndLoadInterstitial"
+- "resetButton"
+- "web"
 - "saveFoundsLeaderboard"
+- "getTimeString"
 depends-top-level:
-- "UIAlertController"
-- !private "UIAlertAction"
-- !private "UnicodeScalarType"
-- !private ">="
-- !private ">"
-- !private "NSURLRequest"
-- !private "UIAlertActionStyle"
+- "String"
 - !private "URL"
-- !private "UIApplication"
-- "UIBarButtonItem"
-- !private "/"
-- !private "print"
-- "GKGameCenterViewController"
-- !private "!"
-- !private "&&"
-- !private "UIActivityIndicatorViewStyle"
-- "BooleanLiteralType"
-- !private "<"
-- "GADInterstitialDelegate"
 - !private "-"
-- "Date"
-- "GKGameCenterControllerDelegate"
-- "UIWebView"
-- !private "DispatchQueue"
-- !private "StringLiteralType"
-- !private "UIAlertControllerStyle"
-- !private "!="
-- !private "CKRecordID"
-- !private "GADRequest"
+- !private "*"
+- !private "UIApplication"
+- "Double"
+- !private "UIActivityIndicatorViewStyle"
+- !private "print"
+- "Bool"
+- !private "GKScore"
+- !private "<"
+- "UIActivityIndicatorView"
+- !private "NSURLRequest"
+- !private "CKContainer"
+- !private "CKRecordValue"
 - !private "StartViewController"
-- "GADInterstitial"
+- "UIBarButtonItem"
+- "UIAlertController"
+- "GKGameCenterViewController"
+- !private "CKRecordID"
+- !private "/"
+- "URLRequest"
+- !private "NSURL"
+- !private "+="
+- !private "Dictionary"
+- "UIWebViewDelegate"
+- "UIWebView"
+- !private "!="
+- !private "UnicodeScalarType"
+- "UIViewController"
+- !private "UIAlertAction"
+- !private "Array"
+- !private ">"
+- !private "GADRequest"
+- !private ">="
+- !private "round"
+- !private "UserDefaults"
+- !private "UIAlertActionStyle"
 - !private "Int64"
+- "ClicksViewController"
+- !private "+"
 - "AssignmentPrecedence"
 - !private "=="
-- !private "Array"
-- "ClicksViewController"
-- "CastingPrecedence"
-- !private "+="
-- !private "GKScore"
-- !private "*"
-- "String"
-- !private "CKRecordValue"
+- "Date"
 - "Int"
-- !private "round"
-- "UIWebViewDelegate"
-- "Double"
-- "UIViewController"
-- !private "UIColor"
-- "URLRequest"
-- "UIActivityIndicatorView"
-- "UIWebViewNavigationType"
-- !private "GKLocalPlayer"
-- !private "kGADSimulatorID"
-- !private "CKContainer"
+- !private "UIAlertControllerStyle"
+- "CastingPrecedence"
+- !private "&&"
+- !private "!"
+- !private "NSDictionary"
+- "GADInterstitial"
 - !private "Void"
-- !private "NSURL"
-- !private "UserDefaults"
-- !private "+"
-- "Bool"
+- !private "Timer"
+- !private "StringLiteralType"
+- "UIWebViewNavigationType"
+- !private "kGADSimulatorID"
+- !private "UIColor"
+- !private "GKLocalPlayer"
+- "BooleanLiteralType"
+- "GADInterstitialDelegate"
+- !private "DispatchQueue"
+- !private "NSForegroundColorAttributeName"
+- "GKGameCenterControllerDelegate"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "RawValue"]
 - !private ["Ps16AbsoluteValuable", "description"]
@@ -120,10 +125,13 @@ depends-member:
 - !private ["Ps9AnyObject", "GKScore"]
 - !private ["Ps9AnyObject", "Int"]
 - !private ["Ps9AnyObject", "Int64"]
+- !private ["Ps9AnyObject", "Key"]
+- !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
 - !private ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "NSURLRequest"]
 - !private ["Ps9AnyObject", "StartViewController"]
 - ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "Timer"]
 - !private ["Ps9AnyObject", "UIActivityIndicatorViewStyle"]
 - !private ["Ps9AnyObject", "UIAlertAction"]
 - !private ["Ps9AnyObject", "UIAlertActionStyle"]
@@ -132,6 +140,7 @@ depends-member:
 - !private ["Ps9AnyObject", "UIApplication"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UserDefaults"]
+- !private ["Ps9AnyObject", "Value"]
 - !private ["Ps9AnyObject", "activityIndicatorViewStyle"]
 - ["Ps9AnyObject", "ad"]
 - !private ["Ps9AnyObject", "addAction"]
@@ -184,6 +193,7 @@ depends-member:
 - !private ["Ps9AnyObject", "main"]
 - !private ["Ps9AnyObject", "navigationBar"]
 - !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "navigationItem"]
 - ["Ps9AnyObject", "parseStringFromLink"]
 - !private ["Ps9AnyObject", "present"]
 - !private ["Ps9AnyObject", "print"]
@@ -199,6 +209,7 @@ depends-member:
 - ["Ps9AnyObject", "saveFoundsLeaderboard"]
 - ["Ps9AnyObject", "saveLeastClicksToLeaderboards"]
 - !private ["Ps9AnyObject", "scalesPageToFit"]
+- !private ["Ps9AnyObject", "scheduledTimer"]
 - !private ["Ps9AnyObject", "setValue"]
 - !private ["Ps9AnyObject", "shared"]
 - ["Ps9AnyObject", "showAd"]
@@ -213,9 +224,11 @@ depends-member:
 - !private ["Ps9AnyObject", "testDevices"]
 - ["Ps9AnyObject", "timeTicking"]
 - !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "titleTextAttributes"]
 - ["Ps9AnyObject", "updateAverage"]
 - ["Ps9AnyObject", "updateBestTime"]
 - ["Ps9AnyObject", "updateTimeLabel"]
+- ["Ps9AnyObject", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", "viewDidAppear"]
 - ["Ps9AnyObject", "viewDidLoad"]
@@ -223,6 +236,7 @@ depends-member:
 - ["Ps9AnyObject", "webView"]
 - ["Ps9AnyObject", "webViewDidFinishLoad"]
 - ["Ps9AnyObject", "webViewDidStartLoad"]
+- !private ["Ps9AnyObject", "white"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Element"]
 - !private ["Sa", "Index"]
@@ -283,6 +297,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "scalesPageToFit"]
 - !private ["PSo15CALayerDelegate", "sizeToFit"]
 - !private ["PSo15CALayerDelegate", "startAnimating"]
+- !private ["PSo15CALayerDelegate", "titleTextAttributes"]
 - !private ["V12CoreGraphics7CGFloat", "RawValue"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["CSo11CKContainer", "default"]
@@ -319,6 +334,8 @@ depends-member:
 - !private ["Ps7CVarArg", "Int64"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "Key"]
+- !private ["Ps7CVarArg", "NSForegroundColorAttributeName"]
 - !private ["Ps7CVarArg", "NSURL"]
 - !private ["Ps7CVarArg", "NSURLRequest"]
 - !private ["Ps7CVarArg", "RawValue"]
@@ -326,6 +343,7 @@ depends-member:
 - !private ["Ps7CVarArg", "Stride"]
 - ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
+- !private ["Ps7CVarArg", "Timer"]
 - !private ["Ps7CVarArg", "UIActivityIndicatorViewStyle"]
 - !private ["Ps7CVarArg", "UIAlertAction"]
 - !private ["Ps7CVarArg", "UIAlertActionStyle"]
@@ -334,6 +352,7 @@ depends-member:
 - !private ["Ps7CVarArg", "UIApplication"]
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UserDefaults"]
+- !private ["Ps7CVarArg", "Value"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "_Element"]
 - !private ["Ps7CVarArg", "activityIndicatorViewStyle"]
@@ -389,6 +408,7 @@ depends-member:
 - !private ["Ps7CVarArg", "main"]
 - !private ["Ps7CVarArg", "navigationBar"]
 - !private ["Ps7CVarArg", "navigationController"]
+- !private ["Ps7CVarArg", "navigationItem"]
 - ["Ps7CVarArg", "parseStringFromLink"]
 - !private ["Ps7CVarArg", "present"]
 - !private ["Ps7CVarArg", "print"]
@@ -405,6 +425,7 @@ depends-member:
 - ["Ps7CVarArg", "saveFoundsLeaderboard"]
 - ["Ps7CVarArg", "saveLeastClicksToLeaderboards"]
 - !private ["Ps7CVarArg", "scalesPageToFit"]
+- !private ["Ps7CVarArg", "scheduledTimer"]
 - !private ["Ps7CVarArg", "setValue"]
 - !private ["Ps7CVarArg", "shared"]
 - ["Ps7CVarArg", "showAd"]
@@ -419,9 +440,11 @@ depends-member:
 - !private ["Ps7CVarArg", "testDevices"]
 - ["Ps7CVarArg", "timeTicking"]
 - !private ["Ps7CVarArg", "title"]
+- !private ["Ps7CVarArg", "titleTextAttributes"]
 - ["Ps7CVarArg", "updateAverage"]
 - ["Ps7CVarArg", "updateBestTime"]
 - ["Ps7CVarArg", "updateTimeLabel"]
+- ["Ps7CVarArg", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps7CVarArg", "value"]
 - ["Ps7CVarArg", "viewDidAppear"]
 - ["Ps7CVarArg", "viewDidLoad"]
@@ -429,6 +452,7 @@ depends-member:
 - ["Ps7CVarArg", "webView"]
 - ["Ps7CVarArg", "webViewDidFinishLoad"]
 - ["Ps7CVarArg", "webViewDidStartLoad"]
+- !private ["Ps7CVarArg", "white"]
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
 - ["C14clicksToHitler20ClicksViewController", "Bool"]
@@ -446,10 +470,13 @@ depends-member:
 - !private ["C14clicksToHitler20ClicksViewController", "GKScore"]
 - ["C14clicksToHitler20ClicksViewController", "Int"]
 - !private ["C14clicksToHitler20ClicksViewController", "Int64"]
+- !private ["C14clicksToHitler20ClicksViewController", "NSDictionary"]
+- !private ["C14clicksToHitler20ClicksViewController", "NSForegroundColorAttributeName"]
 - !private ["C14clicksToHitler20ClicksViewController", "NSURL"]
 - !private ["C14clicksToHitler20ClicksViewController", "NSURLRequest"]
 - !private ["C14clicksToHitler20ClicksViewController", "StartViewController"]
 - ["C14clicksToHitler20ClicksViewController", "String"]
+- !private ["C14clicksToHitler20ClicksViewController", "Timer"]
 - ["C14clicksToHitler20ClicksViewController", "UIActivityIndicatorView"]
 - !private ["C14clicksToHitler20ClicksViewController", "UIActivityIndicatorViewStyle"]
 - !private ["C14clicksToHitler20ClicksViewController", "UIAlertAction"]
@@ -494,6 +521,7 @@ depends-member:
 - !private ["C14clicksToHitler20ClicksViewController", "kGADSimulatorID"]
 - ["C14clicksToHitler20ClicksViewController", "loadingIndicator"]
 - !private ["C14clicksToHitler20ClicksViewController", "navigationController"]
+- !private ["C14clicksToHitler20ClicksViewController", "navigationItem"]
 - ["C14clicksToHitler20ClicksViewController", "parseStringFromLink"]
 - !private ["C14clicksToHitler20ClicksViewController", "present"]
 - !private ["C14clicksToHitler20ClicksViewController", "print"]
@@ -513,6 +541,7 @@ depends-member:
 - ["C14clicksToHitler20ClicksViewController", "updateAverage"]
 - ["C14clicksToHitler20ClicksViewController", "updateBestTime"]
 - ["C14clicksToHitler20ClicksViewController", "updateTimeLabel"]
+- ["C14clicksToHitler20ClicksViewController", "updatingLeaderboardsFromDeviceSave"]
 - ["C14clicksToHitler20ClicksViewController", "viewDidAppear"]
 - ["C14clicksToHitler20ClicksViewController", "viewDidLoad"]
 - ["C14clicksToHitler20ClicksViewController", "web"]
@@ -555,12 +584,15 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Int"]
 - !private ["Ps28CustomDebugStringConvertible", "Int64"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURL"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURLRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "RawValue"]
 - !private ["Ps28CustomDebugStringConvertible", "StartViewController"]
 - ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "Timer"]
 - !private ["Ps28CustomDebugStringConvertible", "UIActivityIndicatorViewStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertActionStyle"]
@@ -569,6 +601,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "activityIndicatorViewStyle"]
 - ["Ps28CustomDebugStringConvertible", "ad"]
@@ -624,6 +657,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - ["Ps28CustomDebugStringConvertible", "parseStringFromLink"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
@@ -640,6 +674,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "saveFoundsLeaderboard"]
 - ["Ps28CustomDebugStringConvertible", "saveLeastClicksToLeaderboards"]
 - !private ["Ps28CustomDebugStringConvertible", "scalesPageToFit"]
+- !private ["Ps28CustomDebugStringConvertible", "scheduledTimer"]
 - !private ["Ps28CustomDebugStringConvertible", "setValue"]
 - !private ["Ps28CustomDebugStringConvertible", "shared"]
 - ["Ps28CustomDebugStringConvertible", "showAd"]
@@ -655,9 +690,11 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "timeIntervalSinceNow"]
 - ["Ps28CustomDebugStringConvertible", "timeTicking"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "titleTextAttributes"]
 - ["Ps28CustomDebugStringConvertible", "updateAverage"]
 - ["Ps28CustomDebugStringConvertible", "updateBestTime"]
 - ["Ps28CustomDebugStringConvertible", "updateTimeLabel"]
+- ["Ps28CustomDebugStringConvertible", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
@@ -665,6 +702,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "webView"]
 - ["Ps28CustomDebugStringConvertible", "webViewDidFinishLoad"]
 - ["Ps28CustomDebugStringConvertible", "webViewDidStartLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "white"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "RawValue"]
@@ -681,9 +719,11 @@ depends-member:
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
 - !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "Key"]
 - !private ["Ps17CustomReflectable", "RawValue"]
 - !private ["Ps17CustomReflectable", "Stride"]
 - !private ["Ps17CustomReflectable", "SubSequence"]
+- !private ["Ps17CustomReflectable", "Value"]
 - !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
@@ -713,6 +753,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Int64"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
 - !private ["Ps23CustomStringConvertible", "NSURL"]
 - !private ["Ps23CustomStringConvertible", "NSURLRequest"]
 - !private ["Ps23CustomStringConvertible", "RawValue"]
@@ -720,6 +762,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "Timer"]
 - !private ["Ps23CustomStringConvertible", "UIActivityIndicatorViewStyle"]
 - !private ["Ps23CustomStringConvertible", "UIAlertAction"]
 - !private ["Ps23CustomStringConvertible", "UIAlertActionStyle"]
@@ -728,6 +771,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIApplication"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UserDefaults"]
+- !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -784,6 +828,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "main"]
 - !private ["Ps23CustomStringConvertible", "navigationBar"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "navigationItem"]
 - ["Ps23CustomStringConvertible", "parseStringFromLink"]
 - !private ["Ps23CustomStringConvertible", "present"]
 - !private ["Ps23CustomStringConvertible", "print"]
@@ -800,6 +845,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "saveFoundsLeaderboard"]
 - ["Ps23CustomStringConvertible", "saveLeastClicksToLeaderboards"]
 - !private ["Ps23CustomStringConvertible", "scalesPageToFit"]
+- !private ["Ps23CustomStringConvertible", "scheduledTimer"]
 - !private ["Ps23CustomStringConvertible", "setValue"]
 - !private ["Ps23CustomStringConvertible", "shared"]
 - ["Ps23CustomStringConvertible", "showAd"]
@@ -815,9 +861,11 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "timeIntervalSinceNow"]
 - ["Ps23CustomStringConvertible", "timeTicking"]
 - !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "titleTextAttributes"]
 - ["Ps23CustomStringConvertible", "updateAverage"]
 - ["Ps23CustomStringConvertible", "updateBestTime"]
 - ["Ps23CustomStringConvertible", "updateTimeLabel"]
+- ["Ps23CustomStringConvertible", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", "viewDidAppear"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
@@ -825,6 +873,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "webView"]
 - ["Ps23CustomStringConvertible", "webViewDidFinishLoad"]
 - ["Ps23CustomStringConvertible", "webViewDidStartLoad"]
+- !private ["Ps23CustomStringConvertible", "white"]
 - ["Ps23CustomStringConvertible", ""]
 - ["V10Foundation4Date", "deinit"]
 - ["V10Foundation4Date", "init"]
@@ -841,6 +890,7 @@ depends-member:
 - !private ["Vs26DefaultRandomAccessIndices", "Iterator"]
 - !private ["Vs26DefaultRandomAccessIndices", "SubSequence"]
 - !private ["Vs26DefaultRandomAccessIndices", "_Element"]
+- ["Vs10Dictionary", "deinit"]
 - !private ["CSo14DispatchObject", "async"]
 - !private ["CSo14DispatchObject", "global"]
 - !private ["CSo14DispatchObject", "main"]
@@ -865,12 +915,15 @@ depends-member:
 - !private ["Ps9Equatable", "Int"]
 - !private ["Ps9Equatable", "Int64"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "Key"]
+- !private ["Ps9Equatable", "NSForegroundColorAttributeName"]
 - !private ["Ps9Equatable", "NSURL"]
 - !private ["Ps9Equatable", "NSURLRequest"]
 - !private ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "StartViewController"]
 - !private ["Ps9Equatable", "Stride"]
 - ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "Timer"]
 - !private ["Ps9Equatable", "UIActivityIndicatorViewStyle"]
 - !private ["Ps9Equatable", "UIAlertAction"]
 - !private ["Ps9Equatable", "UIAlertActionStyle"]
@@ -879,6 +932,7 @@ depends-member:
 - !private ["Ps9Equatable", "UIApplication"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UserDefaults"]
+- !private ["Ps9Equatable", "Value"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "actionSheet"]
@@ -938,6 +992,7 @@ depends-member:
 - !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "navigationBar"]
 - !private ["Ps9Equatable", "navigationController"]
+- !private ["Ps9Equatable", "navigationItem"]
 - ["Ps9Equatable", "parseStringFromLink"]
 - !private ["Ps9Equatable", "present"]
 - !private ["Ps9Equatable", "print"]
@@ -953,6 +1008,7 @@ depends-member:
 - ["Ps9Equatable", "saveFoundsLeaderboard"]
 - ["Ps9Equatable", "saveLeastClicksToLeaderboards"]
 - !private ["Ps9Equatable", "scalesPageToFit"]
+- !private ["Ps9Equatable", "scheduledTimer"]
 - !private ["Ps9Equatable", "setValue"]
 - !private ["Ps9Equatable", "shared"]
 - ["Ps9Equatable", "showAd"]
@@ -968,9 +1024,11 @@ depends-member:
 - !private ["Ps9Equatable", "timeIntervalSinceNow"]
 - ["Ps9Equatable", "timeTicking"]
 - !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "titleTextAttributes"]
 - ["Ps9Equatable", "updateAverage"]
 - ["Ps9Equatable", "updateBestTime"]
 - ["Ps9Equatable", "updateTimeLabel"]
+- ["Ps9Equatable", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps9Equatable", "value"]
 - ["Ps9Equatable", "viewDidAppear"]
 - ["Ps9Equatable", "viewDidLoad"]
@@ -978,6 +1036,7 @@ depends-member:
 - ["Ps9Equatable", "webView"]
 - ["Ps9Equatable", "webViewDidFinishLoad"]
 - ["Ps9Equatable", "webViewDidStartLoad"]
+- !private ["Ps9Equatable", "white"]
 - !private ["Ps9Equatable", "whiteLarge"]
 - ["Ps9Equatable", ""]
 - !private ["Ps5Error", "deinit"]
@@ -993,6 +1052,8 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "removeAll"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Value"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "contains"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "replacingOccurrences"]
@@ -1034,10 +1095,12 @@ depends-member:
 - !private ["PSo13GADAdDelegate", "GKScore"]
 - !private ["PSo13GADAdDelegate", "Int"]
 - !private ["PSo13GADAdDelegate", "Int64"]
+- !private ["PSo13GADAdDelegate", "NSForegroundColorAttributeName"]
 - !private ["PSo13GADAdDelegate", "NSURL"]
 - !private ["PSo13GADAdDelegate", "NSURLRequest"]
 - !private ["PSo13GADAdDelegate", "StartViewController"]
 - ["PSo13GADAdDelegate", "String"]
+- !private ["PSo13GADAdDelegate", "Timer"]
 - !private ["PSo13GADAdDelegate", "UIActivityIndicatorViewStyle"]
 - !private ["PSo13GADAdDelegate", "UIAlertAction"]
 - !private ["PSo13GADAdDelegate", "UIAlertActionStyle"]
@@ -1072,6 +1135,7 @@ depends-member:
 - !private ["PSo13GADAdDelegate", "kGADSimulatorID"]
 - !private ["PSo13GADAdDelegate", "loadingIndicator"]
 - !private ["PSo13GADAdDelegate", "navigationController"]
+- !private ["PSo13GADAdDelegate", "navigationItem"]
 - !private ["PSo13GADAdDelegate", "parseStringFromLink"]
 - !private ["PSo13GADAdDelegate", "present"]
 - !private ["PSo13GADAdDelegate", "print"]
@@ -1091,6 +1155,7 @@ depends-member:
 - !private ["PSo13GADAdDelegate", "updateAverage"]
 - !private ["PSo13GADAdDelegate", "updateBestTime"]
 - !private ["PSo13GADAdDelegate", "updateTimeLabel"]
+- !private ["PSo13GADAdDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo13GADAdDelegate", "web"]
 - ["PSo13GADAdDelegate", "webView"]
 - ["PSo13GADAdDelegate", "webViewDidFinishLoad"]
@@ -1114,10 +1179,12 @@ depends-member:
 - !private ["PSo23GADInterstitialDelegate", "GKScore"]
 - !private ["PSo23GADInterstitialDelegate", "Int"]
 - !private ["PSo23GADInterstitialDelegate", "Int64"]
+- !private ["PSo23GADInterstitialDelegate", "NSForegroundColorAttributeName"]
 - !private ["PSo23GADInterstitialDelegate", "NSURL"]
 - !private ["PSo23GADInterstitialDelegate", "NSURLRequest"]
 - !private ["PSo23GADInterstitialDelegate", "StartViewController"]
 - ["PSo23GADInterstitialDelegate", "String"]
+- !private ["PSo23GADInterstitialDelegate", "Timer"]
 - !private ["PSo23GADInterstitialDelegate", "UIActivityIndicatorViewStyle"]
 - !private ["PSo23GADInterstitialDelegate", "UIAlertAction"]
 - !private ["PSo23GADInterstitialDelegate", "UIAlertActionStyle"]
@@ -1152,6 +1219,7 @@ depends-member:
 - !private ["PSo23GADInterstitialDelegate", "kGADSimulatorID"]
 - !private ["PSo23GADInterstitialDelegate", "loadingIndicator"]
 - !private ["PSo23GADInterstitialDelegate", "navigationController"]
+- !private ["PSo23GADInterstitialDelegate", "navigationItem"]
 - !private ["PSo23GADInterstitialDelegate", "parseStringFromLink"]
 - !private ["PSo23GADInterstitialDelegate", "present"]
 - !private ["PSo23GADInterstitialDelegate", "print"]
@@ -1171,6 +1239,7 @@ depends-member:
 - !private ["PSo23GADInterstitialDelegate", "updateAverage"]
 - !private ["PSo23GADInterstitialDelegate", "updateBestTime"]
 - !private ["PSo23GADInterstitialDelegate", "updateTimeLabel"]
+- !private ["PSo23GADInterstitialDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo23GADInterstitialDelegate", "web"]
 - ["PSo23GADInterstitialDelegate", "webView"]
 - ["PSo23GADInterstitialDelegate", "webViewDidFinishLoad"]
@@ -1194,10 +1263,12 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "GKScore"]
 - !private ["PSo30GKGameCenterControllerDelegate", "Int"]
 - !private ["PSo30GKGameCenterControllerDelegate", "Int64"]
+- !private ["PSo30GKGameCenterControllerDelegate", "NSForegroundColorAttributeName"]
 - !private ["PSo30GKGameCenterControllerDelegate", "NSURL"]
 - !private ["PSo30GKGameCenterControllerDelegate", "NSURLRequest"]
 - !private ["PSo30GKGameCenterControllerDelegate", "StartViewController"]
 - ["PSo30GKGameCenterControllerDelegate", "String"]
+- !private ["PSo30GKGameCenterControllerDelegate", "Timer"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UIActivityIndicatorViewStyle"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UIAlertAction"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UIAlertActionStyle"]
@@ -1233,6 +1304,7 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "kGADSimulatorID"]
 - !private ["PSo30GKGameCenterControllerDelegate", "loadingIndicator"]
 - !private ["PSo30GKGameCenterControllerDelegate", "navigationController"]
+- !private ["PSo30GKGameCenterControllerDelegate", "navigationItem"]
 - !private ["PSo30GKGameCenterControllerDelegate", "parseStringFromLink"]
 - !private ["PSo30GKGameCenterControllerDelegate", "present"]
 - !private ["PSo30GKGameCenterControllerDelegate", "print"]
@@ -1252,6 +1324,7 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "updateAverage"]
 - !private ["PSo30GKGameCenterControllerDelegate", "updateBestTime"]
 - !private ["PSo30GKGameCenterControllerDelegate", "updateTimeLabel"]
+- !private ["PSo30GKGameCenterControllerDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo30GKGameCenterControllerDelegate", "web"]
 - ["PSo30GKGameCenterControllerDelegate", "webView"]
 - ["PSo30GKGameCenterControllerDelegate", "webViewDidFinishLoad"]
@@ -1286,12 +1359,15 @@ depends-member:
 - !private ["Ps8Hashable", "Int"]
 - !private ["Ps8Hashable", "Int64"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "Key"]
+- !private ["Ps8Hashable", "NSForegroundColorAttributeName"]
 - !private ["Ps8Hashable", "NSURL"]
 - !private ["Ps8Hashable", "NSURLRequest"]
 - !private ["Ps8Hashable", "RawValue"]
 - !private ["Ps8Hashable", "StartViewController"]
 - !private ["Ps8Hashable", "Stride"]
 - ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "Timer"]
 - !private ["Ps8Hashable", "UIActivityIndicatorViewStyle"]
 - !private ["Ps8Hashable", "UIAlertAction"]
 - !private ["Ps8Hashable", "UIAlertActionStyle"]
@@ -1300,6 +1376,7 @@ depends-member:
 - !private ["Ps8Hashable", "UIApplication"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UserDefaults"]
+- !private ["Ps8Hashable", "Value"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "actionSheet"]
@@ -1359,6 +1436,7 @@ depends-member:
 - !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "navigationBar"]
 - !private ["Ps8Hashable", "navigationController"]
+- !private ["Ps8Hashable", "navigationItem"]
 - ["Ps8Hashable", "parseStringFromLink"]
 - !private ["Ps8Hashable", "present"]
 - !private ["Ps8Hashable", "print"]
@@ -1374,6 +1452,7 @@ depends-member:
 - ["Ps8Hashable", "saveFoundsLeaderboard"]
 - ["Ps8Hashable", "saveLeastClicksToLeaderboards"]
 - !private ["Ps8Hashable", "scalesPageToFit"]
+- !private ["Ps8Hashable", "scheduledTimer"]
 - !private ["Ps8Hashable", "setValue"]
 - !private ["Ps8Hashable", "shared"]
 - ["Ps8Hashable", "showAd"]
@@ -1389,9 +1468,11 @@ depends-member:
 - !private ["Ps8Hashable", "timeIntervalSinceNow"]
 - ["Ps8Hashable", "timeTicking"]
 - !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "titleTextAttributes"]
 - ["Ps8Hashable", "updateAverage"]
 - ["Ps8Hashable", "updateBestTime"]
 - ["Ps8Hashable", "updateTimeLabel"]
+- ["Ps8Hashable", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", "viewDidAppear"]
 - ["Ps8Hashable", "viewDidLoad"]
@@ -1399,6 +1480,7 @@ depends-member:
 - ["Ps8Hashable", "webView"]
 - ["Ps8Hashable", "webViewDidFinishLoad"]
 - ["Ps8Hashable", "webViewDidStartLoad"]
+- !private ["Ps8Hashable", "white"]
 - !private ["Ps8Hashable", "whiteLarge"]
 - ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
@@ -1499,10 +1581,13 @@ depends-member:
 - !private ["PSo8NSCoding", "GKScore"]
 - !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "Int64"]
+- !private ["PSo8NSCoding", "Key"]
+- !private ["PSo8NSCoding", "NSForegroundColorAttributeName"]
 - !private ["PSo8NSCoding", "NSURL"]
 - !private ["PSo8NSCoding", "NSURLRequest"]
 - !private ["PSo8NSCoding", "StartViewController"]
 - ["PSo8NSCoding", "String"]
+- !private ["PSo8NSCoding", "Timer"]
 - !private ["PSo8NSCoding", "UIActivityIndicatorViewStyle"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
@@ -1511,6 +1596,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIApplication"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UserDefaults"]
+- !private ["PSo8NSCoding", "Value"]
 - !private ["PSo8NSCoding", "activityIndicatorViewStyle"]
 - ["PSo8NSCoding", "ad"]
 - !private ["PSo8NSCoding", "addAction"]
@@ -1551,6 +1637,7 @@ depends-member:
 - ["PSo8NSCoding", "loadingIndicator"]
 - !private ["PSo8NSCoding", "navigationBar"]
 - !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "navigationItem"]
 - ["PSo8NSCoding", "parseStringFromLink"]
 - !private ["PSo8NSCoding", "present"]
 - !private ["PSo8NSCoding", "print"]
@@ -1574,9 +1661,11 @@ depends-member:
 - !private ["PSo8NSCoding", "subscript"]
 - ["PSo8NSCoding", "timeTicking"]
 - !private ["PSo8NSCoding", "title"]
+- !private ["PSo8NSCoding", "titleTextAttributes"]
 - ["PSo8NSCoding", "updateAverage"]
 - ["PSo8NSCoding", "updateBestTime"]
 - ["PSo8NSCoding", "updateTimeLabel"]
+- ["PSo8NSCoding", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo8NSCoding", "value"]
 - ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -1584,12 +1673,19 @@ depends-member:
 - ["PSo8NSCoding", "webView"]
 - ["PSo8NSCoding", "webViewDidFinishLoad"]
 - ["PSo8NSCoding", "webViewDidStartLoad"]
+- !private ["PSo8NSCoding", "white"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "Key"]
+- !private ["PSo9NSCopying", "Value"]
 - !private ["PSo9NSCopying", "contains"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "replacingOccurrences"]
 - !private ["PSo9NSCopying", "subscript"]
 - !private ["PSo9NSCopying", "testDevices"]
+- !private ["PSo9NSCopying", "white"]
+- !private ["CSo12NSDictionary", "Key"]
+- !private ["CSo12NSDictionary", "Value"]
+- ["CSo12NSDictionary", "deinit"]
 - !private ["PSo26NSExtensionRequestHandling", "CKContainer"]
 - !private ["PSo26NSExtensionRequestHandling", "CKRecordID"]
 - !private ["PSo26NSExtensionRequestHandling", "ClicksViewController"]
@@ -1602,10 +1698,12 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "GKScore"]
 - !private ["PSo26NSExtensionRequestHandling", "Int"]
 - !private ["PSo26NSExtensionRequestHandling", "Int64"]
+- !private ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
 - !private ["PSo26NSExtensionRequestHandling", "NSURL"]
 - !private ["PSo26NSExtensionRequestHandling", "NSURLRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "StartViewController"]
 - ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "Timer"]
 - !private ["PSo26NSExtensionRequestHandling", "UIActivityIndicatorViewStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
@@ -1646,6 +1744,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "loadingIndicator"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - ["PSo26NSExtensionRequestHandling", "parseStringFromLink"]
 - !private ["PSo26NSExtensionRequestHandling", "present"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
@@ -1665,6 +1764,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "updateAverage"]
 - ["PSo26NSExtensionRequestHandling", "updateBestTime"]
 - ["PSo26NSExtensionRequestHandling", "updateTimeLabel"]
+- ["PSo26NSExtensionRequestHandling", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "web"]
@@ -1672,6 +1772,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "webViewDidFinishLoad"]
 - ["PSo26NSExtensionRequestHandling", "webViewDidStartLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo17NSFastEnumeration", "Key"]
+- !private ["PSo17NSFastEnumeration", "Value"]
+- !private ["PSo16NSMutableCopying", "Key"]
+- !private ["PSo16NSMutableCopying", "Value"]
 - !private ["PSo16NSMutableCopying", "contains"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "replacingOccurrences"]
@@ -1690,10 +1794,14 @@ depends-member:
 - !private ["CSo8NSObject", "GKScore"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "Int64"]
+- !private ["CSo8NSObject", "Key"]
+- !private ["CSo8NSObject", "NSDictionary"]
+- !private ["CSo8NSObject", "NSForegroundColorAttributeName"]
 - !private ["CSo8NSObject", "NSURL"]
 - !private ["CSo8NSObject", "NSURLRequest"]
 - !private ["CSo8NSObject", "StartViewController"]
 - ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "Timer"]
 - ["CSo8NSObject", "UIActivityIndicatorView"]
 - !private ["CSo8NSObject", "UIActivityIndicatorViewStyle"]
 - !private ["CSo8NSObject", "UIAlertAction"]
@@ -1708,6 +1816,7 @@ depends-member:
 - !private ["CSo8NSObject", "URL"]
 - ["CSo8NSObject", "URLRequest"]
 - !private ["CSo8NSObject", "UserDefaults"]
+- !private ["CSo8NSObject", "Value"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "activityIndicatorViewStyle"]
 - ["CSo8NSObject", "ad"]
@@ -1760,6 +1869,7 @@ depends-member:
 - !private ["CSo8NSObject", "main"]
 - !private ["CSo8NSObject", "navigationBar"]
 - !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "navigationItem"]
 - ["CSo8NSObject", "parseStringFromLink"]
 - !private ["CSo8NSObject", "present"]
 - !private ["CSo8NSObject", "print"]
@@ -1775,6 +1885,7 @@ depends-member:
 - ["CSo8NSObject", "saveFoundsLeaderboard"]
 - ["CSo8NSObject", "saveLeastClicksToLeaderboards"]
 - !private ["CSo8NSObject", "scalesPageToFit"]
+- !private ["CSo8NSObject", "scheduledTimer"]
 - !private ["CSo8NSObject", "setValue"]
 - !private ["CSo8NSObject", "shared"]
 - ["CSo8NSObject", "showAd"]
@@ -1789,9 +1900,11 @@ depends-member:
 - !private ["CSo8NSObject", "testDevices"]
 - ["CSo8NSObject", "timeTicking"]
 - !private ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "titleTextAttributes"]
 - ["CSo8NSObject", "updateAverage"]
 - ["CSo8NSObject", "updateBestTime"]
 - ["CSo8NSObject", "updateTimeLabel"]
+- ["CSo8NSObject", "updatingLeaderboardsFromDeviceSave"]
 - !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
@@ -1799,6 +1912,7 @@ depends-member:
 - ["CSo8NSObject", "webView"]
 - ["CSo8NSObject", "webViewDidFinishLoad"]
 - ["CSo8NSObject", "webViewDidStartLoad"]
+- !private ["CSo8NSObject", "white"]
 - !private ["PSo16NSObjectProtocol", "CKContainer"]
 - !private ["PSo16NSObjectProtocol", "CKRecordID"]
 - !private ["PSo16NSObjectProtocol", "ClicksViewController"]
@@ -1811,10 +1925,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "GKScore"]
 - !private ["PSo16NSObjectProtocol", "Int"]
 - !private ["PSo16NSObjectProtocol", "Int64"]
+- !private ["PSo16NSObjectProtocol", "Key"]
+- !private ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
 - !private ["PSo16NSObjectProtocol", "NSURL"]
 - !private ["PSo16NSObjectProtocol", "NSURLRequest"]
 - !private ["PSo16NSObjectProtocol", "StartViewController"]
 - ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "Timer"]
 - !private ["PSo16NSObjectProtocol", "UIActivityIndicatorViewStyle"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
@@ -1823,6 +1940,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIApplication"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UserDefaults"]
+- !private ["PSo16NSObjectProtocol", "Value"]
 - !private ["PSo16NSObjectProtocol", "activityIndicatorViewStyle"]
 - ["PSo16NSObjectProtocol", "ad"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
@@ -1874,6 +1992,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "main"]
 - !private ["PSo16NSObjectProtocol", "navigationBar"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "navigationItem"]
 - ["PSo16NSObjectProtocol", "parseStringFromLink"]
 - !private ["PSo16NSObjectProtocol", "present"]
 - !private ["PSo16NSObjectProtocol", "print"]
@@ -1889,6 +2008,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "saveFoundsLeaderboard"]
 - ["PSo16NSObjectProtocol", "saveLeastClicksToLeaderboards"]
 - !private ["PSo16NSObjectProtocol", "scalesPageToFit"]
+- !private ["PSo16NSObjectProtocol", "scheduledTimer"]
 - !private ["PSo16NSObjectProtocol", "setValue"]
 - !private ["PSo16NSObjectProtocol", "shared"]
 - ["PSo16NSObjectProtocol", "showAd"]
@@ -1903,9 +2023,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "testDevices"]
 - ["PSo16NSObjectProtocol", "timeTicking"]
 - !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "titleTextAttributes"]
 - ["PSo16NSObjectProtocol", "updateAverage"]
 - ["PSo16NSObjectProtocol", "updateBestTime"]
 - ["PSo16NSObjectProtocol", "updateTimeLabel"]
+- ["PSo16NSObjectProtocol", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
@@ -1913,13 +2035,17 @@ depends-member:
 - ["PSo16NSObjectProtocol", "webView"]
 - ["PSo16NSObjectProtocol", "webViewDidFinishLoad"]
 - ["PSo16NSObjectProtocol", "webViewDidStartLoad"]
+- !private ["PSo16NSObjectProtocol", "white"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "Key"]
+- !private ["PSo14NSSecureCoding", "Value"]
 - !private ["PSo14NSSecureCoding", "contains"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "replacingOccurrences"]
 - !private ["PSo14NSSecureCoding", "report"]
 - !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["PSo14NSSecureCoding", "value"]
+- !private ["PSo14NSSecureCoding", "white"]
 - !private ["CSo8NSString", "contains"]
 - !private ["CSo8NSString", "init"]
 - !private ["CSo8NSString", "replacingOccurrences"]
@@ -1998,7 +2124,9 @@ depends-member:
 - !private ["Ps8Sequence", "IndexDistance"]
 - !private ["Ps8Sequence", "Indices"]
 - !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "Key"]
 - !private ["Ps8Sequence", "SubSequence"]
+- !private ["Ps8Sequence", "Value"]
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "append"]
 - ["Ps8Sequence", "init"]
@@ -2036,6 +2164,8 @@ depends-member:
 - !private ["Ps20TextOutputStreamable", "contains"]
 - !private ["Ps20TextOutputStreamable", "init"]
 - !private ["Ps20TextOutputStreamable", "replacingOccurrences"]
+- ["CSo5Timer", "deinit"]
+- !private ["CSo5Timer", "scheduledTimer"]
 - !private ["PSo29UIAccessibilityIdentification", "activityIndicatorViewStyle"]
 - !private ["PSo29UIAccessibilityIdentification", "allowsLinkPreview"]
 - !private ["PSo29UIAccessibilityIdentification", "allowsPictureInPictureMediaPlayback"]
@@ -2047,6 +2177,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "sizeToFit"]
 - !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
 - !private ["PSo29UIAccessibilityIdentification", "title"]
+- !private ["PSo29UIAccessibilityIdentification", "titleTextAttributes"]
 - !private ["CSo23UIActivityIndicatorView", "activityIndicatorViewStyle"]
 - !private ["CSo23UIActivityIndicatorView", "alpha"]
 - !private ["CSo23UIActivityIndicatorView", "startAnimating"]
@@ -2075,6 +2206,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "sizeToFit"]
 - !private ["PSo12UIAppearance", "startAnimating"]
 - !private ["PSo12UIAppearance", "title"]
+- !private ["PSo12UIAppearance", "titleTextAttributes"]
 - !private ["PSo21UIAppearanceContainer", "CKContainer"]
 - !private ["PSo21UIAppearanceContainer", "CKRecordID"]
 - !private ["PSo21UIAppearanceContainer", "ClicksViewController"]
@@ -2087,10 +2219,12 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "GKScore"]
 - !private ["PSo21UIAppearanceContainer", "Int"]
 - !private ["PSo21UIAppearanceContainer", "Int64"]
+- !private ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo21UIAppearanceContainer", "NSURL"]
 - !private ["PSo21UIAppearanceContainer", "NSURLRequest"]
 - !private ["PSo21UIAppearanceContainer", "StartViewController"]
 - ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "Timer"]
 - !private ["PSo21UIAppearanceContainer", "UIActivityIndicatorViewStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
@@ -2138,6 +2272,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "loadingIndicator"]
 - !private ["PSo21UIAppearanceContainer", "navigationBar"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - ["PSo21UIAppearanceContainer", "parseStringFromLink"]
 - !private ["PSo21UIAppearanceContainer", "present"]
 - !private ["PSo21UIAppearanceContainer", "print"]
@@ -2157,9 +2292,11 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "startAnimating"]
 - ["PSo21UIAppearanceContainer", "startDate"]
 - ["PSo21UIAppearanceContainer", "timeTicking"]
+- !private ["PSo21UIAppearanceContainer", "titleTextAttributes"]
 - ["PSo21UIAppearanceContainer", "updateAverage"]
 - ["PSo21UIAppearanceContainer", "updateBestTime"]
 - ["PSo21UIAppearanceContainer", "updateTimeLabel"]
+- ["PSo21UIAppearanceContainer", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "web"]
@@ -2173,8 +2310,10 @@ depends-member:
 - !private ["CSo15UIBarButtonItem", "title"]
 - !private ["CSo9UIBarItem", "title"]
 - !private ["PSo16UIBarPositioning", "barTintColor"]
+- !private ["PSo16UIBarPositioning", "titleTextAttributes"]
 - ["CSo7UIColor", "deinit"]
 - !private ["CSo7UIColor", "init"]
+- !private ["CSo7UIColor", "white"]
 - !private ["PSo18UIContentContainer", "CKContainer"]
 - !private ["PSo18UIContentContainer", "CKRecordID"]
 - !private ["PSo18UIContentContainer", "ClicksViewController"]
@@ -2187,10 +2326,12 @@ depends-member:
 - !private ["PSo18UIContentContainer", "GKScore"]
 - !private ["PSo18UIContentContainer", "Int"]
 - !private ["PSo18UIContentContainer", "Int64"]
+- !private ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIContentContainer", "NSURL"]
 - !private ["PSo18UIContentContainer", "NSURLRequest"]
 - !private ["PSo18UIContentContainer", "StartViewController"]
 - ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "Timer"]
 - !private ["PSo18UIContentContainer", "UIActivityIndicatorViewStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
@@ -2231,6 +2372,7 @@ depends-member:
 - ["PSo18UIContentContainer", "loadingIndicator"]
 - !private ["PSo18UIContentContainer", "navigationBar"]
 - !private ["PSo18UIContentContainer", "navigationController"]
+- !private ["PSo18UIContentContainer", "navigationItem"]
 - ["PSo18UIContentContainer", "parseStringFromLink"]
 - !private ["PSo18UIContentContainer", "present"]
 - !private ["PSo18UIContentContainer", "print"]
@@ -2250,6 +2392,7 @@ depends-member:
 - ["PSo18UIContentContainer", "updateAverage"]
 - ["PSo18UIContentContainer", "updateBestTime"]
 - ["PSo18UIContentContainer", "updateTimeLabel"]
+- ["PSo18UIContentContainer", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "web"]
@@ -2267,6 +2410,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "scalesPageToFit"]
 - !private ["PSo17UICoordinateSpace", "sizeToFit"]
 - !private ["PSo17UICoordinateSpace", "startAnimating"]
+- !private ["PSo17UICoordinateSpace", "titleTextAttributes"]
 - !private ["PSo13UIDynamicItem", "activityIndicatorViewStyle"]
 - !private ["PSo13UIDynamicItem", "allowsLinkPreview"]
 - !private ["PSo13UIDynamicItem", "allowsPictureInPictureMediaPlayback"]
@@ -2277,6 +2421,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "scalesPageToFit"]
 - !private ["PSo13UIDynamicItem", "sizeToFit"]
 - !private ["PSo13UIDynamicItem", "startAnimating"]
+- !private ["PSo13UIDynamicItem", "titleTextAttributes"]
 - !private ["PSo18UIFocusEnvironment", "CKContainer"]
 - !private ["PSo18UIFocusEnvironment", "CKRecordID"]
 - !private ["PSo18UIFocusEnvironment", "ClicksViewController"]
@@ -2289,10 +2434,12 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "GKScore"]
 - !private ["PSo18UIFocusEnvironment", "Int"]
 - !private ["PSo18UIFocusEnvironment", "Int64"]
+- !private ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIFocusEnvironment", "NSURL"]
 - !private ["PSo18UIFocusEnvironment", "NSURLRequest"]
 - !private ["PSo18UIFocusEnvironment", "StartViewController"]
 - ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "Timer"]
 - !private ["PSo18UIFocusEnvironment", "UIActivityIndicatorViewStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
@@ -2340,6 +2487,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "loadingIndicator"]
 - !private ["PSo18UIFocusEnvironment", "navigationBar"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
+- !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - ["PSo18UIFocusEnvironment", "parseStringFromLink"]
 - !private ["PSo18UIFocusEnvironment", "present"]
 - !private ["PSo18UIFocusEnvironment", "print"]
@@ -2359,9 +2507,11 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "startAnimating"]
 - ["PSo18UIFocusEnvironment", "startDate"]
 - ["PSo18UIFocusEnvironment", "timeTicking"]
+- !private ["PSo18UIFocusEnvironment", "titleTextAttributes"]
 - ["PSo18UIFocusEnvironment", "updateAverage"]
 - ["PSo18UIFocusEnvironment", "updateBestTime"]
 - ["PSo18UIFocusEnvironment", "updateTimeLabel"]
+- ["PSo18UIFocusEnvironment", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo18UIFocusEnvironment", "viewDidAppear"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "web"]
@@ -2379,11 +2529,15 @@ depends-member:
 - !private ["PSo11UIFocusItem", "scalesPageToFit"]
 - !private ["PSo11UIFocusItem", "sizeToFit"]
 - !private ["PSo11UIFocusItem", "startAnimating"]
+- !private ["PSo11UIFocusItem", "titleTextAttributes"]
 - !private ["CSo15UINavigationBar", "barTintColor"]
 - ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "titleTextAttributes"]
 - ["CSo22UINavigationController", "deinit"]
 - !private ["CSo22UINavigationController", "dismiss"]
 - !private ["CSo22UINavigationController", "navigationBar"]
+- ["CSo16UINavigationItem", "deinit"]
+- !private ["CSo16UINavigationItem", "title"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CKContainer"]
 - !private ["CSo11UIResponder", "CKRecordID"]
@@ -2399,10 +2553,13 @@ depends-member:
 - !private ["CSo11UIResponder", "GKScore"]
 - ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "Int64"]
+- !private ["CSo11UIResponder", "NSDictionary"]
+- !private ["CSo11UIResponder", "NSForegroundColorAttributeName"]
 - !private ["CSo11UIResponder", "NSURL"]
 - !private ["CSo11UIResponder", "NSURLRequest"]
 - !private ["CSo11UIResponder", "StartViewController"]
 - ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "Timer"]
 - ["CSo11UIResponder", "UIActivityIndicatorView"]
 - !private ["CSo11UIResponder", "UIActivityIndicatorViewStyle"]
 - !private ["CSo11UIResponder", "UIAlertAction"]
@@ -2458,6 +2615,7 @@ depends-member:
 - ["CSo11UIResponder", "loadingIndicator"]
 - !private ["CSo11UIResponder", "navigationBar"]
 - !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "navigationItem"]
 - ["CSo11UIResponder", "parseStringFromLink"]
 - !private ["CSo11UIResponder", "present"]
 - !private ["CSo11UIResponder", "print"]
@@ -2478,9 +2636,11 @@ depends-member:
 - !private ["CSo11UIResponder", "startAnimating"]
 - ["CSo11UIResponder", "startDate"]
 - ["CSo11UIResponder", "timeTicking"]
+- !private ["CSo11UIResponder", "titleTextAttributes"]
 - ["CSo11UIResponder", "updateAverage"]
 - ["CSo11UIResponder", "updateBestTime"]
 - ["CSo11UIResponder", "updateTimeLabel"]
+- ["CSo11UIResponder", "updatingLeaderboardsFromDeviceSave"]
 - ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "web"]
@@ -2499,10 +2659,12 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "GKScore"]
 - !private ["PSo30UIResponderStandardEditActions", "Int"]
 - !private ["PSo30UIResponderStandardEditActions", "Int64"]
+- !private ["PSo30UIResponderStandardEditActions", "NSForegroundColorAttributeName"]
 - !private ["PSo30UIResponderStandardEditActions", "NSURL"]
 - !private ["PSo30UIResponderStandardEditActions", "NSURLRequest"]
 - !private ["PSo30UIResponderStandardEditActions", "StartViewController"]
 - ["PSo30UIResponderStandardEditActions", "String"]
+- !private ["PSo30UIResponderStandardEditActions", "Timer"]
 - !private ["PSo30UIResponderStandardEditActions", "UIActivityIndicatorViewStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertActionStyle"]
@@ -2551,6 +2713,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "loadingIndicator"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationBar"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationController"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationItem"]
 - ["PSo30UIResponderStandardEditActions", "parseStringFromLink"]
 - !private ["PSo30UIResponderStandardEditActions", "present"]
 - !private ["PSo30UIResponderStandardEditActions", "print"]
@@ -2571,9 +2734,11 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "startAnimating"]
 - ["PSo30UIResponderStandardEditActions", "startDate"]
 - ["PSo30UIResponderStandardEditActions", "timeTicking"]
+- !private ["PSo30UIResponderStandardEditActions", "titleTextAttributes"]
 - ["PSo30UIResponderStandardEditActions", "updateAverage"]
 - ["PSo30UIResponderStandardEditActions", "updateBestTime"]
 - ["PSo30UIResponderStandardEditActions", "updateTimeLabel"]
+- ["PSo30UIResponderStandardEditActions", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo30UIResponderStandardEditActions", "viewDidAppear"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", "web"]
@@ -2600,10 +2765,12 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "GKScore"]
 - !private ["PSo16UIStateRestoring", "Int"]
 - !private ["PSo16UIStateRestoring", "Int64"]
+- !private ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
 - !private ["PSo16UIStateRestoring", "NSURL"]
 - !private ["PSo16UIStateRestoring", "NSURLRequest"]
 - !private ["PSo16UIStateRestoring", "StartViewController"]
 - ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "Timer"]
 - !private ["PSo16UIStateRestoring", "UIActivityIndicatorViewStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
@@ -2644,6 +2811,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "loadingIndicator"]
 - !private ["PSo16UIStateRestoring", "navigationBar"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
+- !private ["PSo16UIStateRestoring", "navigationItem"]
 - ["PSo16UIStateRestoring", "parseStringFromLink"]
 - !private ["PSo16UIStateRestoring", "present"]
 - !private ["PSo16UIStateRestoring", "print"]
@@ -2663,6 +2831,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "updateAverage"]
 - ["PSo16UIStateRestoring", "updateBestTime"]
 - ["PSo16UIStateRestoring", "updateTimeLabel"]
+- ["PSo16UIStateRestoring", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "web"]
@@ -2682,10 +2851,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "GKScore"]
 - !private ["PSo18UITraitEnvironment", "Int"]
 - !private ["PSo18UITraitEnvironment", "Int64"]
+- !private ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
 - !private ["PSo18UITraitEnvironment", "NSURL"]
 - !private ["PSo18UITraitEnvironment", "NSURLRequest"]
 - !private ["PSo18UITraitEnvironment", "StartViewController"]
 - ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "Timer"]
 - !private ["PSo18UITraitEnvironment", "UIActivityIndicatorViewStyle"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
@@ -2733,6 +2904,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "loadingIndicator"]
 - !private ["PSo18UITraitEnvironment", "navigationBar"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "navigationItem"]
 - ["PSo18UITraitEnvironment", "parseStringFromLink"]
 - !private ["PSo18UITraitEnvironment", "present"]
 - !private ["PSo18UITraitEnvironment", "print"]
@@ -2752,9 +2924,11 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "startAnimating"]
 - ["PSo18UITraitEnvironment", "startDate"]
 - ["PSo18UITraitEnvironment", "timeTicking"]
+- !private ["PSo18UITraitEnvironment", "titleTextAttributes"]
 - ["PSo18UITraitEnvironment", "updateAverage"]
 - ["PSo18UITraitEnvironment", "updateBestTime"]
 - ["PSo18UITraitEnvironment", "updateTimeLabel"]
+- ["PSo18UITraitEnvironment", "updatingLeaderboardsFromDeviceSave"]
 - ["PSo18UITraitEnvironment", "viewDidAppear"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "web"]
@@ -2772,6 +2946,7 @@ depends-member:
 - !private ["CSo6UIView", "scalesPageToFit"]
 - !private ["CSo6UIView", "sizeToFit"]
 - !private ["CSo6UIView", "startAnimating"]
+- !private ["CSo6UIView", "titleTextAttributes"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CKContainer"]
 - !private ["CSo16UIViewController", "CKRecordID"]
@@ -2787,10 +2962,13 @@ depends-member:
 - !private ["CSo16UIViewController", "GKScore"]
 - ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "Int64"]
+- !private ["CSo16UIViewController", "NSDictionary"]
+- !private ["CSo16UIViewController", "NSForegroundColorAttributeName"]
 - !private ["CSo16UIViewController", "NSURL"]
 - !private ["CSo16UIViewController", "NSURLRequest"]
 - !private ["CSo16UIViewController", "StartViewController"]
 - ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "Timer"]
 - ["CSo16UIViewController", "UIActivityIndicatorView"]
 - !private ["CSo16UIViewController", "UIActivityIndicatorViewStyle"]
 - !private ["CSo16UIViewController", "UIAlertAction"]
@@ -2839,6 +3017,7 @@ depends-member:
 - ["CSo16UIViewController", "loadingIndicator"]
 - !private ["CSo16UIViewController", "navigationBar"]
 - !private ["CSo16UIViewController", "navigationController"]
+- !private ["CSo16UIViewController", "navigationItem"]
 - ["CSo16UIViewController", "parseStringFromLink"]
 - !private ["CSo16UIViewController", "present"]
 - !private ["CSo16UIViewController", "print"]
@@ -2858,6 +3037,7 @@ depends-member:
 - ["CSo16UIViewController", "updateAverage"]
 - ["CSo16UIViewController", "updateBestTime"]
 - ["CSo16UIViewController", "updateTimeLabel"]
+- ["CSo16UIViewController", "updatingLeaderboardsFromDeviceSave"]
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "web"]
@@ -2884,10 +3064,12 @@ depends-member:
 - !private ["PSo17UIWebViewDelegate", "GKScore"]
 - !private ["PSo17UIWebViewDelegate", "Int"]
 - !private ["PSo17UIWebViewDelegate", "Int64"]
+- !private ["PSo17UIWebViewDelegate", "NSForegroundColorAttributeName"]
 - !private ["PSo17UIWebViewDelegate", "NSURL"]
 - !private ["PSo17UIWebViewDelegate", "NSURLRequest"]
 - !private ["PSo17UIWebViewDelegate", "StartViewController"]
 - ["PSo17UIWebViewDelegate", "String"]
+- !private ["PSo17UIWebViewDelegate", "Timer"]
 - !private ["PSo17UIWebViewDelegate", "UIActivityIndicatorViewStyle"]
 - !private ["PSo17UIWebViewDelegate", "UIAlertAction"]
 - !private ["PSo17UIWebViewDelegate", "UIAlertActionStyle"]
@@ -2922,6 +3104,7 @@ depends-member:
 - !private ["PSo17UIWebViewDelegate", "kGADSimulatorID"]
 - !private ["PSo17UIWebViewDelegate", "loadingIndicator"]
 - !private ["PSo17UIWebViewDelegate", "navigationController"]
+- !private ["PSo17UIWebViewDelegate", "navigationItem"]
 - !private ["PSo17UIWebViewDelegate", "parseStringFromLink"]
 - !private ["PSo17UIWebViewDelegate", "present"]
 - !private ["PSo17UIWebViewDelegate", "print"]
@@ -2941,6 +3124,7 @@ depends-member:
 - !private ["PSo17UIWebViewDelegate", "updateAverage"]
 - !private ["PSo17UIWebViewDelegate", "updateBestTime"]
 - !private ["PSo17UIWebViewDelegate", "updateTimeLabel"]
+- !private ["PSo17UIWebViewDelegate", "updatingLeaderboardsFromDeviceSave"]
 - !private ["PSo17UIWebViewDelegate", "web"]
 - ["PSo17UIWebViewDelegate", "webView"]
 - ["PSo17UIWebViewDelegate", "webViewDidFinishLoad"]
@@ -2977,10 +3161,13 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "GKScore"]
 - !private ["P14clicksToHitler9Utilities", "Int"]
 - !private ["P14clicksToHitler9Utilities", "Int64"]
+- !private ["P14clicksToHitler9Utilities", "Key"]
+- !private ["P14clicksToHitler9Utilities", "NSForegroundColorAttributeName"]
 - !private ["P14clicksToHitler9Utilities", "NSURL"]
 - !private ["P14clicksToHitler9Utilities", "NSURLRequest"]
 - !private ["P14clicksToHitler9Utilities", "StartViewController"]
 - ["P14clicksToHitler9Utilities", "String"]
+- !private ["P14clicksToHitler9Utilities", "Timer"]
 - !private ["P14clicksToHitler9Utilities", "UIActivityIndicatorViewStyle"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertAction"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertActionStyle"]
@@ -2989,6 +3176,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "UIApplication"]
 - !private ["P14clicksToHitler9Utilities", "UIColor"]
 - !private ["P14clicksToHitler9Utilities", "UserDefaults"]
+- !private ["P14clicksToHitler9Utilities", "Value"]
 - !private ["P14clicksToHitler9Utilities", "activityIndicatorViewStyle"]
 - ["P14clicksToHitler9Utilities", "ad"]
 - !private ["P14clicksToHitler9Utilities", "addAction"]
@@ -3040,6 +3228,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "main"]
 - !private ["P14clicksToHitler9Utilities", "navigationBar"]
 - !private ["P14clicksToHitler9Utilities", "navigationController"]
+- !private ["P14clicksToHitler9Utilities", "navigationItem"]
 - ["P14clicksToHitler9Utilities", "parseStringFromLink"]
 - !private ["P14clicksToHitler9Utilities", "present"]
 - !private ["P14clicksToHitler9Utilities", "print"]
@@ -3055,6 +3244,7 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "saveFoundsLeaderboard"]
 - ["P14clicksToHitler9Utilities", "saveLeastClicksToLeaderboards"]
 - !private ["P14clicksToHitler9Utilities", "scalesPageToFit"]
+- !private ["P14clicksToHitler9Utilities", "scheduledTimer"]
 - !private ["P14clicksToHitler9Utilities", "setValue"]
 - !private ["P14clicksToHitler9Utilities", "shared"]
 - ["P14clicksToHitler9Utilities", "showAd"]
@@ -3069,9 +3259,11 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "testDevices"]
 - ["P14clicksToHitler9Utilities", "timeTicking"]
 - !private ["P14clicksToHitler9Utilities", "title"]
+- !private ["P14clicksToHitler9Utilities", "titleTextAttributes"]
 - ["P14clicksToHitler9Utilities", "updateAverage"]
 - ["P14clicksToHitler9Utilities", "updateBestTime"]
 - ["P14clicksToHitler9Utilities", "updateTimeLabel"]
+- ["P14clicksToHitler9Utilities", "updatingLeaderboardsFromDeviceSave"]
 - !private ["P14clicksToHitler9Utilities", "value"]
 - ["P14clicksToHitler9Utilities", "viewDidAppear"]
 - ["P14clicksToHitler9Utilities", "viewDidLoad"]
@@ -3079,6 +3271,7 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "webView"]
 - ["P14clicksToHitler9Utilities", "webViewDidFinishLoad"]
 - ["P14clicksToHitler9Utilities", "webViewDidStartLoad"]
+- !private ["P14clicksToHitler9Utilities", "white"]
 - ["P14clicksToHitler9Utilities", ""]
 - !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
@@ -3106,6 +3299,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "scalesPageToFit"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "sizeToFit"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "startAnimating"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleTextAttributes"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
@@ -3140,6 +3334,7 @@ depends-member:
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "replacingOccurrences"]
 - !private ["Ps26_ExpressibleByColorLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "white"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "contains"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "replacingOccurrences"]
@@ -3156,12 +3351,15 @@ depends-member:
 - !private ["Ps9_Hashable", "Int"]
 - !private ["Ps9_Hashable", "Int64"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
+- !private ["Ps9_Hashable", "Key"]
+- !private ["Ps9_Hashable", "NSForegroundColorAttributeName"]
 - !private ["Ps9_Hashable", "NSURL"]
 - !private ["Ps9_Hashable", "NSURLRequest"]
 - !private ["Ps9_Hashable", "RawValue"]
 - !private ["Ps9_Hashable", "StartViewController"]
 - !private ["Ps9_Hashable", "Stride"]
 - ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "Timer"]
 - !private ["Ps9_Hashable", "UIActivityIndicatorViewStyle"]
 - !private ["Ps9_Hashable", "UIAlertAction"]
 - !private ["Ps9_Hashable", "UIAlertActionStyle"]
@@ -3170,6 +3368,7 @@ depends-member:
 - !private ["Ps9_Hashable", "UIApplication"]
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UserDefaults"]
+- !private ["Ps9_Hashable", "Value"]
 - !private ["Ps9_Hashable", "_DisabledRangeIndex"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "actionSheet"]
@@ -3229,6 +3428,7 @@ depends-member:
 - !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "navigationBar"]
 - !private ["Ps9_Hashable", "navigationController"]
+- !private ["Ps9_Hashable", "navigationItem"]
 - ["Ps9_Hashable", "parseStringFromLink"]
 - !private ["Ps9_Hashable", "present"]
 - !private ["Ps9_Hashable", "print"]
@@ -3244,6 +3444,7 @@ depends-member:
 - ["Ps9_Hashable", "saveFoundsLeaderboard"]
 - ["Ps9_Hashable", "saveLeastClicksToLeaderboards"]
 - !private ["Ps9_Hashable", "scalesPageToFit"]
+- !private ["Ps9_Hashable", "scheduledTimer"]
 - !private ["Ps9_Hashable", "setValue"]
 - !private ["Ps9_Hashable", "shared"]
 - ["Ps9_Hashable", "showAd"]
@@ -3259,9 +3460,11 @@ depends-member:
 - !private ["Ps9_Hashable", "timeIntervalSinceNow"]
 - ["Ps9_Hashable", "timeTicking"]
 - !private ["Ps9_Hashable", "title"]
+- !private ["Ps9_Hashable", "titleTextAttributes"]
 - ["Ps9_Hashable", "updateAverage"]
 - ["Ps9_Hashable", "updateBestTime"]
 - ["Ps9_Hashable", "updateTimeLabel"]
+- ["Ps9_Hashable", "updatingLeaderboardsFromDeviceSave"]
 - !private ["Ps9_Hashable", "value"]
 - ["Ps9_Hashable", "viewDidAppear"]
 - ["Ps9_Hashable", "viewDidLoad"]
@@ -3269,6 +3472,7 @@ depends-member:
 - ["Ps9_Hashable", "webView"]
 - ["Ps9_Hashable", "webViewDidFinishLoad"]
 - ["Ps9_Hashable", "webViewDidStartLoad"]
+- !private ["Ps9_Hashable", "white"]
 - !private ["Ps9_Hashable", "whiteLarge"]
 - ["Ps9_Hashable", ""]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
@@ -3383,6 +3587,7 @@ depends-nominal:
 - !private "VSC7Decimal"
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
+- "Vs10Dictionary"
 - !private "CSo14DispatchObject"
 - "CSo13DispatchQueue"
 - "Sd"
@@ -3390,6 +3595,7 @@ depends-nominal:
 - !private "Ps5Error"
 - "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
@@ -3432,7 +3638,9 @@ depends-nominal:
 - "CSo7NSCoder"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
+- "CSo12NSDictionary"
 - "PSo26NSExtensionRequestHandling"
+- !private "PSo17NSFastEnumeration"
 - !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
@@ -3460,6 +3668,7 @@ depends-nominal:
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- "CSo5Timer"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "CSo23UIActivityIndicatorView"
 - "OSC28UIActivityIndicatorViewStyle"
@@ -3481,6 +3690,7 @@ depends-nominal:
 - !private "PSo11UIFocusItem"
 - "CSo15UINavigationBar"
 - "CSo22UINavigationController"
+- "CSo16UINavigationItem"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - !private "PSo20UIScrollViewDelegate"
@@ -3641,4 +3851,4 @@ depends-external:
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
-interface-hash: "9ad8fd489b95ca755e0b08a68830c69c"
+interface-hash: "75ff9e501c6270484436150d0937a63e"

@@ -681,7 +681,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
-        
+        print("Gamecenter view was closed")
     }
     
     
