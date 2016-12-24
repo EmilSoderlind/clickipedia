@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
 options: "508e754d2e9b521952a688bd25116721"
-build_time: [535843594, 935282000]
+build_time: [535901660, 711332000]
 inputs:
-  "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/ClicksViewController.swift": [535843593, 0]
+  "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/ClicksViewController.swift": [535846643, 0]
   "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/AppDelegate.swift": [535653404, 0]
   "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/StatsViewController.swift": [535718801, 0]
   "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/Utilities.swift": [535717324, 0]
