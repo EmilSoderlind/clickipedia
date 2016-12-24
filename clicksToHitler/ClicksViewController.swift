@@ -715,6 +715,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     // Check if there is better stats saved localy, otherwise we only upload the latest.
     static func updatingLeaderboardsFromDeviceSave(){
+        print("|-->Uploading local save to leaderboards")
         
         if let totalFounds = UserDefaults.standard.value(forKey: "totalFounds") as? Int{
             saveFoundsLeaderboard(founds: totalFounds)
@@ -734,5 +735,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         if let bestTime = UserDefaults.standard.value(forKey: "bestTime") as? Double{
             saveBestTimeToLeaderboards(time: bestTime)
         }
+        
+        print("|-->Uploading local save to leaderboards - Done")
     }
 }
