@@ -39,6 +39,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     }
     
     @IBAction func resetButton(_ sender: Any) {
+        print("Resetbutton pressed")
         
         showAd()
         
@@ -79,7 +80,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     func checkInternet(){
         
         if(String(describing: currentReachabilityStatus) == "notReachable"){
-            print("<NO INTERNET CONNECTION")
+            print("NO INTERNET CONNECTION")
             
             
             let alertController = UIAlertController(title: "No internet connection", message: "You will need a internet connection for this game", preferredStyle: UIAlertControllerStyle.actionSheet)
@@ -109,6 +110,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         super.viewDidLoad()
         
         print("\n\n")
+        print("<ViewDidLoad - Start")
         
         web.allowsLinkPreview = false
         web.allowsPictureInPictureMediaPlayback = false
@@ -125,12 +127,11 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         if(String(describing: currentReachabilityStatus) == "notReachable"){
             checkInternet()
         }else{
-            print("<Connected to internet.")
+            print("\nConnected to internet.")
             authPlayer()
         }
         
         
-        print("<ViewDidLoad - Start")
         
         navigationController?.navigationBar.barTintColor = UIColor(red: 204.0/255.0, green: 21.0/255.0, blue: 24.0/255.0, alpha: 1.0)
 
@@ -141,7 +142,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         web.scalesPageToFit = true
         
         DispatchQueue.global(qos: .background).async {
-            print("Starting site-loading thread")
+            print("Loading site")
             
             let url = NSURL (string: "https://en.m.wikipedia.org/wiki/Special:Random/#/random");
             let requestObj = NSURLRequest(url: url! as URL);
@@ -216,9 +217,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         if(hitlerFound){
             return false
         }
-        
-        
-        print("CLICKED LINK!")
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
@@ -437,9 +435,9 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         
         var siteName:String = link.replacingOccurrences(of: "_", with: " ")
 
-        print(siteName)
+        print(siteName.removingPercentEncoding!)
         
-        return siteName
+        return siteName.removingPercentEncoding!
     }
     
     func addTotalClicksToLocalSave(clicks: Int){

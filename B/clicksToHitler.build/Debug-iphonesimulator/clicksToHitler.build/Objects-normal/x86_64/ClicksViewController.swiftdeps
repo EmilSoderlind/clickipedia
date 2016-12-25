@@ -6,105 +6,105 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler20ClicksViewController", ""]
 provides-dynamic-lookup:
+- "loadingIndicator"
+- "removeLoadingInd"
+- "updatingLeaderboardsFromDeviceSave"
+- "authPlayer"
+- "clicksLabel"
+- "getTimeString"
+- "clicks"
+- "updateAverage"
+- "parseStringFromLink"
+- "hitlerGratzPopup"
+- "updateBestTime"
+- "showAd"
+- "updateTimeLabel"
+- "timeTicking"
+- "viewDidAppear"
+- "createAndLoadInterstitial"
+- "viewDidLoad"
+- "checkLeastClicks"
 - "saveLeastClicksToLeaderboards"
 - "interstitial"
-- "startDate"
-- "web"
-- "resetButton"
-- "gratzScreenHasBeenShown"
-- "updateBestTime"
-- "checkInternet"
-- "showAd"
-- "updatingLeaderboardsFromDeviceSave"
-- "createAndLoadInterstitial"
-- "clicksLabel"
-- "hitlerGratzPopup"
-- "interstitialDidDismissScreen"
-- "viewDidLoad"
-- "saveFoundsLeaderboard"
-- "removeLoadingInd"
-- "updateAverage"
-- "didReceiveMemoryWarning"
-- "timeTicking"
-- "gameCenterViewControllerDidFinish"
-- "saveAverageToLeaderboards"
-- "loadingIndicator"
-- "viewDidAppear"
-- "getTimeString"
-- "authPlayer"
-- "saveBestTimeToLeaderboards"
-- "updateTimeLabel"
-- "siteReady"
-- "addTotalHitlerFound"
-- "webViewDidFinishLoad"
-- "checkLeastClicks"
-- "hitlerFound"
 - "showingAd"
+- "interstitialDidDismissScreen"
+- "gameCenterViewControllerDidFinish"
+- "didReceiveMemoryWarning"
+- "addTotalHitlerFound"
 - "webView"
+- "siteReady"
 - "addTotalClicksToLocalSave"
-- "parseStringFromLink"
+- "startDate"
+- "webViewDidFinishLoad"
+- "gratzScreenHasBeenShown"
+- "checkInternet"
+- "hitlerFound"
+- "saveFoundsLeaderboard"
+- "saveAverageToLeaderboards"
+- "resetButton"
+- "web"
+- "saveBestTimeToLeaderboards"
 - "siteTrace"
-- "clicks"
 depends-top-level:
-- !private "+"
-- !private "<"
-- !private "UIActivityIndicatorViewStyle"
-- !private "UIColor"
-- "GADInterstitialDelegate"
-- !private "Int64"
-- "Date"
-- "GKGameCenterControllerDelegate"
-- !private "DispatchQueue"
-- !private "+="
-- "GADInterstitial"
-- "UIWebViewNavigationType"
 - !private "UserDefaults"
-- !private "CKRecordValue"
-- "UIAlertController"
-- "Int"
-- !private "!="
-- !private "!"
-- "UIWebView"
-- !private "GKLocalPlayer"
-- "URLRequest"
-- "Double"
-- !private "Array"
-- !private "UnicodeScalarType"
-- "BooleanLiteralType"
 - !private "-"
-- !private "UIAlertActionStyle"
-- "CastingPrecedence"
-- !private "StartViewController"
-- "UIBarButtonItem"
-- "AssignmentPrecedence"
-- !private "GKScore"
-- !private "=="
-- "UIActivityIndicatorView"
-- !private "GADRequest"
-- !private "UIAlertControllerStyle"
-- !private "NSURL"
-- !private "StringLiteralType"
-- !private "&&"
-- !private "UIAlertAction"
-- "ClicksViewController"
-- !private "URL"
+- "UIWebView"
+- !private "DispatchQueue"
 - !private "CKContainer"
-- !private ">"
 - !private "UIApplication"
-- !private ">="
-- !private "CKRecordID"
-- !private "/"
-- "UIViewController"
-- "String"
-- "GKGameCenterViewController"
-- "UIWebViewDelegate"
-- "Bool"
-- !private "print"
-- !private "Void"
-- !private "kGADSimulatorID"
+- !private "GADRequest"
+- !private "URL"
+- "UIActivityIndicatorView"
+- !private "Array"
+- !private ">"
+- "UIAlertController"
 - !private "*"
-- !private "NSURLRequest"
+- !private "Int64"
+- "GKGameCenterViewController"
+- "Int"
+- "UIBarButtonItem"
 - !private "round"
+- !private "UIAlertControllerStyle"
+- !private "CKRecordID"
+- !private "print"
+- !private "UIAlertActionStyle"
+- "URLRequest"
+- "UIWebViewNavigationType"
+- !private "NSURL"
+- !private "&&"
+- "GKGameCenterControllerDelegate"
+- "Bool"
+- !private "StartViewController"
+- "GADInterstitialDelegate"
+- !private "UIAlertAction"
+- !private "!="
+- !private "CKRecordValue"
+- "Date"
+- !private "<"
+- !private "GKScore"
+- "AssignmentPrecedence"
+- !private "=="
+- !private "!"
+- "GADInterstitial"
+- "CastingPrecedence"
+- "ClicksViewController"
+- !private "UIActivityIndicatorViewStyle"
+- !private "+="
+- !private "UIColor"
+- "Double"
+- !private "Void"
+- !private "NSURLRequest"
+- !private "StringLiteralType"
+- "String"
+- "UIViewController"
+- !private "UnicodeScalarType"
+- "UIWebViewDelegate"
+- "BooleanLiteralType"
+- !private "GKLocalPlayer"
+- !private "kGADSimulatorID"
+- !private ">="
+- !private "/"
+- !private "+"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "RawValue"]
 - !private ["Ps16AbsoluteValuable", "description"]
@@ -190,6 +190,7 @@ depends-member:
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "publicCloudDatabase"]
 - ["Ps9AnyObject", "removeLoadingInd"]
+- !private ["Ps9AnyObject", "removingPercentEncoding"]
 - !private ["Ps9AnyObject", "replacingOccurrences"]
 - !private ["Ps9AnyObject", "report"]
 - ["Ps9AnyObject", "resetButton"]
@@ -300,9 +301,11 @@ depends-member:
 - !private ["PSo13CKRecordValue", "contains"]
 - !private ["PSo13CKRecordValue", "deinit"]
 - !private ["PSo13CKRecordValue", "init"]
+- !private ["PSo13CKRecordValue", "removingPercentEncoding"]
 - !private ["PSo13CKRecordValue", "replacingOccurrences"]
 - !private ["PSo15CNKeyDescriptor", "contains"]
 - !private ["PSo15CNKeyDescriptor", "init"]
+- !private ["PSo15CNKeyDescriptor", "removingPercentEncoding"]
 - !private ["PSo15CNKeyDescriptor", "replacingOccurrences"]
 - !private ["Ps7CVarArg", "CKContainer"]
 - !private ["Ps7CVarArg", "CKRecordID"]
@@ -397,6 +400,7 @@ depends-member:
 - !private ["Ps7CVarArg", "publicCloudDatabase"]
 - !private ["Ps7CVarArg", "removeAll"]
 - ["Ps7CVarArg", "removeLoadingInd"]
+- !private ["Ps7CVarArg", "removingPercentEncoding"]
 - !private ["Ps7CVarArg", "replacingOccurrences"]
 - !private ["Ps7CVarArg", "report"]
 - ["Ps7CVarArg", "resetButton"]
@@ -541,6 +545,7 @@ depends-member:
 - !private ["Ps10Comparable", "contains"]
 - !private ["Ps10Comparable", "description"]
 - ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "removingPercentEncoding"]
 - !private ["Ps10Comparable", "replacingOccurrences"]
 - !private ["Ps10Comparable", "timeIntervalSinceNow"]
 - !private ["Ps28CustomDebugStringConvertible", "CKContainer"]
@@ -634,6 +639,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "publicCloudDatabase"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAll"]
 - ["Ps28CustomDebugStringConvertible", "removeLoadingInd"]
+- !private ["Ps28CustomDebugStringConvertible", "removingPercentEncoding"]
 - !private ["Ps28CustomDebugStringConvertible", "replacingOccurrences"]
 - !private ["Ps28CustomDebugStringConvertible", "report"]
 - ["Ps28CustomDebugStringConvertible", "resetButton"]
@@ -679,6 +685,7 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "contains"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "description"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "removingPercentEncoding"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "replacingOccurrences"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSinceNow"]
 - !private ["Ps17CustomReflectable", "Element"]
@@ -698,6 +705,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "description"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "removeAll"]
+- !private ["Ps17CustomReflectable", "removingPercentEncoding"]
 - !private ["Ps17CustomReflectable", "replacingOccurrences"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps17CustomReflectable", "timeIntervalSinceNow"]
@@ -795,6 +803,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "publicCloudDatabase"]
 - !private ["Ps23CustomStringConvertible", "removeAll"]
 - ["Ps23CustomStringConvertible", "removeLoadingInd"]
+- !private ["Ps23CustomStringConvertible", "removingPercentEncoding"]
 - !private ["Ps23CustomStringConvertible", "replacingOccurrences"]
 - !private ["Ps23CustomStringConvertible", "report"]
 - ["Ps23CustomStringConvertible", "resetButton"]
@@ -949,6 +958,7 @@ depends-member:
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "publicCloudDatabase"]
 - ["Ps9Equatable", "removeLoadingInd"]
+- !private ["Ps9Equatable", "removingPercentEncoding"]
 - !private ["Ps9Equatable", "replacingOccurrences"]
 - !private ["Ps9Equatable", "report"]
 - ["Ps9Equatable", "resetButton"]
@@ -1002,6 +1012,7 @@ depends-member:
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "contains"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "removingPercentEncoding"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "replacingOccurrences"]
 - !private ["Ps25ExpressibleByFloatLiteral", "RawValue"]
 - !private ["Ps25ExpressibleByFloatLiteral", "description"]
@@ -1015,12 +1026,15 @@ depends-member:
 - !private ["Ps23ExpressibleByNilLiteral", "debugDescription"]
 - !private ["Ps32ExpressibleByStringInterpolation", "contains"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "removingPercentEncoding"]
 - !private ["Ps32ExpressibleByStringInterpolation", "replacingOccurrences"]
 - !private ["Ps26ExpressibleByStringLiteral", "contains"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "removingPercentEncoding"]
 - !private ["Ps26ExpressibleByStringLiteral", "replacingOccurrences"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "contains"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "removingPercentEncoding"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "replacingOccurrences"]
 - !private ["Sf", "RawValue"]
 - !private ["Sf", "deinit"]
@@ -1374,6 +1388,7 @@ depends-member:
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "publicCloudDatabase"]
 - ["Ps8Hashable", "removeLoadingInd"]
+- !private ["Ps8Hashable", "removingPercentEncoding"]
 - !private ["Ps8Hashable", "replacingOccurrences"]
 - !private ["Ps8Hashable", "report"]
 - ["Ps8Hashable", "resetButton"]
@@ -1467,6 +1482,7 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "contains"]
 - !private ["Ps25LosslessStringConvertible", "description"]
 - !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "removingPercentEncoding"]
 - !private ["Ps25LosslessStringConvertible", "replacingOccurrences"]
 - !private ["V10Foundation11Measurement", "RawValue"]
 - !private ["V10Foundation11Measurement", "deinit"]
@@ -1476,6 +1492,7 @@ depends-member:
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "contains"]
 - !private ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "removingPercentEncoding"]
 - !private ["Ps10MirrorPath", "replacingOccurrences"]
 - !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps17MutableCollection", "Index"]
@@ -1566,6 +1583,7 @@ depends-member:
 - !private ["PSo8NSCoding", "present"]
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "removeLoadingInd"]
+- !private ["PSo8NSCoding", "removingPercentEncoding"]
 - !private ["PSo8NSCoding", "replacingOccurrences"]
 - !private ["PSo8NSCoding", "report"]
 - ["PSo8NSCoding", "resetButton"]
@@ -1599,6 +1617,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "contains"]
 - !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "removingPercentEncoding"]
 - !private ["PSo9NSCopying", "replacingOccurrences"]
 - !private ["PSo9NSCopying", "subscript"]
 - !private ["PSo9NSCopying", "testDevices"]
@@ -1687,6 +1706,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo16NSMutableCopying", "contains"]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "removingPercentEncoding"]
 - !private ["PSo16NSMutableCopying", "replacingOccurrences"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CKContainer"]
@@ -1778,6 +1798,7 @@ depends-member:
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "publicCloudDatabase"]
 - ["CSo8NSObject", "removeLoadingInd"]
+- !private ["CSo8NSObject", "removingPercentEncoding"]
 - !private ["CSo8NSObject", "replacingOccurrences"]
 - !private ["CSo8NSObject", "report"]
 - ["CSo8NSObject", "resetButton"]
@@ -1893,6 +1914,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "publicCloudDatabase"]
 - ["PSo16NSObjectProtocol", "removeLoadingInd"]
+- !private ["PSo16NSObjectProtocol", "removingPercentEncoding"]
 - !private ["PSo16NSObjectProtocol", "replacingOccurrences"]
 - !private ["PSo16NSObjectProtocol", "report"]
 - ["PSo16NSObjectProtocol", "resetButton"]
@@ -1931,12 +1953,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "contains"]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "removingPercentEncoding"]
 - !private ["PSo14NSSecureCoding", "replacingOccurrences"]
 - !private ["PSo14NSSecureCoding", "report"]
 - !private ["PSo14NSSecureCoding", "subscript"]
 - !private ["PSo14NSSecureCoding", "value"]
 - !private ["CSo8NSString", "contains"]
 - !private ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "removingPercentEncoding"]
 - !private ["CSo8NSString", "replacingOccurrences"]
 - ["CSo5NSURL", "deinit"]
 - !private ["CSo5NSURL", "init"]
@@ -2044,12 +2068,15 @@ depends-member:
 - !private ["SS", "contains"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
+- !private ["SS", "removingPercentEncoding"]
 - !private ["SS", "replacingOccurrences"]
 - !private ["Ps16TextOutputStream", "contains"]
 - !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "removingPercentEncoding"]
 - !private ["Ps16TextOutputStream", "replacingOccurrences"]
 - !private ["Ps20TextOutputStreamable", "contains"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "removingPercentEncoding"]
 - !private ["Ps20TextOutputStreamable", "replacingOccurrences"]
 - !private ["PSo29UIAccessibilityIdentification", "activityIndicatorViewStyle"]
 - !private ["PSo29UIAccessibilityIdentification", "allowsLinkPreview"]
@@ -3069,6 +3096,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "print"]
 - !private ["P14clicksToHitler9Utilities", "publicCloudDatabase"]
 - ["P14clicksToHitler9Utilities", "removeLoadingInd"]
+- !private ["P14clicksToHitler9Utilities", "removingPercentEncoding"]
 - !private ["P14clicksToHitler9Utilities", "replacingOccurrences"]
 - !private ["P14clicksToHitler9Utilities", "report"]
 - ["P14clicksToHitler9Utilities", "resetButton"]
@@ -3145,6 +3173,7 @@ depends-member:
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "contains"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "removingPercentEncoding"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "replacingOccurrences"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "RawValue"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "description"]
@@ -3157,16 +3186,20 @@ depends-member:
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "contains"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "removingPercentEncoding"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "replacingOccurrences"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "contains"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "removingPercentEncoding"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "replacingOccurrences"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "contains"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "removingPercentEncoding"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "replacingOccurrences"]
 - !private ["Ps26_ExpressibleByColorLiteral", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "contains"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "removingPercentEncoding"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "replacingOccurrences"]
 - !private ["Ps9_Hashable", "CKContainer"]
 - !private ["Ps9_Hashable", "CKRecordID"]
@@ -3259,6 +3292,7 @@ depends-member:
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "publicCloudDatabase"]
 - ["Ps9_Hashable", "removeLoadingInd"]
+- !private ["Ps9_Hashable", "removingPercentEncoding"]
 - !private ["Ps9_Hashable", "replacingOccurrences"]
 - !private ["Ps9_Hashable", "report"]
 - ["Ps9_Hashable", "resetButton"]
@@ -3329,6 +3363,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "description"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "removeAll"]
+- !private ["Ps21_ObjectiveCBridgeable", "removingPercentEncoding"]
 - !private ["Ps21_ObjectiveCBridgeable", "replacingOccurrences"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps21_ObjectiveCBridgeable", "timeIntervalSinceNow"]
