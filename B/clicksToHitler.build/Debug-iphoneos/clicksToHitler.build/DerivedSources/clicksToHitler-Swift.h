@@ -159,7 +159,7 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 @property (nonatomic) BOOL timeTicking;
 @property (nonatomic) BOOL showingAd;
 @property (nonatomic) BOOL siteReady;
-@property (nonatomic) BOOL gratzScreenHasBeenShown;
+@property (nonatomic) BOOL justFoundHitler;
 @property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified web;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified clicksLabel;
 - (void)viewDidAppear:(BOOL)animated;

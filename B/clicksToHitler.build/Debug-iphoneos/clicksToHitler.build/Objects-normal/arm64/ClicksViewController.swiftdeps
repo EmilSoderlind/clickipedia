@@ -6,105 +6,105 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler20ClicksViewController", ""]
 provides-dynamic-lookup:
-- "showingAd"
-- "updateTimeLabel"
-- "webViewDidFinishLoad"
-- "addTotalClicksToLocalSave"
-- "interstitial"
-- "saveAverageToLeaderboards"
-- "siteReady"
 - "startDate"
-- "didReceiveMemoryWarning"
-- "interstitialDidDismissScreen"
-- "addTotalHitlerFound"
-- "hitlerGratzPopup"
-- "saveBestTimeToLeaderboards"
-- "showAd"
-- "timeTicking"
-- "removeLoadingInd"
-- "viewDidAppear"
-- "updateAverage"
-- "gameCenterViewControllerDidFinish"
-- "saveLeastClicksToLeaderboards"
-- "loadingIndicator"
 - "clicksLabel"
-- "createAndLoadInterstitial"
+- "interstitial"
+- "showAd"
+- "saveFoundsLeaderboard"
+- "updateAverage"
 - "getTimeString"
 - "updatingLeaderboardsFromDeviceSave"
-- "saveFoundsLeaderboard"
-- "viewDidLoad"
-- "hitlerFound"
+- "saveAverageToLeaderboards"
+- "timeTicking"
+- "viewDidAppear"
 - "checkLeastClicks"
-- "clicks"
-- "gratzScreenHasBeenShown"
-- "checkInternet"
-- "siteTrace"
-- "web"
-- "parseStringFromLink"
 - "webView"
+- "hitlerGratzPopup"
+- "saveBestTimeToLeaderboards"
+- "interstitialDidDismissScreen"
+- "webViewDidFinishLoad"
 - "updateBestTime"
+- "parseStringFromLink"
+- "siteReady"
+- "clicks"
+- "addTotalClicksToLocalSave"
+- "viewDidLoad"
+- "updateTimeLabel"
+- "showingAd"
+- "createAndLoadInterstitial"
+- "loadingIndicator"
 - "authPlayer"
+- "addTotalHitlerFound"
+- "siteTrace"
+- "didReceiveMemoryWarning"
+- "web"
+- "gameCenterViewControllerDidFinish"
 - "resetButton"
+- "removeLoadingInd"
+- "hitlerFound"
+- "justFoundHitler"
+- "saveLeastClicksToLeaderboards"
+- "checkInternet"
 depends-top-level:
 - "Double"
-- "UIWebViewDelegate"
-- "GKGameCenterControllerDelegate"
-- !private "*"
+- "GKGameCenterViewController"
+- !private "CKContainer"
+- !private "StartViewController"
+- !private "StringLiteralType"
 - !private "NSURL"
-- "UIViewController"
-- "GADInterstitialDelegate"
 - !private "/"
-- "Bool"
-- !private "round"
-- !private "+="
-- !private "CKRecordID"
-- !private "GKLocalPlayer"
-- "GADInterstitial"
+- "GADInterstitialDelegate"
 - "Date"
-- !private "UIAlertActionStyle"
+- "GKGameCenterControllerDelegate"
+- "UIWebView"
+- !private "print"
+- "BooleanLiteralType"
+- !private "CKRecordValue"
+- !private "Array"
+- "URLRequest"
+- !private "&&"
+- "GADInterstitial"
+- !private "UIAlertControllerStyle"
+- !private ">"
+- !private "GKScore"
+- !private "!="
+- !private ">="
+- !private "UserDefaults"
+- "UIAlertController"
+- "Int"
+- !private "+"
+- "UIBarButtonItem"
+- "UIWebViewNavigationType"
+- !private "GKLocalPlayer"
+- !private "UnicodeScalarType"
+- !private "-"
+- !private "GADRequest"
+- !private "UIApplication"
+- "UIActivityIndicatorView"
+- !private "+="
+- !private "DispatchQueue"
+- !private "Void"
+- "Bool"
+- !private "CKRecordID"
+- !private "kGADSimulatorID"
 - "ClicksViewController"
-- !private "UIActivityIndicatorViewStyle"
+- !private "*"
+- !private "NSURLRequest"
+- "String"
+- !private "UIAlertActionStyle"
+- !private "round"
+- "UIWebViewDelegate"
 - !private "UIAlertAction"
 - !private "UIColor"
-- !private "kGADSimulatorID"
-- "UIBarButtonItem"
-- !private "!="
-- !private "UnicodeScalarType"
-- !private "GKScore"
-- "UIAlertController"
-- "URLRequest"
-- !private "StartViewController"
-- !private "Void"
-- !private "UserDefaults"
-- !private "CKContainer"
-- !private "<"
-- !private "print"
-- !private "Array"
-- !private ">"
-- !private "GADRequest"
-- "AssignmentPrecedence"
-- !private "=="
+- "UIViewController"
 - "CastingPrecedence"
-- "UIWebView"
-- !private "DispatchQueue"
-- !private "+"
-- !private "UIApplication"
-- !private ">="
 - !private "Int64"
-- "UIActivityIndicatorView"
-- "Int"
-- !private "URL"
-- !private "&&"
-- "UIWebViewNavigationType"
-- "BooleanLiteralType"
-- "GKGameCenterViewController"
-- !private "NSURLRequest"
-- !private "UIAlertControllerStyle"
-- !private "CKRecordValue"
-- !private "-"
+- !private "UIActivityIndicatorViewStyle"
 - !private "!"
-- "String"
-- !private "StringLiteralType"
+- !private "<"
+- !private "URL"
+- !private "=="
+- "AssignmentPrecedence"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "RawValue"]
 - !private ["Ps16AbsoluteValuable", "description"]
@@ -162,7 +162,6 @@ depends-member:
 - ["Ps9AnyObject", "gameCenterViewControllerDidFinish"]
 - ["Ps9AnyObject", "getTimeString"]
 - !private ["Ps9AnyObject", "global"]
-- ["Ps9AnyObject", "gratzScreenHasBeenShown"]
 - ["Ps9AnyObject", "hitlerFound"]
 - ["Ps9AnyObject", "hitlerGratzPopup"]
 - ["Ps9AnyObject", "init"]
@@ -177,6 +176,7 @@ depends-member:
 - !private ["Ps9AnyObject", "isAuthenticated"]
 - !private ["Ps9AnyObject", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps9AnyObject", "isReady"]
+- ["Ps9AnyObject", "justFoundHitler"]
 - !private ["Ps9AnyObject", "kGADSimulatorID"]
 - !private ["Ps9AnyObject", "load"]
 - !private ["Ps9AnyObject", "loadRequest"]
@@ -371,7 +371,6 @@ depends-member:
 - ["Ps7CVarArg", "gameCenterViewControllerDidFinish"]
 - ["Ps7CVarArg", "getTimeString"]
 - !private ["Ps7CVarArg", "global"]
-- ["Ps7CVarArg", "gratzScreenHasBeenShown"]
 - ["Ps7CVarArg", "hitlerFound"]
 - ["Ps7CVarArg", "hitlerGratzPopup"]
 - ["Ps7CVarArg", "init"]
@@ -386,6 +385,7 @@ depends-member:
 - !private ["Ps7CVarArg", "isAuthenticated"]
 - !private ["Ps7CVarArg", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps7CVarArg", "isReady"]
+- ["Ps7CVarArg", "justFoundHitler"]
 - !private ["Ps7CVarArg", "kGADSimulatorID"]
 - !private ["Ps7CVarArg", "load"]
 - !private ["Ps7CVarArg", "loadRequest"]
@@ -486,7 +486,6 @@ depends-member:
 - ["C14clicksToHitler20ClicksViewController", "didReceiveMemoryWarning"]
 - ["C14clicksToHitler20ClicksViewController", "gameCenterViewControllerDidFinish"]
 - ["C14clicksToHitler20ClicksViewController", "getTimeString"]
-- ["C14clicksToHitler20ClicksViewController", "gratzScreenHasBeenShown"]
 - ["C14clicksToHitler20ClicksViewController", "hitlerFound"]
 - ["C14clicksToHitler20ClicksViewController", "hitlerGratzPopup"]
 - ["C14clicksToHitler20ClicksViewController", "init"]
@@ -498,6 +497,7 @@ depends-member:
 - ["C14clicksToHitler20ClicksViewController", "interstitialWillDismissScreen"]
 - ["C14clicksToHitler20ClicksViewController", "interstitialWillLeaveApplication"]
 - ["C14clicksToHitler20ClicksViewController", "interstitialWillPresentScreen"]
+- ["C14clicksToHitler20ClicksViewController", "justFoundHitler"]
 - !private ["C14clicksToHitler20ClicksViewController", "kGADSimulatorID"]
 - ["C14clicksToHitler20ClicksViewController", "loadingIndicator"]
 - !private ["C14clicksToHitler20ClicksViewController", "navigationController"]
@@ -610,7 +610,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "gameCenterViewControllerDidFinish"]
 - ["Ps28CustomDebugStringConvertible", "getTimeString"]
 - !private ["Ps28CustomDebugStringConvertible", "global"]
-- ["Ps28CustomDebugStringConvertible", "gratzScreenHasBeenShown"]
 - ["Ps28CustomDebugStringConvertible", "hitlerFound"]
 - ["Ps28CustomDebugStringConvertible", "hitlerGratzPopup"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -625,6 +624,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "isAuthenticated"]
 - !private ["Ps28CustomDebugStringConvertible", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps28CustomDebugStringConvertible", "isReady"]
+- ["Ps28CustomDebugStringConvertible", "justFoundHitler"]
 - !private ["Ps28CustomDebugStringConvertible", "kGADSimulatorID"]
 - !private ["Ps28CustomDebugStringConvertible", "load"]
 - !private ["Ps28CustomDebugStringConvertible", "loadRequest"]
@@ -774,7 +774,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "gameCenterViewControllerDidFinish"]
 - ["Ps23CustomStringConvertible", "getTimeString"]
 - !private ["Ps23CustomStringConvertible", "global"]
-- ["Ps23CustomStringConvertible", "gratzScreenHasBeenShown"]
 - ["Ps23CustomStringConvertible", "hitlerFound"]
 - ["Ps23CustomStringConvertible", "hitlerGratzPopup"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -789,6 +788,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "isAuthenticated"]
 - !private ["Ps23CustomStringConvertible", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps23CustomStringConvertible", "isReady"]
+- ["Ps23CustomStringConvertible", "justFoundHitler"]
 - !private ["Ps23CustomStringConvertible", "kGADSimulatorID"]
 - !private ["Ps23CustomStringConvertible", "load"]
 - !private ["Ps23CustomStringConvertible", "loadRequest"]
@@ -930,7 +930,6 @@ depends-member:
 - ["Ps9Equatable", "gameCenterViewControllerDidFinish"]
 - ["Ps9Equatable", "getTimeString"]
 - !private ["Ps9Equatable", "global"]
-- ["Ps9Equatable", "gratzScreenHasBeenShown"]
 - ["Ps9Equatable", "hitlerFound"]
 - ["Ps9Equatable", "hitlerGratzPopup"]
 - ["Ps9Equatable", "init"]
@@ -945,6 +944,7 @@ depends-member:
 - !private ["Ps9Equatable", "isAuthenticated"]
 - !private ["Ps9Equatable", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps9Equatable", "isReady"]
+- ["Ps9Equatable", "justFoundHitler"]
 - !private ["Ps9Equatable", "kGADSimulatorID"]
 - !private ["Ps9Equatable", "load"]
 - !private ["Ps9Equatable", "loadRequest"]
@@ -1077,7 +1077,6 @@ depends-member:
 - !private ["PSo13GADAdDelegate", "currentReachabilityStatus"]
 - ["PSo13GADAdDelegate", "gameCenterViewControllerDidFinish"]
 - !private ["PSo13GADAdDelegate", "getTimeString"]
-- !private ["PSo13GADAdDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo13GADAdDelegate", "hitlerFound"]
 - !private ["PSo13GADAdDelegate", "hitlerGratzPopup"]
 - ["PSo13GADAdDelegate", "interstitial"]
@@ -1088,6 +1087,7 @@ depends-member:
 - ["PSo13GADAdDelegate", "interstitialWillDismissScreen"]
 - ["PSo13GADAdDelegate", "interstitialWillLeaveApplication"]
 - ["PSo13GADAdDelegate", "interstitialWillPresentScreen"]
+- !private ["PSo13GADAdDelegate", "justFoundHitler"]
 - !private ["PSo13GADAdDelegate", "kGADSimulatorID"]
 - !private ["PSo13GADAdDelegate", "loadingIndicator"]
 - !private ["PSo13GADAdDelegate", "navigationController"]
@@ -1158,7 +1158,6 @@ depends-member:
 - !private ["PSo23GADInterstitialDelegate", "currentReachabilityStatus"]
 - ["PSo23GADInterstitialDelegate", "gameCenterViewControllerDidFinish"]
 - !private ["PSo23GADInterstitialDelegate", "getTimeString"]
-- !private ["PSo23GADInterstitialDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo23GADInterstitialDelegate", "hitlerFound"]
 - !private ["PSo23GADInterstitialDelegate", "hitlerGratzPopup"]
 - ["PSo23GADInterstitialDelegate", "interstitial"]
@@ -1169,6 +1168,7 @@ depends-member:
 - ["PSo23GADInterstitialDelegate", "interstitialWillDismissScreen"]
 - ["PSo23GADInterstitialDelegate", "interstitialWillLeaveApplication"]
 - ["PSo23GADInterstitialDelegate", "interstitialWillPresentScreen"]
+- !private ["PSo23GADInterstitialDelegate", "justFoundHitler"]
 - !private ["PSo23GADInterstitialDelegate", "kGADSimulatorID"]
 - !private ["PSo23GADInterstitialDelegate", "loadingIndicator"]
 - !private ["PSo23GADInterstitialDelegate", "navigationController"]
@@ -1240,7 +1240,6 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "downloadLatestWorldStats"]
 - ["PSo30GKGameCenterControllerDelegate", "gameCenterViewControllerDidFinish"]
 - !private ["PSo30GKGameCenterControllerDelegate", "getTimeString"]
-- !private ["PSo30GKGameCenterControllerDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo30GKGameCenterControllerDelegate", "hitlerFound"]
 - !private ["PSo30GKGameCenterControllerDelegate", "hitlerGratzPopup"]
 - ["PSo30GKGameCenterControllerDelegate", "interstitial"]
@@ -1251,6 +1250,7 @@ depends-member:
 - ["PSo30GKGameCenterControllerDelegate", "interstitialWillDismissScreen"]
 - ["PSo30GKGameCenterControllerDelegate", "interstitialWillLeaveApplication"]
 - ["PSo30GKGameCenterControllerDelegate", "interstitialWillPresentScreen"]
+- !private ["PSo30GKGameCenterControllerDelegate", "justFoundHitler"]
 - !private ["PSo30GKGameCenterControllerDelegate", "kGADSimulatorID"]
 - !private ["PSo30GKGameCenterControllerDelegate", "loadingIndicator"]
 - !private ["PSo30GKGameCenterControllerDelegate", "navigationController"]
@@ -1358,7 +1358,6 @@ depends-member:
 - ["Ps8Hashable", "gameCenterViewControllerDidFinish"]
 - ["Ps8Hashable", "getTimeString"]
 - !private ["Ps8Hashable", "global"]
-- ["Ps8Hashable", "gratzScreenHasBeenShown"]
 - ["Ps8Hashable", "hitlerFound"]
 - ["Ps8Hashable", "hitlerGratzPopup"]
 - ["Ps8Hashable", "init"]
@@ -1373,6 +1372,7 @@ depends-member:
 - !private ["Ps8Hashable", "isAuthenticated"]
 - !private ["Ps8Hashable", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps8Hashable", "isReady"]
+- ["Ps8Hashable", "justFoundHitler"]
 - !private ["Ps8Hashable", "kGADSimulatorID"]
 - !private ["Ps8Hashable", "load"]
 - !private ["Ps8Hashable", "loadRequest"]
@@ -1560,7 +1560,6 @@ depends-member:
 - !private ["PSo8NSCoding", "downloadLatestWorldStats"]
 - ["PSo8NSCoding", "gameCenterViewControllerDidFinish"]
 - ["PSo8NSCoding", "getTimeString"]
-- ["PSo8NSCoding", "gratzScreenHasBeenShown"]
 - ["PSo8NSCoding", "hitlerFound"]
 - ["PSo8NSCoding", "hitlerGratzPopup"]
 - ["PSo8NSCoding", "init"]
@@ -1572,6 +1571,7 @@ depends-member:
 - ["PSo8NSCoding", "interstitialWillDismissScreen"]
 - ["PSo8NSCoding", "interstitialWillLeaveApplication"]
 - ["PSo8NSCoding", "interstitialWillPresentScreen"]
+- ["PSo8NSCoding", "justFoundHitler"]
 - !private ["PSo8NSCoding", "kGADSimulatorID"]
 - !private ["PSo8NSCoding", "loadRequest"]
 - ["PSo8NSCoding", "loadingIndicator"]
@@ -1659,7 +1659,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "downloadLatestWorldStats"]
 - ["PSo26NSExtensionRequestHandling", "gameCenterViewControllerDidFinish"]
 - ["PSo26NSExtensionRequestHandling", "getTimeString"]
-- ["PSo26NSExtensionRequestHandling", "gratzScreenHasBeenShown"]
 - ["PSo26NSExtensionRequestHandling", "hitlerFound"]
 - ["PSo26NSExtensionRequestHandling", "hitlerGratzPopup"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -1671,6 +1670,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "interstitialWillDismissScreen"]
 - ["PSo26NSExtensionRequestHandling", "interstitialWillLeaveApplication"]
 - ["PSo26NSExtensionRequestHandling", "interstitialWillPresentScreen"]
+- ["PSo26NSExtensionRequestHandling", "justFoundHitler"]
 - !private ["PSo26NSExtensionRequestHandling", "kGADSimulatorID"]
 - ["PSo26NSExtensionRequestHandling", "loadingIndicator"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
@@ -1768,7 +1768,6 @@ depends-member:
 - ["CSo8NSObject", "gameCenterViewControllerDidFinish"]
 - ["CSo8NSObject", "getTimeString"]
 - !private ["CSo8NSObject", "global"]
-- ["CSo8NSObject", "gratzScreenHasBeenShown"]
 - ["CSo8NSObject", "hitlerFound"]
 - ["CSo8NSObject", "hitlerGratzPopup"]
 - ["CSo8NSObject", "init"]
@@ -1783,6 +1782,7 @@ depends-member:
 - !private ["CSo8NSObject", "isAuthenticated"]
 - !private ["CSo8NSObject", "isNetworkActivityIndicatorVisible"]
 - !private ["CSo8NSObject", "isReady"]
+- ["CSo8NSObject", "justFoundHitler"]
 - !private ["CSo8NSObject", "kGADSimulatorID"]
 - !private ["CSo8NSObject", "load"]
 - !private ["CSo8NSObject", "loadRequest"]
@@ -1884,7 +1884,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "gameCenterViewControllerDidFinish"]
 - ["PSo16NSObjectProtocol", "getTimeString"]
 - !private ["PSo16NSObjectProtocol", "global"]
-- ["PSo16NSObjectProtocol", "gratzScreenHasBeenShown"]
 - ["PSo16NSObjectProtocol", "hitlerFound"]
 - ["PSo16NSObjectProtocol", "hitlerGratzPopup"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -1899,6 +1898,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "isAuthenticated"]
 - !private ["PSo16NSObjectProtocol", "isNetworkActivityIndicatorVisible"]
 - !private ["PSo16NSObjectProtocol", "isReady"]
+- ["PSo16NSObjectProtocol", "justFoundHitler"]
 - !private ["PSo16NSObjectProtocol", "kGADSimulatorID"]
 - !private ["PSo16NSObjectProtocol", "load"]
 - !private ["PSo16NSObjectProtocol", "loadRequest"]
@@ -2161,7 +2161,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "downloadLatestWorldStats"]
 - ["PSo21UIAppearanceContainer", "gameCenterViewControllerDidFinish"]
 - ["PSo21UIAppearanceContainer", "getTimeString"]
-- ["PSo21UIAppearanceContainer", "gratzScreenHasBeenShown"]
 - ["PSo21UIAppearanceContainer", "hitlerFound"]
 - ["PSo21UIAppearanceContainer", "hitlerGratzPopup"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -2173,6 +2172,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "interstitialWillDismissScreen"]
 - ["PSo21UIAppearanceContainer", "interstitialWillLeaveApplication"]
 - ["PSo21UIAppearanceContainer", "interstitialWillPresentScreen"]
+- ["PSo21UIAppearanceContainer", "justFoundHitler"]
 - !private ["PSo21UIAppearanceContainer", "kGADSimulatorID"]
 - !private ["PSo21UIAppearanceContainer", "loadRequest"]
 - ["PSo21UIAppearanceContainer", "loadingIndicator"]
@@ -2256,7 +2256,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "downloadLatestWorldStats"]
 - ["PSo18UIContentContainer", "gameCenterViewControllerDidFinish"]
 - ["PSo18UIContentContainer", "getTimeString"]
-- ["PSo18UIContentContainer", "gratzScreenHasBeenShown"]
 - ["PSo18UIContentContainer", "hitlerFound"]
 - ["PSo18UIContentContainer", "hitlerGratzPopup"]
 - ["PSo18UIContentContainer", "init"]
@@ -2268,6 +2267,7 @@ depends-member:
 - ["PSo18UIContentContainer", "interstitialWillDismissScreen"]
 - ["PSo18UIContentContainer", "interstitialWillLeaveApplication"]
 - ["PSo18UIContentContainer", "interstitialWillPresentScreen"]
+- ["PSo18UIContentContainer", "justFoundHitler"]
 - !private ["PSo18UIContentContainer", "kGADSimulatorID"]
 - ["PSo18UIContentContainer", "loadingIndicator"]
 - !private ["PSo18UIContentContainer", "navigationBar"]
@@ -2365,7 +2365,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "downloadLatestWorldStats"]
 - ["PSo18UIFocusEnvironment", "gameCenterViewControllerDidFinish"]
 - ["PSo18UIFocusEnvironment", "getTimeString"]
-- ["PSo18UIFocusEnvironment", "gratzScreenHasBeenShown"]
 - ["PSo18UIFocusEnvironment", "hitlerFound"]
 - ["PSo18UIFocusEnvironment", "hitlerGratzPopup"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -2377,6 +2376,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "interstitialWillDismissScreen"]
 - ["PSo18UIFocusEnvironment", "interstitialWillLeaveApplication"]
 - ["PSo18UIFocusEnvironment", "interstitialWillPresentScreen"]
+- ["PSo18UIFocusEnvironment", "justFoundHitler"]
 - !private ["PSo18UIFocusEnvironment", "kGADSimulatorID"]
 - !private ["PSo18UIFocusEnvironment", "loadRequest"]
 - ["PSo18UIFocusEnvironment", "loadingIndicator"]
@@ -2483,7 +2483,6 @@ depends-member:
 - !private ["CSo11UIResponder", "downloadLatestWorldStats"]
 - ["CSo11UIResponder", "gameCenterViewControllerDidFinish"]
 - ["CSo11UIResponder", "getTimeString"]
-- ["CSo11UIResponder", "gratzScreenHasBeenShown"]
 - ["CSo11UIResponder", "hitlerFound"]
 - ["CSo11UIResponder", "hitlerGratzPopup"]
 - ["CSo11UIResponder", "init"]
@@ -2496,6 +2495,7 @@ depends-member:
 - ["CSo11UIResponder", "interstitialWillLeaveApplication"]
 - ["CSo11UIResponder", "interstitialWillPresentScreen"]
 - !private ["CSo11UIResponder", "isNetworkActivityIndicatorVisible"]
+- ["CSo11UIResponder", "justFoundHitler"]
 - !private ["CSo11UIResponder", "kGADSimulatorID"]
 - !private ["CSo11UIResponder", "loadRequest"]
 - ["CSo11UIResponder", "loadingIndicator"]
@@ -2577,7 +2577,6 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "downloadLatestWorldStats"]
 - ["PSo30UIResponderStandardEditActions", "gameCenterViewControllerDidFinish"]
 - ["PSo30UIResponderStandardEditActions", "getTimeString"]
-- ["PSo30UIResponderStandardEditActions", "gratzScreenHasBeenShown"]
 - ["PSo30UIResponderStandardEditActions", "hitlerFound"]
 - ["PSo30UIResponderStandardEditActions", "hitlerGratzPopup"]
 - ["PSo30UIResponderStandardEditActions", "init"]
@@ -2590,6 +2589,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "interstitialWillLeaveApplication"]
 - ["PSo30UIResponderStandardEditActions", "interstitialWillPresentScreen"]
 - !private ["PSo30UIResponderStandardEditActions", "isNetworkActivityIndicatorVisible"]
+- ["PSo30UIResponderStandardEditActions", "justFoundHitler"]
 - !private ["PSo30UIResponderStandardEditActions", "kGADSimulatorID"]
 - !private ["PSo30UIResponderStandardEditActions", "loadRequest"]
 - ["PSo30UIResponderStandardEditActions", "loadingIndicator"]
@@ -2673,7 +2673,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "downloadLatestWorldStats"]
 - ["PSo16UIStateRestoring", "gameCenterViewControllerDidFinish"]
 - ["PSo16UIStateRestoring", "getTimeString"]
-- ["PSo16UIStateRestoring", "gratzScreenHasBeenShown"]
 - ["PSo16UIStateRestoring", "hitlerFound"]
 - ["PSo16UIStateRestoring", "hitlerGratzPopup"]
 - ["PSo16UIStateRestoring", "init"]
@@ -2685,6 +2684,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "interstitialWillDismissScreen"]
 - ["PSo16UIStateRestoring", "interstitialWillLeaveApplication"]
 - ["PSo16UIStateRestoring", "interstitialWillPresentScreen"]
+- ["PSo16UIStateRestoring", "justFoundHitler"]
 - !private ["PSo16UIStateRestoring", "kGADSimulatorID"]
 - ["PSo16UIStateRestoring", "loadingIndicator"]
 - !private ["PSo16UIStateRestoring", "navigationBar"]
@@ -2762,7 +2762,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "downloadLatestWorldStats"]
 - ["PSo18UITraitEnvironment", "gameCenterViewControllerDidFinish"]
 - ["PSo18UITraitEnvironment", "getTimeString"]
-- ["PSo18UITraitEnvironment", "gratzScreenHasBeenShown"]
 - ["PSo18UITraitEnvironment", "hitlerFound"]
 - ["PSo18UITraitEnvironment", "hitlerGratzPopup"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -2774,6 +2773,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "interstitialWillDismissScreen"]
 - ["PSo18UITraitEnvironment", "interstitialWillLeaveApplication"]
 - ["PSo18UITraitEnvironment", "interstitialWillPresentScreen"]
+- ["PSo18UITraitEnvironment", "justFoundHitler"]
 - !private ["PSo18UITraitEnvironment", "kGADSimulatorID"]
 - !private ["PSo18UITraitEnvironment", "loadRequest"]
 - ["PSo18UITraitEnvironment", "loadingIndicator"]
@@ -2870,7 +2870,6 @@ depends-member:
 - !private ["CSo16UIViewController", "downloadLatestWorldStats"]
 - ["CSo16UIViewController", "gameCenterViewControllerDidFinish"]
 - ["CSo16UIViewController", "getTimeString"]
-- ["CSo16UIViewController", "gratzScreenHasBeenShown"]
 - ["CSo16UIViewController", "hitlerFound"]
 - ["CSo16UIViewController", "hitlerGratzPopup"]
 - ["CSo16UIViewController", "init"]
@@ -2882,6 +2881,7 @@ depends-member:
 - ["CSo16UIViewController", "interstitialWillDismissScreen"]
 - ["CSo16UIViewController", "interstitialWillLeaveApplication"]
 - ["CSo16UIViewController", "interstitialWillPresentScreen"]
+- ["CSo16UIViewController", "justFoundHitler"]
 - !private ["CSo16UIViewController", "kGADSimulatorID"]
 - ["CSo16UIViewController", "loadingIndicator"]
 - !private ["CSo16UIViewController", "navigationBar"]
@@ -2956,7 +2956,6 @@ depends-member:
 - !private ["PSo17UIWebViewDelegate", "currentReachabilityStatus"]
 - ["PSo17UIWebViewDelegate", "gameCenterViewControllerDidFinish"]
 - !private ["PSo17UIWebViewDelegate", "getTimeString"]
-- !private ["PSo17UIWebViewDelegate", "gratzScreenHasBeenShown"]
 - !private ["PSo17UIWebViewDelegate", "hitlerFound"]
 - !private ["PSo17UIWebViewDelegate", "hitlerGratzPopup"]
 - ["PSo17UIWebViewDelegate", "interstitial"]
@@ -2967,6 +2966,7 @@ depends-member:
 - ["PSo17UIWebViewDelegate", "interstitialWillDismissScreen"]
 - ["PSo17UIWebViewDelegate", "interstitialWillLeaveApplication"]
 - ["PSo17UIWebViewDelegate", "interstitialWillPresentScreen"]
+- !private ["PSo17UIWebViewDelegate", "justFoundHitler"]
 - !private ["PSo17UIWebViewDelegate", "kGADSimulatorID"]
 - !private ["PSo17UIWebViewDelegate", "loadingIndicator"]
 - !private ["PSo17UIWebViewDelegate", "navigationController"]
@@ -3066,7 +3066,6 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "gameCenterViewControllerDidFinish"]
 - ["P14clicksToHitler9Utilities", "getTimeString"]
 - !private ["P14clicksToHitler9Utilities", "global"]
-- ["P14clicksToHitler9Utilities", "gratzScreenHasBeenShown"]
 - ["P14clicksToHitler9Utilities", "hitlerFound"]
 - ["P14clicksToHitler9Utilities", "hitlerGratzPopup"]
 - ["P14clicksToHitler9Utilities", "init"]
@@ -3081,6 +3080,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "isAuthenticated"]
 - !private ["P14clicksToHitler9Utilities", "isNetworkActivityIndicatorVisible"]
 - !private ["P14clicksToHitler9Utilities", "isReady"]
+- ["P14clicksToHitler9Utilities", "justFoundHitler"]
 - !private ["P14clicksToHitler9Utilities", "kGADSimulatorID"]
 - !private ["P14clicksToHitler9Utilities", "load"]
 - !private ["P14clicksToHitler9Utilities", "loadRequest"]
@@ -3262,7 +3262,6 @@ depends-member:
 - ["Ps9_Hashable", "gameCenterViewControllerDidFinish"]
 - ["Ps9_Hashable", "getTimeString"]
 - !private ["Ps9_Hashable", "global"]
-- ["Ps9_Hashable", "gratzScreenHasBeenShown"]
 - ["Ps9_Hashable", "hitlerFound"]
 - ["Ps9_Hashable", "hitlerGratzPopup"]
 - ["Ps9_Hashable", "init"]
@@ -3277,6 +3276,7 @@ depends-member:
 - !private ["Ps9_Hashable", "isAuthenticated"]
 - !private ["Ps9_Hashable", "isNetworkActivityIndicatorVisible"]
 - !private ["Ps9_Hashable", "isReady"]
+- ["Ps9_Hashable", "justFoundHitler"]
 - !private ["Ps9_Hashable", "kGADSimulatorID"]
 - !private ["Ps9_Hashable", "load"]
 - !private ["Ps9_Hashable", "loadRequest"]
@@ -3699,4 +3699,4 @@ depends-external:
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
-interface-hash: "75ff9e501c6270484436150d0937a63e"
+interface-hash: "21aeeb50bfa872828837c711ed6c9c10"

@@ -29,7 +29,8 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     
     var showingAd = false
     var siteReady = false
-    var gratzScreenHasBeenShown = false
+    
+    var justFoundHitler = false
     
     @IBOutlet weak var web: UIWebView!
     @IBOutlet weak var clicksLabel: UIBarButtonItem!
@@ -54,7 +55,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         
         
         hitlerFound = false
-        gratzScreenHasBeenShown = false
         
         siteTrace.removeAll()
         
@@ -166,7 +166,7 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3033461333499330/7963329403")
         interstitial.delegate = self
         var request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "fff49adc7690922a03c614377c2f2ad2" ];
+        request.testDevices = [ kGADSimulatorID, "e2bdda043ad3036b4ce6f8a486f03a4f" ];
         interstitial.load(request)
         return interstitial
     }
@@ -177,13 +177,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
         print("User closed AD")
         showingAd = false
         
-        if(hitlerFound){
-            self.present(hitlerGratzPopup, animated: true, completion: {
-                print("<Closed found hitler popup")
-                self.gratzScreenHasBeenShown = true
-            })
-        }
-        
         if(siteReady){
             print("Reseting Date! (in interstitialDidDismissScreen)")
             startDate = Date()
@@ -192,12 +185,18 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
     }
     
     func showAd(){
-        if (self.interstitial.isReady && !gratzScreenHasBeenShown){
-            print("\nPresenting ad!\n")
-            showingAd = true
-            self.interstitial.present(fromRootViewController: self)
+        if(!justFoundHitler){
+        
+            if (self.interstitial.isReady){
+                print("\nPresenting ad!\n")
+                showingAd = true
+                self.interstitial.present(fromRootViewController: self)
+            }else{
+                print("\nAd was not ready\n")
+            }
         }else{
-            print("\nAd was not ready\n")
+            print("You just saw an found-hitler-ad... Not showing one more..")
+            justFoundHitler = false
         }
     }
     
@@ -296,8 +295,6 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             print("<FOUND HITLER!")
             hitlerFound = true
             
-            showAd()
-            
             timeTicking = false
             
             var time:Double = -(Double(startDate.timeIntervalSinceNow.description)!)
@@ -387,14 +384,24 @@ class ClicksViewController: UIViewController, UIWebViewDelegate, GKGameCenterCon
             
             hitlerGratzPopup = UIAlertController(title: "Congratulations!", message: "You found Adolf Hitler in: \n\(clicks) clicks \nand\n\(ClicksViewController.getTimeString(time: time))\n\n\(traceString)", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+                self.showAd()
+                self.justFoundHitler = true
                 StartViewController.downloadLatestWorldStats()
             }
             let againAction = UIAlertAction(title: "Try again!", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in self.resetButton(self)
+                self.showAd()
+                self.justFoundHitler = true
                 StartViewController.downloadLatestWorldStats()
             }
             
             hitlerGratzPopup.addAction(okAction)
             hitlerGratzPopup.addAction(againAction)
+            
+            
+            self.present(hitlerGratzPopup, animated: true, completion: {
+                print("<Closed found hitler popup -> Showing ad")
+            })
+            
         }
         return true;
     }
