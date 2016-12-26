@@ -202,6 +202,7 @@ SWIFT_CLASS("_TtC14clicksToHitler20ClicksViewController")
 
 SWIFT_CLASS("_TtC14clicksToHitler19StartViewController")
 @interface StartViewController : UIViewController <GKGameCenterControllerDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified ClicksToHitler_text;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified hitlerStart;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified startText;
 @property (nonatomic) double animateAngle;

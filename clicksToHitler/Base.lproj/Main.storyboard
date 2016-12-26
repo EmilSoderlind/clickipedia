@@ -82,6 +82,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vVh-hs-HCh" firstAttribute="height" relation="lessThanOrEqual" secondItem="5Os-Y2-iE5" secondAttribute="height" id="Lat-WA-9Af"/>
+                                    <constraint firstItem="JPm-5D-GSH" firstAttribute="width" secondItem="vVh-hs-HCh" secondAttribute="width" id="WAU-z3-y3W"/>
                                     <constraint firstItem="za9-AJ-PXO" firstAttribute="height" secondItem="5Os-Y2-iE5" secondAttribute="height" id="yM1-CH-dNu"/>
                                 </constraints>
                             </stackView>

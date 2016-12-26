@@ -6,68 +6,71 @@ provides-nominal:
 provides-member:
 - ["C14clicksToHitler19StartViewController", ""]
 provides-dynamic-lookup:
-- "loggedIn"
-- "hitlerStart"
-- "checkInternet"
-- "animateSpeed"
-- "startText"
-- "rotateHitlerPlus"
-- "viewDidLoad"
-- "viewDidAppear"
-- "invisButton"
-- "downloadLatestWorldStats"
 - "resetLocalSave"
-- "gameCenterButton"
-- "showLeaderBoard"
-- "startButtonPushed"
+- "loggedIn"
+- "startText"
+- "checkInternet"
 - "didReceiveMemoryWarning"
-- "authPlayer"
-- "gameCenterViewControllerDidFinish"
+- "downloadLatestWorldStats"
+- "showLeaderBoard"
 - "rotateHitlerMinus"
+- "viewDidAppear"
+- "authPlayer"
+- "hitlerStart"
+- "animateSpeed"
+- "gameCenterViewControllerDidFinish"
+- "startButtonPushed"
+- "gameCenterButton"
 - "animateAngle"
+- "invisButton"
+- "viewDidLoad"
+- "rotateHitlerPlus"
+- "ClicksToHitler_text"
 depends-top-level:
-- !private "CKRecordID"
-- !private "Date"
-- !private "!"
-- !private "GKLocalPlayer"
-- "BooleanLiteralType"
-- !private "-"
-- !private "!="
-- !private "ClicksViewController"
-- !private "CGFloat"
-- "GKGameCenterViewController"
-- "UIImageView"
-- "UILabel"
-- !private "UIView"
-- !private "UIAlertActionStyle"
-- "GKGameCenterControllerDelegate"
-- !private "<"
-- !private "UIAlertAction"
-- "Double"
-- "StartViewController"
 - !private "StringLiteralType"
-- !private "UserDefaults"
-- !private "CKContainer"
+- !private "!="
 - !private "CGAffineTransform"
-- !private "print"
-- !private "DispatchQueue"
+- !private "!"
+- !private "UIAlertControllerStyle"
 - !private "Int"
-- !private "String"
+- "StartViewController"
+- !private "UIAlertController"
+- !private "CKRecordID"
 - !private "=="
 - "AssignmentPrecedence"
-- "UIViewController"
-- "Bool"
 - !private "CastingPrecedence"
-- !private "UIAlertControllerStyle"
-- !private "UIAlertController"
-- "UnicodeScalarType"
+- !private "ClicksViewController"
+- !private "UserDefaults"
+- !private "String"
+- !private "print"
 - !private "Void"
+- "UIViewController"
+- "Double"
+- !private "UIImage"
+- !private "CKContainer"
+- "BooleanLiteralType"
+- !private "-"
+- !private "<"
+- !private "GKLocalPlayer"
+- "GKGameCenterControllerDelegate"
+- "Bool"
+- !private "CGFloat"
+- "UnicodeScalarType"
+- !private "DispatchQueue"
+- !private "Date"
+- !private "UIAlertActionStyle"
+- "GKGameCenterViewController"
+- "UILabel"
+- !private "UIAlertAction"
+- !private "UIView"
+- "UIImageView"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
 - !private ["Ps9AnyObject", "CGFloat"]
 - !private ["Ps9AnyObject", "CKContainer"]
 - !private ["Ps9AnyObject", "CKRecordID"]
+- ["Ps9AnyObject", "ClicksToHitler_text"]
 - !private ["Ps9AnyObject", "ClicksViewController"]
 - !private ["Ps9AnyObject", "Date"]
 - !private ["Ps9AnyObject", "DispatchQueue"]
@@ -79,6 +82,7 @@ depends-member:
 - !private ["Ps9AnyObject", "UIAlertActionStyle"]
 - !private ["Ps9AnyObject", "UIAlertController"]
 - !private ["Ps9AnyObject", "UIAlertControllerStyle"]
+- !private ["Ps9AnyObject", "UIImage"]
 - !private ["Ps9AnyObject", "UIView"]
 - !private ["Ps9AnyObject", "UserDefaults"]
 - !private ["Ps9AnyObject", "addAction"]
@@ -100,6 +104,7 @@ depends-member:
 - ["Ps9AnyObject", "gameCenterViewControllerDidFinish"]
 - !private ["Ps9AnyObject", "global"]
 - ["Ps9AnyObject", "hitlerStart"]
+- !private ["Ps9AnyObject", "image"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "invisButton"]
 - !private ["Ps9AnyObject", "isAuthenticated"]
@@ -134,6 +139,7 @@ depends-member:
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "animate"]
+- !private ["PSo15CALayerDelegate", "image"]
 - !private ["PSo15CALayerDelegate", "rootViewController"]
 - !private ["PSo15CALayerDelegate", "text"]
 - !private ["PSo15CALayerDelegate", "transform"]
@@ -157,6 +163,7 @@ depends-member:
 - !private ["Ps7CVarArg", "CGFloat"]
 - !private ["Ps7CVarArg", "CKContainer"]
 - !private ["Ps7CVarArg", "CKRecordID"]
+- ["Ps7CVarArg", "ClicksToHitler_text"]
 - !private ["Ps7CVarArg", "ClicksViewController"]
 - !private ["Ps7CVarArg", "Date"]
 - !private ["Ps7CVarArg", "DispatchQueue"]
@@ -168,6 +175,7 @@ depends-member:
 - !private ["Ps7CVarArg", "UIAlertActionStyle"]
 - !private ["Ps7CVarArg", "UIAlertController"]
 - !private ["Ps7CVarArg", "UIAlertControllerStyle"]
+- !private ["Ps7CVarArg", "UIImage"]
 - !private ["Ps7CVarArg", "UIView"]
 - !private ["Ps7CVarArg", "UserDefaults"]
 - !private ["Ps7CVarArg", "addAction"]
@@ -189,6 +197,7 @@ depends-member:
 - ["Ps7CVarArg", "gameCenterViewControllerDidFinish"]
 - !private ["Ps7CVarArg", "global"]
 - ["Ps7CVarArg", "hitlerStart"]
+- !private ["Ps7CVarArg", "image"]
 - !private ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "invisButton"]
 - !private ["Ps7CVarArg", "isAuthenticated"]
@@ -227,6 +236,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
 - !private ["Ps28CustomDebugStringConvertible", "CKContainer"]
 - !private ["Ps28CustomDebugStringConvertible", "CKRecordID"]
+- ["Ps28CustomDebugStringConvertible", "ClicksToHitler_text"]
 - !private ["Ps28CustomDebugStringConvertible", "ClicksViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "Date"]
 - !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
@@ -238,6 +248,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertActionStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertControllerStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
 - !private ["Ps28CustomDebugStringConvertible", "UIView"]
 - !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "addAction"]
@@ -260,6 +271,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "gameCenterViewControllerDidFinish"]
 - !private ["Ps28CustomDebugStringConvertible", "global"]
 - ["Ps28CustomDebugStringConvertible", "hitlerStart"]
+- !private ["Ps28CustomDebugStringConvertible", "image"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "invisButton"]
 - !private ["Ps28CustomDebugStringConvertible", "isAuthenticated"]
@@ -302,6 +314,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGFloat"]
 - !private ["Ps23CustomStringConvertible", "CKContainer"]
 - !private ["Ps23CustomStringConvertible", "CKRecordID"]
+- ["Ps23CustomStringConvertible", "ClicksToHitler_text"]
 - !private ["Ps23CustomStringConvertible", "ClicksViewController"]
 - !private ["Ps23CustomStringConvertible", "Date"]
 - !private ["Ps23CustomStringConvertible", "DispatchQueue"]
@@ -313,6 +326,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIAlertActionStyle"]
 - !private ["Ps23CustomStringConvertible", "UIAlertController"]
 - !private ["Ps23CustomStringConvertible", "UIAlertControllerStyle"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
 - !private ["Ps23CustomStringConvertible", "UIView"]
 - !private ["Ps23CustomStringConvertible", "UserDefaults"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -335,6 +349,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "gameCenterViewControllerDidFinish"]
 - !private ["Ps23CustomStringConvertible", "global"]
 - ["Ps23CustomStringConvertible", "hitlerStart"]
+- !private ["Ps23CustomStringConvertible", "image"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "invisButton"]
 - !private ["Ps23CustomStringConvertible", "isAuthenticated"]
@@ -381,6 +396,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "CKContainer"]
 - !private ["Ps9Equatable", "CKRecordID"]
+- ["Ps9Equatable", "ClicksToHitler_text"]
 - !private ["Ps9Equatable", "ClicksViewController"]
 - !private ["Ps9Equatable", "Date"]
 - !private ["Ps9Equatable", "DispatchQueue"]
@@ -392,6 +408,7 @@ depends-member:
 - !private ["Ps9Equatable", "UIAlertActionStyle"]
 - !private ["Ps9Equatable", "UIAlertController"]
 - !private ["Ps9Equatable", "UIAlertControllerStyle"]
+- !private ["Ps9Equatable", "UIImage"]
 - !private ["Ps9Equatable", "UIView"]
 - !private ["Ps9Equatable", "UserDefaults"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
@@ -419,6 +436,7 @@ depends-member:
 - ["Ps9Equatable", "gameCenterViewControllerDidFinish"]
 - !private ["Ps9Equatable", "global"]
 - ["Ps9Equatable", "hitlerStart"]
+- !private ["Ps9Equatable", "image"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "invisButton"]
 - !private ["Ps9Equatable", "isAuthenticated"]
@@ -470,6 +488,7 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "CGFloat"]
 - !private ["PSo30GKGameCenterControllerDelegate", "CKContainer"]
 - !private ["PSo30GKGameCenterControllerDelegate", "CKRecordID"]
+- !private ["PSo30GKGameCenterControllerDelegate", "ClicksToHitler_text"]
 - !private ["PSo30GKGameCenterControllerDelegate", "ClicksViewController"]
 - !private ["PSo30GKGameCenterControllerDelegate", "Date"]
 - !private ["PSo30GKGameCenterControllerDelegate", "DispatchQueue"]
@@ -481,6 +500,7 @@ depends-member:
 - !private ["PSo30GKGameCenterControllerDelegate", "UIAlertActionStyle"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UIAlertController"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UIAlertControllerStyle"]
+- !private ["PSo30GKGameCenterControllerDelegate", "UIImage"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UIView"]
 - !private ["PSo30GKGameCenterControllerDelegate", "UserDefaults"]
 - !private ["PSo30GKGameCenterControllerDelegate", "animateAngle"]
@@ -519,6 +539,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGFloat"]
 - !private ["Ps8Hashable", "CKContainer"]
 - !private ["Ps8Hashable", "CKRecordID"]
+- ["Ps8Hashable", "ClicksToHitler_text"]
 - !private ["Ps8Hashable", "ClicksViewController"]
 - !private ["Ps8Hashable", "Date"]
 - !private ["Ps8Hashable", "DispatchQueue"]
@@ -530,6 +551,7 @@ depends-member:
 - !private ["Ps8Hashable", "UIAlertActionStyle"]
 - !private ["Ps8Hashable", "UIAlertController"]
 - !private ["Ps8Hashable", "UIAlertControllerStyle"]
+- !private ["Ps8Hashable", "UIImage"]
 - !private ["Ps8Hashable", "UIView"]
 - !private ["Ps8Hashable", "UserDefaults"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
@@ -557,6 +579,7 @@ depends-member:
 - ["Ps8Hashable", "gameCenterViewControllerDidFinish"]
 - !private ["Ps8Hashable", "global"]
 - ["Ps8Hashable", "hitlerStart"]
+- !private ["Ps8Hashable", "image"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "invisButton"]
 - !private ["Ps8Hashable", "isAuthenticated"]
@@ -602,6 +625,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "CKContainer"]
 - !private ["PSo8NSCoding", "CKRecordID"]
+- ["PSo8NSCoding", "ClicksToHitler_text"]
 - !private ["PSo8NSCoding", "ClicksViewController"]
 - !private ["PSo8NSCoding", "Date"]
 - !private ["PSo8NSCoding", "DispatchQueue"]
@@ -613,6 +637,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
 - !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "UIAlertControllerStyle"]
+- !private ["PSo8NSCoding", "UIImage"]
 - !private ["PSo8NSCoding", "UIView"]
 - !private ["PSo8NSCoding", "UserDefaults"]
 - !private ["PSo8NSCoding", "addAction"]
@@ -629,6 +654,7 @@ depends-member:
 - !private ["PSo8NSCoding", "gameCenterDelegate"]
 - ["PSo8NSCoding", "gameCenterViewControllerDidFinish"]
 - ["PSo8NSCoding", "hitlerStart"]
+- !private ["PSo8NSCoding", "image"]
 - !private ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "invisButton"]
 - ["PSo8NSCoding", "loggedIn"]
@@ -658,6 +684,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGFloat"]
 - !private ["PSo26NSExtensionRequestHandling", "CKContainer"]
 - !private ["PSo26NSExtensionRequestHandling", "CKRecordID"]
+- ["PSo26NSExtensionRequestHandling", "ClicksToHitler_text"]
 - !private ["PSo26NSExtensionRequestHandling", "ClicksViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "Date"]
 - !private ["PSo26NSExtensionRequestHandling", "DispatchQueue"]
@@ -669,6 +696,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertControllerStyle"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
 - !private ["PSo26NSExtensionRequestHandling", "UIView"]
 - !private ["PSo26NSExtensionRequestHandling", "UserDefaults"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
@@ -708,6 +736,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CKContainer"]
 - !private ["CSo8NSObject", "CKRecordID"]
+- ["CSo8NSObject", "ClicksToHitler_text"]
 - !private ["CSo8NSObject", "ClicksViewController"]
 - !private ["CSo8NSObject", "Date"]
 - !private ["CSo8NSObject", "DispatchQueue"]
@@ -721,6 +750,7 @@ depends-member:
 - !private ["CSo8NSObject", "UIAlertActionStyle"]
 - !private ["CSo8NSObject", "UIAlertController"]
 - !private ["CSo8NSObject", "UIAlertControllerStyle"]
+- !private ["CSo8NSObject", "UIImage"]
 - ["CSo8NSObject", "UIImageView"]
 - ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UIView"]
@@ -745,6 +775,7 @@ depends-member:
 - ["CSo8NSObject", "gameCenterViewControllerDidFinish"]
 - !private ["CSo8NSObject", "global"]
 - ["CSo8NSObject", "hitlerStart"]
+- !private ["CSo8NSObject", "image"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "invisButton"]
 - !private ["CSo8NSObject", "isAuthenticated"]
@@ -778,6 +809,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGFloat"]
 - !private ["PSo16NSObjectProtocol", "CKContainer"]
 - !private ["PSo16NSObjectProtocol", "CKRecordID"]
+- ["PSo16NSObjectProtocol", "ClicksToHitler_text"]
 - !private ["PSo16NSObjectProtocol", "ClicksViewController"]
 - !private ["PSo16NSObjectProtocol", "Date"]
 - !private ["PSo16NSObjectProtocol", "DispatchQueue"]
@@ -789,6 +821,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
 - !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIAlertControllerStyle"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
 - !private ["PSo16NSObjectProtocol", "UIView"]
 - !private ["PSo16NSObjectProtocol", "UserDefaults"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
@@ -810,6 +843,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "gameCenterViewControllerDidFinish"]
 - !private ["PSo16NSObjectProtocol", "global"]
 - ["PSo16NSObjectProtocol", "hitlerStart"]
+- !private ["PSo16NSObjectProtocol", "image"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "invisButton"]
 - !private ["PSo16NSObjectProtocol", "isAuthenticated"]
@@ -863,6 +897,7 @@ depends-member:
 - !private ["C14clicksToHitler19StartViewController", "CGFloat"]
 - !private ["C14clicksToHitler19StartViewController", "CKContainer"]
 - !private ["C14clicksToHitler19StartViewController", "CKRecordID"]
+- ["C14clicksToHitler19StartViewController", "ClicksToHitler_text"]
 - !private ["C14clicksToHitler19StartViewController", "ClicksViewController"]
 - !private ["C14clicksToHitler19StartViewController", "Date"]
 - !private ["C14clicksToHitler19StartViewController", "DispatchQueue"]
@@ -876,6 +911,7 @@ depends-member:
 - !private ["C14clicksToHitler19StartViewController", "UIAlertActionStyle"]
 - !private ["C14clicksToHitler19StartViewController", "UIAlertController"]
 - !private ["C14clicksToHitler19StartViewController", "UIAlertControllerStyle"]
+- !private ["C14clicksToHitler19StartViewController", "UIImage"]
 - ["C14clicksToHitler19StartViewController", "UIImageView"]
 - ["C14clicksToHitler19StartViewController", "UILabel"]
 - !private ["C14clicksToHitler19StartViewController", "UIView"]
@@ -913,6 +949,8 @@ depends-member:
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "animate"]
+- !private ["PSo29UIAccessibilityIdentification", "image"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "rootViewController"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "transform"]
@@ -929,6 +967,7 @@ depends-member:
 - !private ["OSC22UIAlertControllerStyle", "alert"]
 - ["OSC22UIAlertControllerStyle", "deinit"]
 - !private ["PSo12UIAppearance", "animate"]
+- !private ["PSo12UIAppearance", "image"]
 - !private ["PSo12UIAppearance", "rootViewController"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "transform"]
@@ -937,6 +976,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGFloat"]
 - !private ["PSo21UIAppearanceContainer", "CKContainer"]
 - !private ["PSo21UIAppearanceContainer", "CKRecordID"]
+- ["PSo21UIAppearanceContainer", "ClicksToHitler_text"]
 - !private ["PSo21UIAppearanceContainer", "ClicksViewController"]
 - !private ["PSo21UIAppearanceContainer", "Date"]
 - !private ["PSo21UIAppearanceContainer", "DispatchQueue"]
@@ -948,6 +988,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertControllerStyle"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
 - !private ["PSo21UIAppearanceContainer", "UIView"]
 - !private ["PSo21UIAppearanceContainer", "UserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "addAction"]
@@ -964,6 +1005,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "gameCenterDelegate"]
 - ["PSo21UIAppearanceContainer", "gameCenterViewControllerDidFinish"]
 - ["PSo21UIAppearanceContainer", "hitlerStart"]
+- !private ["PSo21UIAppearanceContainer", "image"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "invisButton"]
 - ["PSo21UIAppearanceContainer", "loggedIn"]
@@ -990,6 +1032,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGFloat"]
 - !private ["PSo18UIContentContainer", "CKContainer"]
 - !private ["PSo18UIContentContainer", "CKRecordID"]
+- ["PSo18UIContentContainer", "ClicksToHitler_text"]
 - !private ["PSo18UIContentContainer", "ClicksViewController"]
 - !private ["PSo18UIContentContainer", "Date"]
 - !private ["PSo18UIContentContainer", "DispatchQueue"]
@@ -1001,6 +1044,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "UIAlertControllerStyle"]
+- !private ["PSo18UIContentContainer", "UIImage"]
 - !private ["PSo18UIContentContainer", "UIView"]
 - !private ["PSo18UIContentContainer", "UserDefaults"]
 - !private ["PSo18UIContentContainer", "addAction"]
@@ -1036,11 +1080,13 @@ depends-member:
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
 - !private ["PSo17UICoordinateSpace", "animate"]
+- !private ["PSo17UICoordinateSpace", "image"]
 - !private ["PSo17UICoordinateSpace", "rootViewController"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "transform"]
 - !private ["PSo17UICoordinateSpace", "window"]
 - !private ["PSo13UIDynamicItem", "animate"]
+- !private ["PSo13UIDynamicItem", "image"]
 - !private ["PSo13UIDynamicItem", "rootViewController"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "transform"]
@@ -1049,6 +1095,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGFloat"]
 - !private ["PSo18UIFocusEnvironment", "CKContainer"]
 - !private ["PSo18UIFocusEnvironment", "CKRecordID"]
+- ["PSo18UIFocusEnvironment", "ClicksToHitler_text"]
 - !private ["PSo18UIFocusEnvironment", "ClicksViewController"]
 - !private ["PSo18UIFocusEnvironment", "Date"]
 - !private ["PSo18UIFocusEnvironment", "DispatchQueue"]
@@ -1060,6 +1107,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertControllerStyle"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
 - !private ["PSo18UIFocusEnvironment", "UIView"]
 - !private ["PSo18UIFocusEnvironment", "UserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "addAction"]
@@ -1076,6 +1124,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "gameCenterDelegate"]
 - ["PSo18UIFocusEnvironment", "gameCenterViewControllerDidFinish"]
 - ["PSo18UIFocusEnvironment", "hitlerStart"]
+- !private ["PSo18UIFocusEnvironment", "image"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "invisButton"]
 - ["PSo18UIFocusEnvironment", "loggedIn"]
@@ -1099,10 +1148,13 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "window"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "animate"]
+- !private ["PSo11UIFocusItem", "image"]
 - !private ["PSo11UIFocusItem", "rootViewController"]
 - !private ["PSo11UIFocusItem", "text"]
 - !private ["PSo11UIFocusItem", "transform"]
 - !private ["PSo11UIFocusItem", "window"]
+- !private ["CSo7UIImage", "init"]
+- !private ["CSo11UIImageView", "image"]
 - !private ["CSo11UIImageView", "transform"]
 - !private ["CSo7UILabel", "text"]
 - !private ["CSo22UINavigationController", "dismiss"]
@@ -1113,6 +1165,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "CKContainer"]
 - !private ["CSo11UIResponder", "CKRecordID"]
+- ["CSo11UIResponder", "ClicksToHitler_text"]
 - !private ["CSo11UIResponder", "ClicksViewController"]
 - !private ["CSo11UIResponder", "Date"]
 - !private ["CSo11UIResponder", "DispatchQueue"]
@@ -1126,6 +1179,7 @@ depends-member:
 - !private ["CSo11UIResponder", "UIAlertActionStyle"]
 - !private ["CSo11UIResponder", "UIAlertController"]
 - !private ["CSo11UIResponder", "UIAlertControllerStyle"]
+- !private ["CSo11UIResponder", "UIImage"]
 - ["CSo11UIResponder", "UIImageView"]
 - ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UIView"]
@@ -1145,6 +1199,7 @@ depends-member:
 - !private ["CSo11UIResponder", "gameCenterDelegate"]
 - ["CSo11UIResponder", "gameCenterViewControllerDidFinish"]
 - ["CSo11UIResponder", "hitlerStart"]
+- !private ["CSo11UIResponder", "image"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "invisButton"]
 - ["CSo11UIResponder", "loggedIn"]
@@ -1170,6 +1225,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "CGFloat"]
 - !private ["PSo30UIResponderStandardEditActions", "CKContainer"]
 - !private ["PSo30UIResponderStandardEditActions", "CKRecordID"]
+- ["PSo30UIResponderStandardEditActions", "ClicksToHitler_text"]
 - !private ["PSo30UIResponderStandardEditActions", "ClicksViewController"]
 - !private ["PSo30UIResponderStandardEditActions", "Date"]
 - !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
@@ -1181,6 +1237,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertActionStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertController"]
 - !private ["PSo30UIResponderStandardEditActions", "UIAlertControllerStyle"]
+- !private ["PSo30UIResponderStandardEditActions", "UIImage"]
 - !private ["PSo30UIResponderStandardEditActions", "UIView"]
 - !private ["PSo30UIResponderStandardEditActions", "UserDefaults"]
 - !private ["PSo30UIResponderStandardEditActions", "addAction"]
@@ -1197,6 +1254,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "gameCenterDelegate"]
 - ["PSo30UIResponderStandardEditActions", "gameCenterViewControllerDidFinish"]
 - ["PSo30UIResponderStandardEditActions", "hitlerStart"]
+- !private ["PSo30UIResponderStandardEditActions", "image"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - ["PSo30UIResponderStandardEditActions", "invisButton"]
 - ["PSo30UIResponderStandardEditActions", "loggedIn"]
@@ -1223,6 +1281,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGFloat"]
 - !private ["PSo16UIStateRestoring", "CKContainer"]
 - !private ["PSo16UIStateRestoring", "CKRecordID"]
+- ["PSo16UIStateRestoring", "ClicksToHitler_text"]
 - !private ["PSo16UIStateRestoring", "ClicksViewController"]
 - !private ["PSo16UIStateRestoring", "Date"]
 - !private ["PSo16UIStateRestoring", "DispatchQueue"]
@@ -1234,6 +1293,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "UIAlertControllerStyle"]
+- !private ["PSo16UIStateRestoring", "UIImage"]
 - !private ["PSo16UIStateRestoring", "UIView"]
 - !private ["PSo16UIStateRestoring", "UserDefaults"]
 - !private ["PSo16UIStateRestoring", "addAction"]
@@ -1274,6 +1334,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGFloat"]
 - !private ["PSo18UITraitEnvironment", "CKContainer"]
 - !private ["PSo18UITraitEnvironment", "CKRecordID"]
+- ["PSo18UITraitEnvironment", "ClicksToHitler_text"]
 - !private ["PSo18UITraitEnvironment", "ClicksViewController"]
 - !private ["PSo18UITraitEnvironment", "Date"]
 - !private ["PSo18UITraitEnvironment", "DispatchQueue"]
@@ -1285,6 +1346,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "UIAlertControllerStyle"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
 - !private ["PSo18UITraitEnvironment", "UIView"]
 - !private ["PSo18UITraitEnvironment", "UserDefaults"]
 - !private ["PSo18UITraitEnvironment", "addAction"]
@@ -1301,6 +1363,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "gameCenterDelegate"]
 - ["PSo18UITraitEnvironment", "gameCenterViewControllerDidFinish"]
 - ["PSo18UITraitEnvironment", "hitlerStart"]
+- !private ["PSo18UITraitEnvironment", "image"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "invisButton"]
 - ["PSo18UITraitEnvironment", "loggedIn"]
@@ -1324,6 +1387,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "window"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "animate"]
+- !private ["CSo6UIView", "image"]
 - !private ["CSo6UIView", "rootViewController"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "transform"]
@@ -1333,6 +1397,7 @@ depends-member:
 - !private ["CSo16UIViewController", "CGFloat"]
 - !private ["CSo16UIViewController", "CKContainer"]
 - !private ["CSo16UIViewController", "CKRecordID"]
+- ["CSo16UIViewController", "ClicksToHitler_text"]
 - !private ["CSo16UIViewController", "ClicksViewController"]
 - !private ["CSo16UIViewController", "Date"]
 - !private ["CSo16UIViewController", "DispatchQueue"]
@@ -1346,6 +1411,7 @@ depends-member:
 - !private ["CSo16UIViewController", "UIAlertActionStyle"]
 - !private ["CSo16UIViewController", "UIAlertController"]
 - !private ["CSo16UIViewController", "UIAlertControllerStyle"]
+- !private ["CSo16UIViewController", "UIImage"]
 - ["CSo16UIViewController", "UIImageView"]
 - ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UIView"]
@@ -1400,6 +1466,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "CGFloat"]
 - !private ["P14clicksToHitler9Utilities", "CKContainer"]
 - !private ["P14clicksToHitler9Utilities", "CKRecordID"]
+- ["P14clicksToHitler9Utilities", "ClicksToHitler_text"]
 - !private ["P14clicksToHitler9Utilities", "ClicksViewController"]
 - !private ["P14clicksToHitler9Utilities", "Date"]
 - !private ["P14clicksToHitler9Utilities", "DispatchQueue"]
@@ -1411,6 +1478,7 @@ depends-member:
 - !private ["P14clicksToHitler9Utilities", "UIAlertActionStyle"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertController"]
 - !private ["P14clicksToHitler9Utilities", "UIAlertControllerStyle"]
+- !private ["P14clicksToHitler9Utilities", "UIImage"]
 - !private ["P14clicksToHitler9Utilities", "UIView"]
 - !private ["P14clicksToHitler9Utilities", "UserDefaults"]
 - !private ["P14clicksToHitler9Utilities", "addAction"]
@@ -1432,6 +1500,7 @@ depends-member:
 - ["P14clicksToHitler9Utilities", "gameCenterViewControllerDidFinish"]
 - !private ["P14clicksToHitler9Utilities", "global"]
 - ["P14clicksToHitler9Utilities", "hitlerStart"]
+- !private ["P14clicksToHitler9Utilities", "image"]
 - !private ["P14clicksToHitler9Utilities", "init"]
 - ["P14clicksToHitler9Utilities", "invisButton"]
 - !private ["P14clicksToHitler9Utilities", "isAuthenticated"]
@@ -1465,6 +1534,7 @@ depends-member:
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "animate"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "image"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "rootViewController"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "transform"]
@@ -1474,11 +1544,13 @@ depends-member:
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "CGAffineTransform"]
 - !private ["Ps9_Hashable", "CGFloat"]
 - !private ["Ps9_Hashable", "CKContainer"]
 - !private ["Ps9_Hashable", "CKRecordID"]
+- ["Ps9_Hashable", "ClicksToHitler_text"]
 - !private ["Ps9_Hashable", "ClicksViewController"]
 - !private ["Ps9_Hashable", "Date"]
 - !private ["Ps9_Hashable", "DispatchQueue"]
@@ -1490,6 +1562,7 @@ depends-member:
 - !private ["Ps9_Hashable", "UIAlertActionStyle"]
 - !private ["Ps9_Hashable", "UIAlertController"]
 - !private ["Ps9_Hashable", "UIAlertControllerStyle"]
+- !private ["Ps9_Hashable", "UIImage"]
 - !private ["Ps9_Hashable", "UIView"]
 - !private ["Ps9_Hashable", "UserDefaults"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
@@ -1517,6 +1590,7 @@ depends-member:
 - ["Ps9_Hashable", "gameCenterViewControllerDidFinish"]
 - !private ["Ps9_Hashable", "global"]
 - ["Ps9_Hashable", "hitlerStart"]
+- !private ["Ps9_Hashable", "image"]
 - !private ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "invisButton"]
 - !private ["Ps9_Hashable", "isAuthenticated"]
@@ -1643,6 +1717,7 @@ depends-nominal:
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - !private "PSo11UIFocusItem"
+- !private "CSo7UIImage"
 - !private "CSo11UIImageView"
 - !private "CSo7UILabel"
 - !private "CSo22UINavigationController"
@@ -1672,6 +1747,7 @@ depends-nominal:
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 - !private "Ps21_ObjectiveCBridgeable"
@@ -1772,4 +1848,4 @@ depends-external:
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAdsDefines.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Headers/GoogleMobileAds.h"
 - "/Users/Emil/Grov-Filer/Xcode kod/clicksToHitler/clicksToHitler/GoogleMobileAds.framework/Modules/module.modulemap"
-interface-hash: "7dc2ec58a8d374ea7067e5c7d53a2024"
+interface-hash: "3f07b80ba3a3df1b684b41092dfdf097"
