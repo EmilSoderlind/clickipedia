@@ -12,6 +12,7 @@ import GameKit
 
 class StartViewController: UIViewController, GKGameCenterControllerDelegate{
     
+    @IBOutlet weak var ClicksToHitler_text: UIImageView!
     @IBOutlet weak var hitlerStart: UIImageView!
     
     @IBOutlet weak var startText: UILabel!
@@ -68,26 +69,22 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
     }
     
     func rotateHitlerPlus(){
-        
         UIView.animate(withDuration: animateSpeed, animations: {
                     self.hitlerStart.transform = CGAffineTransform(rotationAngle: CGFloat(self.animateAngle))
             },completion: { (b) in
                 self.rotateHitlerMinus()
         })
-        
     }
     
     func rotateHitlerMinus(){
-        
         UIView.animate(withDuration: animateSpeed, animations: {
             self.hitlerStart.transform = CGAffineTransform(rotationAngle: -(CGFloat)(self.animateAngle))
             
         }, completion: { (b) in
             self.rotateHitlerPlus()
         })
-        
-        
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -200,8 +197,13 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate{
 
     }
     @IBAction func invisButton(_ sender: Any) {
-        animateAngle = 20
-        animateSpeed = 0.25
+        
+        hitlerStart.image = UIImage(named: "harambe_selfie")
+        ClicksToHitler_text.image = UIImage(named: "harambe_text")
+        
+        
+        animateAngle = 0.3
+        animateSpeed = 2
     }
     
     func authPlayer(){
